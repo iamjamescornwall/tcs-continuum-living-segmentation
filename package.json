@@ -13,7 +13,8 @@
     "test:ai": "tsx tests/aiService.test.ts",
     "test:loop": "tsx tests/stateLoop.test.ts",
     "test:persona": "tsx tests/personaMatrix.test.ts",
-    "test:all": "npm run test:governance && npm run test:ai && npm run test:loop && npm run test:persona && npm run data:validate"
+    "test:all": "npm run test:governance && npm run test:ai && npm run test:loop && npm run test:persona && npm run data:validate",
+    "proxy": "node server/llm-proxy/proxy.js"
   },
   "dependencies": {
     "d3-sankey": "^0.12.3",

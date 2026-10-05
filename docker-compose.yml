@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  continuum-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: continuum-living-segmentation
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  # Optional live LLM proxy service (uncomment when using live keys)
+  # llm-proxy:
+  #   image: node:20-alpine
+  #   working_dir: /app
+  #   volumes:
+  #     - ./server/llm-proxy:/app
+  #   command: node proxy.js
+  #   ports:
+  #     - "3001:3001"
+  #   environment:
+  #     - PORT=3001
+  #     - LLM_TARGET_URL=https://api.openai.com/v1/chat/completions
+  #     - LLM_API_KEY=${LLM_API_KEY}
