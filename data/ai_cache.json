@@ -1,0 +1,2958 @@
+{
+  "AI-1": {
+    "vendor_mkt_c_v1": {
+      "column_mappings": [
+        {
+          "source_column": "Ref_No",
+          "global_field": "hcp_id",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Dr_Name",
+          "global_field": "display_name",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Spec",
+          "global_field": "specialty",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Clinic",
+          "global_field": "practice_name",
+          "confidence": "Medium"
+        },
+        {
+          "source_column": "City",
+          "global_field": "region",
+          "confidence": "Medium"
+        },
+        {
+          "source_column": "Pot_Class",
+          "global_field": "POTENTIAL",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Segmen",
+          "global_field": "SEGMENT",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Adopt",
+          "global_field": "ADOPTION",
+          "confidence": "High"
+        },
+        {
+          "source_column": "Last_Visit",
+          "global_field": "last_interaction_date",
+          "confidence": "High"
+        }
+      ],
+      "value_maps": {
+        "Pot_Class": {
+          "High": "4",
+          "Med": "3",
+          "Low": "2"
+        },
+        "Segmen": {
+          "Gold": "A",
+          "Silver": "B",
+          "Bronze": "C"
+        },
+        "Adopt": {
+          "Aware": "Aware",
+          "Trying": "Trial",
+          "Using": "Adoption",
+          "Loyal": "Expansion"
+        }
+      },
+      "confidence": {
+        "overall": "High",
+        "match_rate": 0.923,
+        "conformance": 0.88
+      }
+    }
+  },
+  "AI-2": {
+    "VER-0001": [
+      {
+        "cluster_id": "cluster_0",
+        "name": "Traditional Low Prescribers",
+        "description": "Low TRx volume with negative trend; minimal portal or digital interaction.",
+        "global_value": "E"
+      },
+      {
+        "cluster_id": "cluster_1",
+        "name": "Pragmatist Core Maintainers",
+        "description": "Steady volume with flat quarterly growth; standard face-to-face cadence.",
+        "global_value": "D"
+      },
+      {
+        "cluster_id": "cluster_2",
+        "name": "Engaged Biologic Champions",
+        "description": "High prescription growth (+28% QoQ) and intensive portal engagement (8+ sessions/mo).",
+        "global_value": "A"
+      },
+      {
+        "cluster_id": "cluster_3",
+        "name": "Expanding Specialty Adopters",
+        "description": "Positive growth trajectory with increasing self-serve digital queries.",
+        "global_value": "B"
+      },
+      {
+        "cluster_id": "cluster_4",
+        "name": "Moderate Trialists",
+        "description": "Moderate volume base with occasional patient initiations and web inquiry.",
+        "global_value": "C"
+      }
+    ],
+    "VER-0005": [
+      {
+        "cluster_id": "grid_tier_1",
+        "name": "Top Potential Survey Champions",
+        "description": "High volume proxy and high stated prescribe intent from latest wave.",
+        "global_value": "A"
+      },
+      {
+        "cluster_id": "grid_tier_2",
+        "name": "Moderate Regional Base",
+        "description": "Medium volume and consistent rep assessment.",
+        "global_value": "B"
+      }
+    ]
+  },
+  "AI-3": {
+    "PRP-000001": {
+      "headline": "Proposed SEGMENT change from B to A based on 4 verified signals.",
+      "drivers": [
+        {
+          "label": "Brick-level Aurelix sales (BRK-B-014)",
+          "value": "+12% QoQ",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        },
+        {
+          "label": "Portal visit frequency",
+          "value": "3 → 6 visits/mo",
+          "direction": "Up",
+          "source_category": "Digital",
+          "data_age_days": 10
+        },
+        {
+          "label": "PMR survey wave 2026-W2",
+          "value": "Shift to Early adopter",
+          "direction": "Up",
+          "source_category": "Survey",
+          "data_age_days": 8
+        },
+        {
+          "label": "Rep observation (Tomás Ferreira)",
+          "value": "4 new patient starts on Aurelix",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Brick-level Aurelix sales (BRK-B-014): +12% QoQ; Portal visit frequency: 3 → 6 v"
+    },
+    "PRP-000002": {
+      "headline": "Proposed BEHAVIOURAL change from Traditionalist to Engaged based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Brick sales acceleration",
+          "value": "+12% QoQ",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        },
+        {
+          "label": "Digital engagement growth",
+          "value": "6 portal sessions/mo",
+          "direction": "Up",
+          "source_category": "Digital",
+          "data_age_days": 10
+        }
+      ],
+      "confidence": "High",
+      "data_age": "10 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Brick sales acceleration: +12% QoQ; Digital engagement growth: 6 portal sessions"
+    },
+    "PRP-000003": {
+      "headline": "Proposed ATTITUDINAL change from Late majority to Early adopter based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "PMR Wave 2026-W2 response",
+          "value": "Classified as Early Adopter",
+          "direction": "Up",
+          "source_category": "Survey",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. PMR Wave 2026-W2 response: Classified as Early Adopter"
+    },
+    "PRP-000004": {
+      "headline": "Proposed DIGITAL change from Evolving to Savvy based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Monthly portal visits",
+          "value": "Doubled from 3 to 6",
+          "direction": "Up",
+          "source_category": "Digital",
+          "data_age_days": 10
+        },
+        {
+          "label": "Rep note preference",
+          "value": "Expressed clear portal preference",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Monthly portal visits: Doubled from 3 to 6; Rep note preference: Expressed clear"
+    },
+    "PRP-000005": {
+      "headline": "Proposed ADOPTION change from Consideration to Expansion based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Patient initiation",
+          "value": "4 new moderate-to-severe starts",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 5
+        },
+        {
+          "label": "Brick volume trajectory",
+          "value": "+12% QoQ",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Patient initiation: 4 new moderate-to-severe starts; Brick volume trajectory: +1"
+    },
+    "PRP-000006": {
+      "headline": "Proposed ACCESS_STATUS change from Under review to Listed based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Tender award notification",
+          "value": "Unrestricted listing",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Tender award notification: Unrestricted listing"
+    },
+    "PRP-000007": {
+      "headline": "Proposed ACC_TIER change from Tier 2 to Tier 1 based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Formulary status update",
+          "value": "Now Listed in oncology",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Annual oncology patient volume",
+          "value": "860 patients/yr",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 30
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Formulary status update: Now Listed in oncology; Annual oncology patient volume:"
+    },
+    "PRP-000008": {
+      "headline": "Proposed SEGMENT change from B to A based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Account formulary win (ACC-B-001)",
+          "value": "Zentrova listed on formulary",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Accessible prescribing potential rise",
+          "value": "Potential up one level (2 → 3)",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Account formulary win (ACC-B-001): Zentrova listed on formulary; Accessible pres"
+    },
+    "PRP-000009": {
+      "headline": "Proposed SEGMENT change from B to A based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Account formulary win (ACC-B-001)",
+          "value": "Zentrova listed on formulary",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Accessible prescribing potential rise",
+          "value": "Potential up one level (2 → 3)",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Account formulary win (ACC-B-001): Zentrova listed on formulary; Accessible pres"
+    },
+    "PRP-000010": {
+      "headline": "Proposed SEGMENT change from C to B based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Account formulary win (ACC-B-001)",
+          "value": "Zentrova listed on formulary",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Accessible prescribing potential rise",
+          "value": "Potential up one level (2 → 3)",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Account formulary win (ACC-B-001): Zentrova listed on formulary; Accessible pres"
+    },
+    "PRP-000011": {
+      "headline": "Proposed SEGMENT change from C to B based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Account formulary win (ACC-B-001)",
+          "value": "Zentrova listed on formulary",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Accessible prescribing potential rise",
+          "value": "Potential up one level (2 → 3)",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Account formulary win (ACC-B-001): Zentrova listed on formulary; Accessible pres"
+    },
+    "PRP-000012": {
+      "headline": "Proposed SEGMENT change from C to B based on 3 verified signals.",
+      "drivers": [
+        {
+          "label": "Account formulary win (ACC-B-001)",
+          "value": "Zentrova listed on formulary",
+          "direction": "Up",
+          "source_category": "Claims & access",
+          "data_age_days": 7
+        },
+        {
+          "label": "Accessible prescribing potential rise",
+          "value": "Potential up one level (2 → 3)",
+          "direction": "Up",
+          "source_category": "Reference",
+          "data_age_days": 7
+        },
+        {
+          "label": "Declining call acceptance",
+          "value": "3 consecutive call declines logged",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 4
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "4 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Account formulary win (ACC-B-001): Zentrova listed on formulary; Accessible pres"
+    },
+    "PRP-000013": {
+      "headline": "Proposed SEGMENT change from C to B based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Brick sales volume uptick",
+          "value": "+14% QoQ",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        },
+        {
+          "label": "Rep note contradicts signal",
+          "value": "Trial driven by samples; unlikely to continue",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Brick sales volume uptick: +14% QoQ; Rep note contradicts signal: Trial driven b"
+    },
+    "PRP-000014": {
+      "headline": "Proposed SEGMENT change from B to A based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "HCP TRx volume growth",
+          "value": "+19% QoQ",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        },
+        {
+          "label": "Portal visit frequency",
+          "value": "7 visits/mo",
+          "direction": "Up",
+          "source_category": "Digital",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. HCP TRx volume growth: +19% QoQ; Portal visit frequency: 7 visits/mo"
+    },
+    "PRP-000015": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "One-time prescription spike",
+          "value": "+22% 30d",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 35
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "35 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. One-time prescription spike: +22% 30d"
+    },
+    "PRP-000016": {
+      "headline": "Proposed ADOPTION change from Consideration to Trial based on 2 verified signals.",
+      "drivers": [
+        {
+          "label": "Structured rep assessment",
+          "value": "First biologic patient initiated",
+          "direction": "Up",
+          "source_category": "CRM",
+          "data_age_days": 9
+        },
+        {
+          "label": "PMR Wave survey response",
+          "value": "High intent to prescribe in Q4",
+          "direction": "Up",
+          "source_category": "Survey",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Structured rep assessment: First biologic patient initiated; PMR Wave survey res"
+    },
+    "PRP-000017": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000018": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "High",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000019": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000020": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000021": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000022": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "High",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000023": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000024": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "High",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000025": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 19
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "19 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000026": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000027": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000028": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 16
+        }
+      ],
+      "confidence": "High",
+      "data_age": "16 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000029": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000030": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000031": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000032": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 9
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000033": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "High",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000034": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "High",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000035": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000036": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000037": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000038": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 10
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "10 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000039": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 18
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "18 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000040": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "High",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000041": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "High",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000042": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000043": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000044": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 23
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "23 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000045": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000046": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 23
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "23 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000047": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 19
+        }
+      ],
+      "confidence": "High",
+      "data_age": "19 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000048": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000049": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 18
+        }
+      ],
+      "confidence": "High",
+      "data_age": "18 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000050": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000051": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 9
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000052": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000053": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000054": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 16
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "16 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000055": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000056": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 21
+        }
+      ],
+      "confidence": "High",
+      "data_age": "21 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000057": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 22
+        }
+      ],
+      "confidence": "High",
+      "data_age": "22 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000058": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000059": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000060": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 9
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000061": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000062": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000063": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000064": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000065": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "High",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000066": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 23
+        }
+      ],
+      "confidence": "High",
+      "data_age": "23 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000067": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 10
+        }
+      ],
+      "confidence": "High",
+      "data_age": "10 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000068": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 19
+        }
+      ],
+      "confidence": "High",
+      "data_age": "19 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000069": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000070": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 9
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000071": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000072": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 16
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "16 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000073": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000074": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000075": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "High",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000076": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000077": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 14
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "14 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000078": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 10
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "10 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000079": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "High",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000080": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 18
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "18 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000081": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 23
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "23 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000082": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000083": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000084": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000085": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000086": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "High",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000087": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 14
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "14 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000088": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000089": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 22
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "22 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000090": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "High",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000091": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000092": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000093": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000094": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000095": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000096": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 24
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "24 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000097": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 17
+        }
+      ],
+      "confidence": "High",
+      "data_age": "17 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000098": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000099": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000100": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000101": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "High",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000102": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000103": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 8
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "8 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000104": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 22
+        }
+      ],
+      "confidence": "High",
+      "data_age": "22 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000105": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 18
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "18 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000106": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000107": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "High",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000108": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000109": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000110": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "High",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000111": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "High",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000112": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000113": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 11
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "11 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000114": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 17
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "17 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000115": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 22
+        }
+      ],
+      "confidence": "High",
+      "data_age": "22 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000116": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 18
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "18 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000117": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000118": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 16
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "16 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000119": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000120": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000121": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000122": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000123": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 5
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "5 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000124": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 19
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "19 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000125": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000126": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000127": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 17
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "17 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000128": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "High",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000129": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 20
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "20 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000130": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000131": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 15
+        }
+      ],
+      "confidence": "High",
+      "data_age": "15 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000132": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 23
+        }
+      ],
+      "confidence": "High",
+      "data_age": "23 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000133": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 6
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "6 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000134": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 25
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "25 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000135": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000136": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 14
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "14 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000137": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000138": {
+      "headline": "Proposed DIGITAL change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000139": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 21
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "21 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000140": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 12
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "12 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000141": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 13
+        }
+      ],
+      "confidence": "High",
+      "data_age": "13 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000142": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 7
+        }
+      ],
+      "confidence": "High",
+      "data_age": "7 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000143": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 9
+        }
+      ],
+      "confidence": "Medium",
+      "data_age": "9 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000144": {
+      "headline": "Proposed SEGMENT change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 10
+        }
+      ],
+      "confidence": "Low",
+      "data_age": "10 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    },
+    "PRP-000145": {
+      "headline": "Proposed ADOPTION change from C to B based on 1 verified signals.",
+      "drivers": [
+        {
+          "label": "Signal indicator change",
+          "value": "+15% relative velocity",
+          "direction": "Up",
+          "source_category": "Sales",
+          "data_age_days": 16
+        }
+      ],
+      "confidence": "High",
+      "data_age": "16 days",
+      "what_would_move_next": "Sustained trend over next 60 days or shift in secondary channel engagement. Signal indicator change: +15% relative velocity"
+    }
+  },
+  "AI-4": {
+    "Which market has the oldest segments?": {
+      "answer": "Market C has the oldest segments with a median age of 330 days, where 81% of customer segment assignments are older than 180 days due to reliance on an annual agency spreadsheet refresh.",
+      "table": [
+        {
+          "Market": "Market A",
+          "Median Age": "70 days",
+          "Stale (>180d)": "12%"
+        },
+        {
+          "Market": "Market B",
+          "Median Age": "210 days",
+          "Stale (>180d)": "58%"
+        },
+        {
+          "Market": "Market C",
+          "Median Age": "330 days",
+          "Stale (>180d)": "81%"
+        }
+      ],
+      "link": "/health"
+    },
+    "Which segments are older than 9 months?": {
+      "answer": "Segments older than 270 days are concentrated primarily in Market C (64% of universe) and Market B (31% of universe), representing customers who have not had a verified review since late 2025.",
+      "link": "/health"
+    },
+    "Why is Dr. Hanna Vogel proposed to move to Segment A?": {
+      "answer": "Dr. Hanna Vogel (HCP-B-0001) is proposed for Segment A driven by four independent concordant signals: +12% QoQ brick volume (BRK-B-014), portal visits doubling from 3 to 6/month, shift to Early Adopter in PMR Wave 2026-W2, and rep note confirming 4 new patient starts.",
+      "table": [
+        {
+          "Signal": "Brick Sales",
+          "Value": "+12% QoQ",
+          "Source": "Sales"
+        },
+        {
+          "Signal": "Portal Visits",
+          "Value": "3 → 6/mo",
+          "Source": "Digital"
+        },
+        {
+          "Signal": "PMR Wave",
+          "Value": "Early Adopter",
+          "Source": "Survey"
+        },
+        {
+          "Signal": "Rep Note",
+          "Value": "4 patient starts",
+          "Source": "CRM"
+        }
+      ],
+      "link": "/review-queue"
+    },
+    "Which proposals are on hold, and why?": {
+      "answer": "There are currently 41 proposals held across markets under stability policy rules: conflicting signal divergence (e.g. sample trial noted for HCP-B-0007), territory freeze windows in Market A (Q4 incentive period), and rapid re-segmentation limits.",
+      "link": "/review-queue"
+    },
+    "What changed at St. Aldric University Hospital?": {
+      "answer": "St. Aldric University Hospital (ACC-B-001) was awarded an unrestricted formulary listing for Zentrova on 2026-10-08 following regional tender outcome, triggering account tier elevation to Tier 1 and propagation proposals for 5 affiliated oncologists.",
+      "link": "/change-monitor"
+    },
+    "How many unapproved write-backs are there?": {
+      "answer": "There are 0 unapproved write-backs. Continuum enforces a strict human-in-the-loop gate: no model, agent, or automated process can update a CRM segment field without verified owner sign-off.",
+      "link": "/audit"
+    },
+    "Which markets are on the global standard?": {
+      "answer": "Market A and Market B operate on the global standard vocabulary. Market C is currently being onboarded via Data Intake to map local agency nomenclature into the global taxonomy.",
+      "link": "/health"
+    },
+    "Is Market C's data ready?": {
+      "answer": "Market C has high survey and rep note coverage but lacks HCP-level Rx sales. The platform uses proxy variables (account sell-in, PMR intent, and rep potential assessment) with explicit gap-filled indicators.",
+      "link": "/market-data"
+    },
+    "Where is the biggest opportunity gap for Aurelix?": {
+      "answer": "The greatest opportunity gap lies in high-potential HCPs (Potential 3 and 4) who remain in Consideration or Trial adoption stages, representing 142 prescribers across Market A and B.",
+      "link": "/insights"
+    },
+    "What are the top rejection reasons?": {
+      "answer": "The leading reason for proposal rejection is \"Temporary behaviour\" (38% of rejections in Market A), where short-term prescription surges or sample trials do not reflect sustained clinical practice.",
+      "link": "/audit"
+    },
+    "Is any group under-represented in Segment A?": {
+      "answer": "Yes, responsible AI monitoring flags that rural General Practitioners in Market A are under-represented in Brevanta Segment A (representation index 0.62 vs parity 1.0), triggering a clinical review alert.",
+      "link": "/responsible-ai"
+    },
+    "What is living segmentation worth?": {
+      "answer": "The value model estimates $1.64M annualised benefit across four levers: earlier capture of rising prescribers ($680k), avoided declining visits ($450k), higher rep plan adherence ($310k), and reduced analyst refresh hours ($200k).",
+      "link": "/value-calculator"
+    }
+  },
+  "AI-5": {
+    "NOTE-000001": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Expansion",
+          "evidence_quote": "started 4 new moderate-to-severe psoriasis patients on Aurelix since August",
+          "confidence": "High"
+        },
+        {
+          "dimension_code": "DIGITAL",
+          "direction": "Up",
+          "proposed_value": "Savvy",
+          "evidence_quote": "Prefers to receive updates through the portal rather than in-person visits",
+          "confidence": "Medium"
+        },
+        {
+          "dimension_code": "CHANNEL_PREF",
+          "direction": "None",
+          "proposed_value": "Portal",
+          "evidence_quote": "Prefers to receive updates through the portal",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000002": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Down",
+          "proposed_value": "Consideration",
+          "evidence_quote": "Trial driven by samples; unlikely to continue",
+          "confidence": "High"
+        }
+      ]
+    },
+    "NOTE-000003": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000004": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000005": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000006": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000007": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000008": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000009": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000010": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000011": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000012": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000013": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000014": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000015": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000016": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000017": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000018": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000019": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000020": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000021": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000022": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000023": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000024": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000025": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000026": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000027": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000028": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000029": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000030": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000031": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000032": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000033": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000034": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000035": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000036": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000037": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000038": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000039": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    },
+    "NOTE-000040": {
+      "signals": [
+        {
+          "dimension_code": "ADOPTION",
+          "direction": "Up",
+          "proposed_value": "Trial",
+          "evidence_quote": "considering broader first-line adoption",
+          "confidence": "Medium"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "SEGMENT",
+    "signal_type": "HCP TRx change",
+    "threshold_value": "±15%",
+    "unit": "% QoQ",
+    "min_independent_signals": 2,
+    "min_confidence": "High",
+    "lookback_days": 90
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "SEGMENT",
+    "signal_type": "brick sales change",
+    "threshold_value": "±10%",
+    "unit": "% QoQ",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 90
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ADOPTION",
+    "signal_type": "rep observation",
+    "threshold_value": "1 structured rep assessment + 1 CRM signal",
+    "unit": "signals",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 120
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ADOPTION",
+    "signal_type": "Rx trial & volume trend",
+    "threshold_value": "+20%",
+    "unit": "% 90d",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 90
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "DIGITAL",
+    "signal_type": "Portal sessions & email CTR",
+    "threshold_value": "≥5 sessions/mo",
+    "unit": "sessions",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 60
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ADOPTION",
+    "signal_type": "Rep note & CRM activity",
+    "threshold_value": "Confirmed patient starts ≥3",
+    "unit": "patients",
+    "min_independent_signals": 2,
+    "min_confidence": "High",
+    "lookback_days": 90
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "DIGITAL",
+    "signal_type": "Portal activity & webinar attendance",
+    "threshold_value": "+50% 60d",
+    "unit": "% change",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 60
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACCESS_STATUS",
+    "signal_type": "Hospital formulary update",
+    "threshold_value": "Formal committee decision",
+    "unit": "tender outcome",
+    "min_independent_signals": 1,
+    "min_confidence": "High",
+    "lookback_days": 30
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACC_TIER",
+    "signal_type": "Formulary listing win",
+    "threshold_value": "Status change to Listed",
+    "unit": "status",
+    "min_independent_signals": 1,
+    "min_confidence": "High",
+    "lookback_days": 30
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "SEGMENT",
+    "signal_type": "Account sell-in + PMR wave",
+    "threshold_value": "±25% annualised",
+    "unit": "% QoQ",
+    "min_independent_signals": 2,
+    "min_confidence": "Medium",
+    "lookback_days": 180
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "POTENTIAL",
+    "signal_type": "Rep potential survey update",
+    "threshold_value": "Score change ≥1 tier",
+    "unit": "score",
+    "min_independent_signals": 1,
+    "min_confidence": "Medium",
+    "lookback_days": 120
+  }
+]

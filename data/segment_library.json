@@ -1,0 +1,172 @@
+[
+  {
+    "version_id": "VER-0001",
+    "name": "Market A Aurelix K-Means Segmentation v2.1",
+    "market_code": "MKT_A",
+    "brand_code": "AUR",
+    "customer_type": "HCP",
+    "method": "KMEANS",
+    "parameters": {
+      "k": 5,
+      "features": [
+        "trx_qoq_change",
+        "portal_visits_3m",
+        "pmr_attitudinal"
+      ]
+    },
+    "status": "Active",
+    "author_user_id": "USR-003",
+    "created_date": "2026-07-15",
+    "approved_by": "USR-001",
+    "approved_date": "2026-07-20",
+    "activated_date": "2026-08-01",
+    "records_segmented": 600,
+    "mapped_to_global": true,
+    "notes": "Active quarterly refresh model for Market A Aurelix launch tracking."
+  },
+  {
+    "version_id": "VER-0002",
+    "name": "Market A Aurelix K-Means Segmentation v1.0",
+    "market_code": "MKT_A",
+    "brand_code": "AUR",
+    "customer_type": "HCP",
+    "method": "KMEANS",
+    "parameters": {
+      "k": 4,
+      "features": [
+        "trx_qoq_change",
+        "portal_visits_3m"
+      ]
+    },
+    "status": "Retired",
+    "author_user_id": "USR-003",
+    "created_date": "2026-01-10",
+    "approved_by": "USR-001",
+    "approved_date": "2026-01-15",
+    "activated_date": "2026-02-01",
+    "records_segmented": 580,
+    "mapped_to_global": true,
+    "notes": "Previous baseline segmentation model."
+  },
+  {
+    "version_id": "VER-0003",
+    "name": "Market B Aurelix Decile Rules v3.0",
+    "market_code": "MKT_B",
+    "brand_code": "AUR",
+    "customer_type": "HCP",
+    "method": "RULES",
+    "parameters": {
+      "features": [
+        "brick_sales_qoq_change",
+        "call_acceptance_rate"
+      ]
+    },
+    "status": "Active",
+    "author_user_id": "USR-002",
+    "created_date": "2026-05-01",
+    "approved_by": "USR-001",
+    "approved_date": "2026-05-03",
+    "activated_date": "2026-05-04",
+    "records_segmented": 400,
+    "mapped_to_global": true,
+    "notes": "Decile rules with behavioral adjustments."
+  },
+  {
+    "version_id": "VER-0004",
+    "name": "Market C Agency File 2025",
+    "market_code": "MKT_C",
+    "brand_code": "AUR",
+    "customer_type": "HCP",
+    "method": "RULES",
+    "parameters": {},
+    "status": "Active",
+    "author_user_id": "USR-004",
+    "created_date": "2025-11-20",
+    "approved_by": "USR-004",
+    "approved_date": "2025-11-25",
+    "activated_date": "2025-12-01",
+    "records_segmented": 250,
+    "mapped_to_global": false,
+    "notes": "Imported from local vendor agency Excel spreadsheet."
+  },
+  {
+    "version_id": "VER-0005",
+    "name": "Market C Aurelix Rules Template v1.0",
+    "market_code": "MKT_C",
+    "brand_code": "AUR",
+    "customer_type": "HCP",
+    "method": "RULES_TEMPLATE",
+    "parameters": {
+      "weights": {
+        "volume_proxy": 0.5,
+        "pmr_intent": 0.3,
+        "rep_assessment": 0.2
+      }
+    },
+    "status": "Draft",
+    "author_user_id": "USR-004",
+    "created_date": "2026-10-12",
+    "approved_by": null,
+    "approved_date": null,
+    "activated_date": null,
+    "records_segmented": 250,
+    "mapped_to_global": true,
+    "notes": "Standardized rules template created in Segmentation Studio."
+  },
+  {
+    "version_id": "VER-0006",
+    "name": "Market A Zentrova K-Means v1.2",
+    "market_code": "MKT_A",
+    "brand_code": "ZEN",
+    "customer_type": "HCP",
+    "method": "KMEANS",
+    "parameters": {
+      "k": 4
+    },
+    "status": "Active",
+    "author_user_id": "USR-003",
+    "created_date": "2026-06-10",
+    "approved_by": "USR-001",
+    "approved_date": "2026-06-15",
+    "activated_date": "2026-07-01",
+    "records_segmented": 600,
+    "mapped_to_global": true,
+    "notes": "Oncology prescriber clustering."
+  },
+  {
+    "version_id": "VER-0007",
+    "name": "Market B Zentrova Account Model",
+    "market_code": "MKT_B",
+    "brand_code": "ZEN",
+    "customer_type": "HCO",
+    "method": "RULES",
+    "parameters": {},
+    "status": "Active",
+    "author_user_id": "USR-005",
+    "created_date": "2026-04-12",
+    "approved_by": "USR-001",
+    "approved_date": "2026-04-18",
+    "activated_date": "2026-05-01",
+    "records_segmented": 80,
+    "mapped_to_global": true,
+    "notes": "Account tiering and access rules."
+  },
+  {
+    "version_id": "VER-0008",
+    "name": "Market A Brevanta Hybrid v2.0",
+    "market_code": "MKT_A",
+    "brand_code": "BRV",
+    "customer_type": "HCP",
+    "method": "HYBRID",
+    "parameters": {},
+    "status": "Active",
+    "author_user_id": "USR-003",
+    "created_date": "2026-03-01",
+    "approved_by": "USR-001",
+    "approved_date": "2026-03-10",
+    "activated_date": "2026-04-01",
+    "records_segmented": 600,
+    "mapped_to_global": true,
+    "notes": "Respiratory specialist and GP mix segmentation."
+  }
+]

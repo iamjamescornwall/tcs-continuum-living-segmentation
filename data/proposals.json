@@ -1,0 +1,5318 @@
+[
+  {
+    "proposal_id": "PRP-000001",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "B",
+    "proposed_value": "A",
+    "segment_age_days": 164,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Brick-level Aurelix sales (BRK-B-014)",
+        "value": "+12% QoQ",
+        "source_category": "Sales",
+        "data_age_days": 13
+      },
+      {
+        "label": "Portal visit frequency",
+        "value": "3 → 6 visits/mo",
+        "source_category": "Digital",
+        "data_age_days": 10
+      },
+      {
+        "label": "PMR survey wave 2026-W2",
+        "value": "Shift to Early adopter",
+        "source_category": "Survey",
+        "data_age_days": 8
+      },
+      {
+        "label": "Rep observation (Tomás Ferreira)",
+        "value": "4 new patient starts on Aurelix",
+        "source_category": "CRM",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000001"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000001",
+    "created_at": "2026-10-11T10:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000002",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "BEHAVIOURAL",
+    "current_value": "Traditionalist",
+    "proposed_value": "Engaged",
+    "segment_age_days": 164,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Brick sales acceleration",
+        "value": "+12% QoQ",
+        "source_category": "Sales",
+        "data_age_days": 13
+      },
+      {
+        "label": "Digital engagement growth",
+        "value": "6 portal sessions/mo",
+        "source_category": "Digital",
+        "data_age_days": 10
+      }
+    ],
+    "flag_ids": [
+      "DRF-000002"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000002",
+    "created_at": "2026-10-11T10:05:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000003",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ATTITUDINAL",
+    "current_value": "Late majority",
+    "proposed_value": "Early adopter",
+    "segment_age_days": 164,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "PMR Wave 2026-W2 response",
+        "value": "Classified as Early Adopter",
+        "source_category": "Survey",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000003"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000003",
+    "created_at": "2026-10-11T10:10:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000004",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "Evolving",
+    "proposed_value": "Savvy",
+    "segment_age_days": 164,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Monthly portal visits",
+        "value": "Doubled from 3 to 6",
+        "source_category": "Digital",
+        "data_age_days": 10
+      },
+      {
+        "label": "Rep note preference",
+        "value": "Expressed clear portal preference",
+        "source_category": "CRM",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000004"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000004",
+    "created_at": "2026-10-11T10:15:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000005",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "Consideration",
+    "proposed_value": "Expansion",
+    "segment_age_days": 164,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Patient initiation",
+        "value": "4 new moderate-to-severe starts",
+        "source_category": "CRM",
+        "data_age_days": 5
+      },
+      {
+        "label": "Brick volume trajectory",
+        "value": "+12% QoQ",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000005"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000005",
+    "created_at": "2026-10-11T10:20:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000006",
+    "market_code": "MKT_B",
+    "customer_type": "HCO",
+    "customer_id": "ACC-B-001",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ACCESS_STATUS",
+    "current_value": "Under review",
+    "proposed_value": "Listed",
+    "segment_age_days": 7,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Tender award notification",
+        "value": "Unrestricted listing",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000006"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P3",
+    "approver_user_id": "USR-005",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000006",
+    "created_at": "2026-10-08T12:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000007",
+    "market_code": "MKT_B",
+    "customer_type": "HCO",
+    "customer_id": "ACC-B-001",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ACC_TIER",
+    "current_value": "Tier 2",
+    "proposed_value": "Tier 1",
+    "segment_age_days": 7,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Formulary status update",
+        "value": "Now Listed in oncology",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Annual oncology patient volume",
+        "value": "860 patients/yr",
+        "source_category": "Reference",
+        "data_age_days": 30
+      }
+    ],
+    "flag_ids": [
+      "DRF-000007"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P3",
+    "approver_user_id": "USR-005",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000007",
+    "created_at": "2026-10-08T12:05:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000008",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0002",
+    "brand_code": "ZEN",
+    "indication_code": "ZEN_NSCLC",
+    "dimension_code": "SEGMENT",
+    "current_value": "B",
+    "proposed_value": "A",
+    "segment_age_days": 120,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Account formulary win (ACC-B-001)",
+        "value": "Zentrova listed on formulary",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Accessible prescribing potential rise",
+        "value": "Potential up one level (2 → 3)",
+        "source_category": "Reference",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000008"
+    ],
+    "origin": "Propagation",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000008",
+    "created_at": "2026-10-09T09:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000009",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0003",
+    "brand_code": "ZEN",
+    "indication_code": "ZEN_NSCLC",
+    "dimension_code": "SEGMENT",
+    "current_value": "B",
+    "proposed_value": "A",
+    "segment_age_days": 120,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Account formulary win (ACC-B-001)",
+        "value": "Zentrova listed on formulary",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Accessible prescribing potential rise",
+        "value": "Potential up one level (2 → 3)",
+        "source_category": "Reference",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000009"
+    ],
+    "origin": "Propagation",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000009",
+    "created_at": "2026-10-09T09:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000010",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0004",
+    "brand_code": "ZEN",
+    "indication_code": "ZEN_NSCLC",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 120,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Account formulary win (ACC-B-001)",
+        "value": "Zentrova listed on formulary",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Accessible prescribing potential rise",
+        "value": "Potential up one level (2 → 3)",
+        "source_category": "Reference",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000010"
+    ],
+    "origin": "Propagation",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000010",
+    "created_at": "2026-10-09T09:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000011",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0005",
+    "brand_code": "ZEN",
+    "indication_code": "ZEN_NSCLC",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 120,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Account formulary win (ACC-B-001)",
+        "value": "Zentrova listed on formulary",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Accessible prescribing potential rise",
+        "value": "Potential up one level (2 → 3)",
+        "source_category": "Reference",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000011"
+    ],
+    "origin": "Propagation",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000011",
+    "created_at": "2026-10-09T09:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000012",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0006",
+    "brand_code": "ZEN",
+    "indication_code": "ZEN_NSCLC",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 120,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Account formulary win (ACC-B-001)",
+        "value": "Zentrova listed on formulary",
+        "source_category": "Claims & access",
+        "data_age_days": 7
+      },
+      {
+        "label": "Accessible prescribing potential rise",
+        "value": "Potential up one level (2 → 3)",
+        "source_category": "Reference",
+        "data_age_days": 7
+      },
+      {
+        "label": "Declining call acceptance",
+        "value": "3 consecutive call declines logged",
+        "source_category": "CRM",
+        "data_age_days": 4
+      }
+    ],
+    "flag_ids": [
+      "DRF-000012"
+    ],
+    "origin": "Propagation",
+    "origin_ref": "EVT-000005",
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-B-CONFLICT-01",
+    "explanation_key": "PRP-000012",
+    "created_at": "2026-10-09T09:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000013",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0007",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 145,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Brick sales volume uptick",
+        "value": "+14% QoQ",
+        "source_category": "Sales",
+        "data_age_days": 12
+      },
+      {
+        "label": "Rep note contradicts signal",
+        "value": "Trial driven by samples; unlikely to continue",
+        "source_category": "CRM",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000013"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-B-CONFLICT-01",
+    "explanation_key": "PRP-000013",
+    "created_at": "2026-10-10T10:15:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000014",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "B",
+    "proposed_value": "A",
+    "segment_age_days": 95,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "HCP TRx volume growth",
+        "value": "+19% QoQ",
+        "source_category": "Sales",
+        "data_age_days": 15
+      },
+      {
+        "label": "Portal visit frequency",
+        "value": "7 visits/mo",
+        "source_category": "Digital",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000014"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Held",
+    "hold_reason": "Freeze window",
+    "policy_rule_ref": "POL-A-FREEZE-Q4",
+    "explanation_key": "PRP-000014",
+    "created_at": "2026-10-04T09:15:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000015",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0002",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 80,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "One-time prescription spike",
+        "value": "+22% 30d",
+        "source_category": "Sales",
+        "data_age_days": 35
+      }
+    ],
+    "flag_ids": [
+      "DRF-000015"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000015",
+    "created_at": "2026-09-12T14:15:00Z",
+    "decided_at": "2026-09-15T11:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Temporary behaviour"
+  },
+  {
+    "proposal_id": "PRP-000016",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0001",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "Consideration",
+    "proposed_value": "Trial",
+    "segment_age_days": 122,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Structured rep assessment",
+        "value": "First biologic patient initiated",
+        "source_category": "CRM",
+        "data_age_days": 9
+      },
+      {
+        "label": "PMR Wave survey response",
+        "value": "High intent to prescribe in Q4",
+        "source_category": "Survey",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000016"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000016",
+    "created_at": "2026-10-06T10:30:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000017",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0310",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 94,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000122"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000017",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000018",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0278",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 106,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000086"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000018",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000019",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0247",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 175,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000056"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000019",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000020",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0600",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 183,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000075"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000020",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000021",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0316",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 105,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000116"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000021",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Other"
+  },
+  {
+    "proposal_id": "PRP-000022",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0470",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 225,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000096"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000022",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000023",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0400",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 177,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000026"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000023",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000024",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0506",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 223,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000049"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000024",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000025",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0590",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 85,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 19
+      }
+    ],
+    "flag_ids": [
+      "DRF-000110"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000025",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000026",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0221",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 166,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000111"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000026",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000027",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0370",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 232,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000067"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000027",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000028",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0187",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 78,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 16
+      }
+    ],
+    "flag_ids": [
+      "DRF-000024"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000028",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000029",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0442",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 193,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000123"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Change-frequency limit",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000029",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000030",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0385",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 159,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000094"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000030",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Other"
+  },
+  {
+    "proposal_id": "PRP-000031",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0042",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 206,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000113"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000031",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000032",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0141",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 225,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 9
+      }
+    ],
+    "flag_ids": [
+      "DRF-000053"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000032",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000033",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0580",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 208,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000070"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000033",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000034",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0578",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 159,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000018"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000034",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000035",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0095",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 152,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000099"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000035",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000036",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0500",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 139,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000061"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000036",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000037",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0451",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 141,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000108"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000037",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000038",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0593",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 138,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 10
+      }
+    ],
+    "flag_ids": [
+      "DRF-000076"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000038",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000039",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0067",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 112,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 18
+      }
+    ],
+    "flag_ids": [
+      "DRF-000055"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000039",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000040",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0076",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 208,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000027"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000040",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000041",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0132",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 101,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000051"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000041",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000042",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0074",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 218,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000080"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000042",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000043",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0359",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 191,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000076"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000043",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000044",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0520",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 176,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 23
+      }
+    ],
+    "flag_ids": [
+      "DRF-000055"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000044",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000045",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0022",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 175,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000105"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000045",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000046",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0156",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 178,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 23
+      }
+    ],
+    "flag_ids": [
+      "DRF-000067"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000046",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000047",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0525",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 215,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 19
+      }
+    ],
+    "flag_ids": [
+      "DRF-000049"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000047",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000048",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0104",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 135,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000098"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000048",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000049",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0549",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 136,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 18
+      }
+    ],
+    "flag_ids": [
+      "DRF-000099"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000049",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000050",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0071",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 126,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000047"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000050",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000051",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0004",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 127,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 9
+      }
+    ],
+    "flag_ids": [
+      "DRF-000056"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000051",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Temporary behaviour"
+  },
+  {
+    "proposal_id": "PRP-000052",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0328",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 227,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000106"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000052",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000053",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0053",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 215,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000105"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000053",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000054",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0033",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 163,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 16
+      }
+    ],
+    "flag_ids": [
+      "DRF-000062"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000054",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000055",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0513",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 225,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000045"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000055",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000056",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0514",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 185,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 21
+      }
+    ],
+    "flag_ids": [
+      "DRF-000092"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Held",
+    "hold_reason": "Change-frequency limit",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000056",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000057",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0471",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 240,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 22
+      }
+    ],
+    "flag_ids": [
+      "DRF-000032"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000057",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000058",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0006",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 129,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000050"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000058",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000059",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0338",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 231,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000023"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000059",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000060",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0357",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 157,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 9
+      }
+    ],
+    "flag_ids": [
+      "DRF-000055"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000060",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000061",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0306",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 203,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000022"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000061",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000062",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0538",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 210,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000092"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000062",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Data quality issue"
+  },
+  {
+    "proposal_id": "PRP-000063",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0412",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 159,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000049"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000063",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000064",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0143",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 156,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000123"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000064",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000065",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0174",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 148,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000026"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000065",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000066",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0441",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 199,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 23
+      }
+    ],
+    "flag_ids": [
+      "DRF-000070"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000066",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000067",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0431",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 180,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 10
+      }
+    ],
+    "flag_ids": [
+      "DRF-000039"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000067",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000068",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0161",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 131,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 19
+      }
+    ],
+    "flag_ids": [
+      "DRF-000087"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000068",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Freeze period"
+  },
+  {
+    "proposal_id": "PRP-000069",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0482",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 180,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000069"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000069",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000070",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0578",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 115,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 9
+      }
+    ],
+    "flag_ids": [
+      "DRF-000105"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000070",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000071",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0444",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 101,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000049"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000071",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000072",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0473",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 157,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 16
+      }
+    ],
+    "flag_ids": [
+      "DRF-000033"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000072",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000073",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0054",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 185,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000068"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000073",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000074",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0347",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 203,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000122"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000074",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000075",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0387",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 238,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000086"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000075",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000076",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0396",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 165,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000072"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000076",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000077",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0363",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 106,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 14
+      }
+    ],
+    "flag_ids": [
+      "DRF-000081"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000077",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000078",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0152",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 214,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 10
+      }
+    ],
+    "flag_ids": [
+      "DRF-000102"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000078",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000079",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0108",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 220,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000041"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000079",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-003",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000080",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0197",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 128,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 18
+      }
+    ],
+    "flag_ids": [
+      "DRF-000106"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000080",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000081",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0446",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 81,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 23
+      }
+    ],
+    "flag_ids": [
+      "DRF-000053"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000081",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000082",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0131",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 165,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000105"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-010",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000082",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-010",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000083",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0282",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 173,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000111"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Held",
+    "hold_reason": "Change-frequency limit",
+    "policy_rule_ref": "POL-MKT_A-RULE-01",
+    "explanation_key": "PRP-000083",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000084",
+    "market_code": "MKT_A",
+    "customer_type": "HCP",
+    "customer_id": "HCP-A-0583",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 165,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000101"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-003",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000084",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000085",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0105",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 211,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000151"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000085",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-002",
+    "decision_reason": "Other"
+  },
+  {
+    "proposal_id": "PRP-000086",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0248",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 224,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000181"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Held",
+    "hold_reason": "Freeze window",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000086",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000087",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0030",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 110,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 14
+      }
+    ],
+    "flag_ids": [
+      "DRF-000152"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000087",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000088",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0360",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 169,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000177"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000088",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000089",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0096",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 87,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 22
+      }
+    ],
+    "flag_ids": [
+      "DRF-000127"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000089",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000090",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0153",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 81,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000141"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000090",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000091",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0318",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 116,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000172"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000091",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000092",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0301",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 208,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000129"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000092",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000093",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0007",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 101,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000163"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000093",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000094",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0090",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 72,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000152"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000094",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000095",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0192",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 224,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000141"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000095",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000096",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0093",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 190,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 24
+      }
+    ],
+    "flag_ids": [
+      "DRF-000153"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000096",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000097",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0200",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 113,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 17
+      }
+    ],
+    "flag_ids": [
+      "DRF-000186"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000097",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-002",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000098",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0026",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 222,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000162"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000098",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000099",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0016",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 74,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000130"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000099",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000100",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0369",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 139,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000130"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000100",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000101",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0271",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 229,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000143"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000101",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000102",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0184",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 79,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000135"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Held",
+    "hold_reason": "Freeze window",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000102",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000103",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0292",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 193,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 8
+      }
+    ],
+    "flag_ids": [
+      "DRF-000168"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000103",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000104",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0291",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 163,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 22
+      }
+    ],
+    "flag_ids": [
+      "DRF-000159"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000104",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000105",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0033",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 210,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 18
+      }
+    ],
+    "flag_ids": [
+      "DRF-000128"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000105",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000106",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0362",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 171,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000176"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000106",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000107",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0367",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 104,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000127"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000107",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000108",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0123",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 70,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000149"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000108",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000109",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0077",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 167,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000168"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000109",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000110",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0040",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 198,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000170"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000110",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000111",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0232",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 177,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000137"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000111",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000112",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0098",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 120,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000154"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000112",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000113",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0394",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 176,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 11
+      }
+    ],
+    "flag_ids": [
+      "DRF-000150"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000113",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000114",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0287",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 90,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 17
+      }
+    ],
+    "flag_ids": [
+      "DRF-000147"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000114",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000115",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0030",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 92,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 22
+      }
+    ],
+    "flag_ids": [
+      "DRF-000165"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000115",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000116",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0255",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 120,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 18
+      }
+    ],
+    "flag_ids": [
+      "DRF-000154"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_B-RULE-01",
+    "explanation_key": "PRP-000116",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000117",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0231",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 142,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000161"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000117",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000118",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0003",
+    "brand_code": "BRV",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 166,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 16
+      }
+    ],
+    "flag_ids": [
+      "DRF-000127"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-002",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000118",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000119",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0330",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 226,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000148"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000119",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-006",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000120",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0113",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 185,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000184"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000120",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-002",
+    "decision_reason": "Freeze period"
+  },
+  {
+    "proposal_id": "PRP-000121",
+    "market_code": "MKT_B",
+    "customer_type": "HCP",
+    "customer_id": "HCP-B-0119",
+    "brand_code": "NEU",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 99,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000160"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-006",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000121",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-002",
+    "decision_reason": "Other"
+  },
+  {
+    "proposal_id": "PRP-000122",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0077",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 83,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000205"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000122",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-004",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000123",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0144",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 87,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 5
+      }
+    ],
+    "flag_ids": [
+      "DRF-000197"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Written back",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000123",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-004",
+    "decision_reason": "Approved after evidence review"
+  },
+  {
+    "proposal_id": "PRP-000124",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0118",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 240,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 19
+      }
+    ],
+    "flag_ids": [
+      "DRF-000211"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000124",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000125",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0203",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 149,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000192"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000125",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000126",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0057",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 188,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000187"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Rejected",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000126",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-08T14:00:00Z",
+    "decided_by": "USR-004",
+    "decision_reason": "Freeze period"
+  },
+  {
+    "proposal_id": "PRP-000127",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0101",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 161,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 17
+      }
+    ],
+    "flag_ids": [
+      "DRF-000191"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000127",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000128",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0168",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 219,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000210"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000128",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000129",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0030",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 125,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 20
+      }
+    ],
+    "flag_ids": [
+      "DRF-000217"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000129",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000130",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0060",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 202,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000196"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000130",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000131",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0038",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 196,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 15
+      }
+    ],
+    "flag_ids": [
+      "DRF-000197"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000131",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000132",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0142",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 80,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 23
+      }
+    ],
+    "flag_ids": [
+      "DRF-000209"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000132",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000133",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0136",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 155,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 6
+      }
+    ],
+    "flag_ids": [
+      "DRF-000204"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000133",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000134",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0027",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 187,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 25
+      }
+    ],
+    "flag_ids": [
+      "DRF-000194"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000134",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000135",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0021",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 158,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000190"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000135",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000136",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0141",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 119,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 14
+      }
+    ],
+    "flag_ids": [
+      "DRF-000219"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000136",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000137",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0242",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 226,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000216"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000137",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000138",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0053",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "DIGITAL",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 205,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000204"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000138",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000139",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0209",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 135,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 21
+      }
+    ],
+    "flag_ids": [
+      "DRF-000193"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000139",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000140",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0220",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 123,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 12
+      }
+    ],
+    "flag_ids": [
+      "DRF-000187"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Held",
+    "hold_reason": "Conflicting signals",
+    "policy_rule_ref": "POL-MKT_C-RULE-01",
+    "explanation_key": "PRP-000140",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000141",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0199",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 221,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 13
+      }
+    ],
+    "flag_ids": [
+      "DRF-000217"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Proposed",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000141",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000142",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0043",
+    "brand_code": "CRD",
+    "indication_code": null,
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 124,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 7
+      }
+    ],
+    "flag_ids": [
+      "DRF-000216"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Held",
+    "hold_reason": "Change-frequency limit",
+    "policy_rule_ref": "POL-MKT_C-RULE-01",
+    "explanation_key": "PRP-000142",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000143",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0109",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 126,
+    "confidence": "Medium",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 9
+      }
+    ],
+    "flag_ids": [
+      "DRF-000199"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Held",
+    "hold_reason": "Insufficient evidence",
+    "policy_rule_ref": "POL-MKT_C-RULE-01",
+    "explanation_key": "PRP-000143",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000144",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0228",
+    "brand_code": "ZEN",
+    "indication_code": null,
+    "dimension_code": "SEGMENT",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 210,
+    "confidence": "Low",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 10
+      }
+    ],
+    "flag_ids": [
+      "DRF-000187"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P2",
+    "approver_user_id": "USR-004",
+    "status": "Held",
+    "hold_reason": "Freeze window",
+    "policy_rule_ref": "POL-MKT_C-RULE-01",
+    "explanation_key": "PRP-000144",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": null,
+    "decided_by": null,
+    "decision_reason": null
+  },
+  {
+    "proposal_id": "PRP-000145",
+    "market_code": "MKT_C",
+    "customer_type": "HCP",
+    "customer_id": "HCP-C-0236",
+    "brand_code": "AUR",
+    "indication_code": "AUR_PSO",
+    "dimension_code": "ADOPTION",
+    "current_value": "C",
+    "proposed_value": "B",
+    "segment_age_days": 207,
+    "confidence": "High",
+    "drivers": [
+      {
+        "label": "Signal indicator change",
+        "value": "+15% relative velocity",
+        "source_category": "Sales",
+        "data_age_days": 16
+      }
+    ],
+    "flag_ids": [
+      "DRF-000215"
+    ],
+    "origin": "Event-driven",
+    "origin_ref": null,
+    "approver_role": "P4",
+    "approver_user_id": "USR-029",
+    "status": "Approved",
+    "hold_reason": null,
+    "policy_rule_ref": null,
+    "explanation_key": "PRP-000145",
+    "created_at": "2026-10-04T08:00:00Z",
+    "decided_at": "2026-10-09T16:00:00Z",
+    "decided_by": "USR-029",
+    "decision_reason": "Approved after evidence review"
+  }
+]

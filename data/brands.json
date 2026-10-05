@@ -1,0 +1,133 @@
+[
+  {
+    "brand_code": "AUR",
+    "brand_name": "Aurelix",
+    "therapy_area": "Immunology",
+    "lifecycle": "Launch",
+    "launch_date": "2025-01-15",
+    "indications": [
+      {
+        "indication_code": "AUR_PSO",
+        "name": "Plaque psoriasis"
+      },
+      {
+        "indication_code": "AUR_PSA",
+        "name": "Psoriatic arthritis"
+      }
+    ],
+    "markets": [
+      "MKT_A",
+      "MKT_B",
+      "MKT_C"
+    ],
+    "key_specialties": [
+      "Dermatology",
+      "Rheumatology"
+    ]
+  },
+  {
+    "brand_code": "ZEN",
+    "brand_name": "Zentrova",
+    "therapy_area": "Oncology",
+    "lifecycle": "Growth",
+    "launch_date": "2023-06-01",
+    "indications": [
+      {
+        "indication_code": "ZEN_NSCLC",
+        "name": "NSCLC"
+      },
+      {
+        "indication_code": "ZEN_HER2",
+        "name": "HER2+ breast cancer"
+      }
+    ],
+    "markets": [
+      "MKT_A",
+      "MKT_B",
+      "MKT_C"
+    ],
+    "key_specialties": [
+      "Medical oncology",
+      "Thoracic oncology",
+      "Breast surgery"
+    ]
+  },
+  {
+    "brand_code": "CRD",
+    "brand_name": "Cardivance",
+    "therapy_area": "Cardiometabolic",
+    "lifecycle": "Mature",
+    "launch_date": "2018-03-10",
+    "indications": [
+      {
+        "indication_code": "CRD_HF",
+        "name": "Heart failure"
+      },
+      {
+        "indication_code": "CRD_CKD",
+        "name": "CKD"
+      }
+    ],
+    "markets": [
+      "MKT_A",
+      "MKT_B",
+      "MKT_C"
+    ],
+    "key_specialties": [
+      "Cardiology",
+      "Nephrology",
+      "General practice"
+    ]
+  },
+  {
+    "brand_code": "NEU",
+    "brand_name": "Neurelle",
+    "therapy_area": "Neuroscience",
+    "lifecycle": "Growth",
+    "launch_date": "2024-02-20",
+    "indications": [
+      {
+        "indication_code": "NEU_MIG",
+        "name": "Migraine prevention"
+      },
+      {
+        "indication_code": "NEU_MS",
+        "name": "Multiple sclerosis"
+      }
+    ],
+    "markets": [
+      "MKT_A",
+      "MKT_B"
+    ],
+    "key_specialties": [
+      "Neurology",
+      "Headache specialist"
+    ]
+  },
+  {
+    "brand_code": "BRV",
+    "brand_name": "Brevanta",
+    "therapy_area": "Respiratory",
+    "lifecycle": "Mature",
+    "launch_date": "2019-09-01",
+    "indications": [
+      {
+        "indication_code": "BRV_SA",
+        "name": "Severe asthma"
+      },
+      {
+        "indication_code": "BRV_COPD",
+        "name": "COPD"
+      }
+    ],
+    "markets": [
+      "MKT_A",
+      "MKT_B"
+    ],
+    "key_specialties": [
+      "Pulmonology",
+      "Allergy",
+      "General practice"
+    ]
+  }
+]

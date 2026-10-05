@@ -1,0 +1,288 @@
+[
+  {
+    "dimension_code": "SEGMENT",
+    "customer_type": "HCP",
+    "name": "HCP Value Segment",
+    "captured_per": "brand",
+    "allowed_values": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "thresholds",
+      "cadence"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "POTENTIAL",
+    "customer_type": "HCP",
+    "name": "Prescribing Potential",
+    "captured_per": "brand",
+    "allowed_values": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "weights",
+      "thresholds"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ADOPTION",
+    "customer_type": "HCP",
+    "name": "Brand Adoption Stage",
+    "captured_per": "brand",
+    "allowed_values": [
+      "Unaware",
+      "Aware",
+      "Consideration",
+      "Trial",
+      "Adoption",
+      "Expansion"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "thresholds",
+      "cadence"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "BEHAVIOURAL",
+    "customer_type": "HCP",
+    "name": "Behavioural Segment",
+    "captured_per": "brand",
+    "allowed_values": [
+      "Traditionalist",
+      "Pragmatist",
+      "Engaged",
+      "Advocate"
+    ],
+    "layer": "Strategic",
+    "refreshable_between_cycles": false,
+    "global_fixed": true,
+    "market_configurable": [
+      "cluster_naming"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ATTITUDINAL",
+    "customer_type": "HCP",
+    "name": "Attitudinal Archetype",
+    "captured_per": "brand",
+    "allowed_values": [
+      "Early adopter",
+      "Early majority",
+      "Late majority",
+      "Sceptic"
+    ],
+    "layer": "Strategic",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "survey_wave_mapping"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "DIGITAL",
+    "customer_type": "HCP",
+    "name": "Digital Affinity",
+    "captured_per": "customer",
+    "allowed_values": [
+      "Traditional",
+      "Evolving",
+      "Savvy"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "thresholds"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "CHANNEL_PREF",
+    "customer_type": "HCP",
+    "name": "Channel Preference",
+    "captured_per": "customer",
+    "allowed_values": [
+      "Face-to-face",
+      "Remote",
+      "Email",
+      "Portal",
+      "Events",
+      "Mixed"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "cadence"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "MICRO_SEGMENT",
+    "customer_type": "HCP",
+    "name": "Micro-segment Cell",
+    "captured_per": "brand_market",
+    "allowed_values": [
+      "MS-01",
+      "MS-02",
+      "MS-03",
+      "MS-04",
+      "MS-05",
+      "MS-06",
+      "MS-07",
+      "MS-08",
+      "None"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": false,
+    "market_configurable": [
+      "micro_segment_scheme"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ACC_ARCHETYPE",
+    "customer_type": "HCO",
+    "name": "Account Archetype",
+    "captured_per": "customer",
+    "allowed_values": [
+      "Academic centre",
+      "Community hospital",
+      "Specialty clinic",
+      "Integrated network",
+      "Private practice group",
+      "Pharmacy chain"
+    ],
+    "layer": "Strategic",
+    "refreshable_between_cycles": false,
+    "global_fixed": true,
+    "market_configurable": [],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ACC_POTENTIAL",
+    "customer_type": "HCO",
+    "name": "Account Potential Tier",
+    "captured_per": "brand",
+    "allowed_values": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "thresholds"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ACCESS_STATUS",
+    "customer_type": "HCO",
+    "name": "Formulary & Access Status",
+    "captured_per": "brand",
+    "allowed_values": [
+      "Listed",
+      "Restricted",
+      "Under review",
+      "Not listed"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "tender_cadence"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "DECISION_MODEL",
+    "customer_type": "HCO",
+    "name": "Decision-Making Model",
+    "captured_per": "customer",
+    "allowed_values": [
+      "Clinician-led",
+      "Committee-led",
+      "Protocol-driven",
+      "Procurement-led"
+    ],
+    "layer": "Strategic",
+    "refreshable_between_cycles": false,
+    "global_fixed": true,
+    "market_configurable": [],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "TREATMENT_CAP",
+    "customer_type": "HCO",
+    "name": "Treatment Capability",
+    "captured_per": "customer",
+    "allowed_values": [
+      "Full (infusion + specialist)",
+      "Partial",
+      "Referral only"
+    ],
+    "layer": "Strategic",
+    "refreshable_between_cycles": false,
+    "global_fixed": true,
+    "market_configurable": [],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  },
+  {
+    "dimension_code": "ACC_TIER",
+    "customer_type": "HCO",
+    "name": "Account Priority Tier",
+    "captured_per": "brand",
+    "allowed_values": [
+      "Tier 1",
+      "Tier 2",
+      "Tier 3"
+    ],
+    "layer": "Priority",
+    "refreshable_between_cycles": true,
+    "global_fixed": true,
+    "market_configurable": [
+      "thresholds"
+    ],
+    "version": "v3.2",
+    "effective_from": "2026-01-01"
+  }
+]

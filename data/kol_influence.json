@@ -1,0 +1,398 @@
+[
+  {
+    "hcp_id": "HCP-A-0003",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 95,
+    "publications_3y": 17,
+    "congress_talks_3y": 4,
+    "network_degree": 41
+  },
+  {
+    "hcp_id": "HCP-A-0013",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 92,
+    "publications_3y": 15,
+    "congress_talks_3y": 7,
+    "network_degree": 43
+  },
+  {
+    "hcp_id": "HCP-A-0015",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 81,
+    "publications_3y": 15,
+    "congress_talks_3y": 9,
+    "network_degree": 38
+  },
+  {
+    "hcp_id": "HCP-A-0019",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 95,
+    "publications_3y": 14,
+    "congress_talks_3y": 5,
+    "network_degree": 28
+  },
+  {
+    "hcp_id": "HCP-A-0038",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 88,
+    "publications_3y": 14,
+    "congress_talks_3y": 5,
+    "network_degree": 25
+  },
+  {
+    "hcp_id": "HCP-A-0064",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 92,
+    "publications_3y": 13,
+    "congress_talks_3y": 7,
+    "network_degree": 33
+  },
+  {
+    "hcp_id": "HCP-A-0087",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 91,
+    "publications_3y": 17,
+    "congress_talks_3y": 7,
+    "network_degree": 45
+  },
+  {
+    "hcp_id": "HCP-A-0119",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 83,
+    "publications_3y": 10,
+    "congress_talks_3y": 7,
+    "network_degree": 24
+  },
+  {
+    "hcp_id": "HCP-A-0145",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 81,
+    "publications_3y": 15,
+    "congress_talks_3y": 6,
+    "network_degree": 29
+  },
+  {
+    "hcp_id": "HCP-A-0164",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 77,
+    "publications_3y": 8,
+    "congress_talks_3y": 7,
+    "network_degree": 45
+  },
+  {
+    "hcp_id": "HCP-A-0170",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 85,
+    "publications_3y": 13,
+    "congress_talks_3y": 2,
+    "network_degree": 36
+  },
+  {
+    "hcp_id": "HCP-A-0178",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 95,
+    "publications_3y": 8,
+    "congress_talks_3y": 3,
+    "network_degree": 15
+  },
+  {
+    "hcp_id": "HCP-A-0236",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 79,
+    "publications_3y": 17,
+    "congress_talks_3y": 5,
+    "network_degree": 32
+  },
+  {
+    "hcp_id": "HCP-A-0270",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 98,
+    "publications_3y": 15,
+    "congress_talks_3y": 8,
+    "network_degree": 26
+  },
+  {
+    "hcp_id": "HCP-A-0284",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 79,
+    "publications_3y": 7,
+    "congress_talks_3y": 3,
+    "network_degree": 21
+  },
+  {
+    "hcp_id": "HCP-A-0336",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 87,
+    "publications_3y": 18,
+    "congress_talks_3y": 6,
+    "network_degree": 32
+  },
+  {
+    "hcp_id": "HCP-A-0339",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 92,
+    "publications_3y": 6,
+    "congress_talks_3y": 4,
+    "network_degree": 32
+  },
+  {
+    "hcp_id": "HCP-A-0362",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 79,
+    "publications_3y": 16,
+    "congress_talks_3y": 8,
+    "network_degree": 29
+  },
+  {
+    "hcp_id": "HCP-A-0373",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 97,
+    "publications_3y": 10,
+    "congress_talks_3y": 2,
+    "network_degree": 18
+  },
+  {
+    "hcp_id": "HCP-A-0447",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 88,
+    "publications_3y": 14,
+    "congress_talks_3y": 4,
+    "network_degree": 19
+  },
+  {
+    "hcp_id": "HCP-A-0463",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 80,
+    "publications_3y": 10,
+    "congress_talks_3y": 7,
+    "network_degree": 43
+  },
+  {
+    "hcp_id": "HCP-A-0517",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 83,
+    "publications_3y": 12,
+    "congress_talks_3y": 5,
+    "network_degree": 26
+  },
+  {
+    "hcp_id": "HCP-A-0579",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 81,
+    "publications_3y": 6,
+    "congress_talks_3y": 6,
+    "network_degree": 24
+  },
+  {
+    "hcp_id": "HCP-A-0589",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 98,
+    "publications_3y": 14,
+    "congress_talks_3y": 3,
+    "network_degree": 29
+  },
+  {
+    "hcp_id": "HCP-A-0590",
+    "market_code": "MKT_A",
+    "therapy_area": "Immunology",
+    "influence_score": 89,
+    "publications_3y": 6,
+    "congress_talks_3y": 8,
+    "network_degree": 25
+  },
+  {
+    "hcp_id": "HCP-B-0002",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 89,
+    "publications_3y": 7,
+    "congress_talks_3y": 5,
+    "network_degree": 35
+  },
+  {
+    "hcp_id": "HCP-B-0037",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 85,
+    "publications_3y": 14,
+    "congress_talks_3y": 6,
+    "network_degree": 24
+  },
+  {
+    "hcp_id": "HCP-B-0038",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 81,
+    "publications_3y": 7,
+    "congress_talks_3y": 3,
+    "network_degree": 35
+  },
+  {
+    "hcp_id": "HCP-B-0133",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 79,
+    "publications_3y": 6,
+    "congress_talks_3y": 4,
+    "network_degree": 27
+  },
+  {
+    "hcp_id": "HCP-B-0209",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 92,
+    "publications_3y": 3,
+    "congress_talks_3y": 3,
+    "network_degree": 17
+  },
+  {
+    "hcp_id": "HCP-B-0272",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 83,
+    "publications_3y": 5,
+    "congress_talks_3y": 5,
+    "network_degree": 19
+  },
+  {
+    "hcp_id": "HCP-B-0300",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 90,
+    "publications_3y": 4,
+    "congress_talks_3y": 5,
+    "network_degree": 27
+  },
+  {
+    "hcp_id": "HCP-B-0310",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 89,
+    "publications_3y": 5,
+    "congress_talks_3y": 2,
+    "network_degree": 13
+  },
+  {
+    "hcp_id": "HCP-B-0319",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 82,
+    "publications_3y": 12,
+    "congress_talks_3y": 4,
+    "network_degree": 16
+  },
+  {
+    "hcp_id": "HCP-B-0321",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 75,
+    "publications_3y": 6,
+    "congress_talks_3y": 5,
+    "network_degree": 33
+  },
+  {
+    "hcp_id": "HCP-B-0369",
+    "market_code": "MKT_B",
+    "therapy_area": "Immunology",
+    "influence_score": 94,
+    "publications_3y": 9,
+    "congress_talks_3y": 2,
+    "network_degree": 20
+  },
+  {
+    "hcp_id": "HCP-C-0001",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 85,
+    "publications_3y": 2,
+    "congress_talks_3y": 3,
+    "network_degree": 18
+  },
+  {
+    "hcp_id": "HCP-C-0002",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 72,
+    "publications_3y": 5,
+    "congress_talks_3y": 3,
+    "network_degree": 22
+  },
+  {
+    "hcp_id": "HCP-C-0003",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 66,
+    "publications_3y": 8,
+    "congress_talks_3y": 4,
+    "network_degree": 8
+  },
+  {
+    "hcp_id": "HCP-C-0004",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 69,
+    "publications_3y": 3,
+    "congress_talks_3y": 4,
+    "network_degree": 22
+  },
+  {
+    "hcp_id": "HCP-C-0005",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 71,
+    "publications_3y": 3,
+    "congress_talks_3y": 2,
+    "network_degree": 19
+  },
+  {
+    "hcp_id": "HCP-C-0006",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 81,
+    "publications_3y": 2,
+    "congress_talks_3y": 4,
+    "network_degree": 8
+  },
+  {
+    "hcp_id": "HCP-C-0007",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 78,
+    "publications_3y": 3,
+    "congress_talks_3y": 4,
+    "network_degree": 22
+  },
+  {
+    "hcp_id": "HCP-C-0008",
+    "market_code": "MKT_C",
+    "therapy_area": "Immunology",
+    "influence_score": 67,
+    "publications_3y": 5,
+    "congress_talks_3y": 2,
+    "network_degree": 17
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "market_code": "MKT_A",
+    "brand_code": "AUR",
+    "consumer": "Call planning",
+    "metric": "A/B segment calls planned",
+    "before": 1840,
+    "after": 2060,
+    "period": "Q4 2026"
+  },
+  {
+    "market_code": "MKT_A",
+    "brand_code": "AUR",
+    "consumer": "Targeting",
+    "metric": "Target customer universe list size",
+    "before": 610,
+    "after": 642,
+    "period": "Q4 2026"
+  },
+  {
+    "market_code": "MKT_B",
+    "brand_code": "ZEN",
+    "consumer": "Next-best-action",
+    "metric": "Customer context records refreshed",
+    "before": 0,
+    "after": 186,
+    "period": "Q4 2026"
+  },
+  {
+    "market_code": "MKT_B",
+    "brand_code": "AUR",
+    "consumer": "Journeys",
+    "metric": "Audience re-entries triggered",
+    "before": 0,
+    "after": 74,
+    "period": "Q4 2026"
+  },
+  {
+    "market_code": "MKT_A",
+    "brand_code": "AUR",
+    "consumer": "Segment-health dashboard",
+    "metric": "Active segment currency (<90d)",
+    "before": 0.68,
+    "after": 0.88,
+    "period": "Q4 2026"
+  },
+  {
+    "market_code": "MKT_B",
+    "brand_code": "AUR",
+    "consumer": "Call planning",
+    "metric": "High-affinity digital contacts scheduled",
+    "before": 420,
+    "after": 580,
+    "period": "Q4 2026"
+  }
+]

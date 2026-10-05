@@ -1,0 +1,233 @@
+[
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_0",
+    "global_dimension": "SEGMENT",
+    "global_value": "E",
+    "mapped_by": "AI",
+    "confidence": 0.94,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_1",
+    "global_dimension": "SEGMENT",
+    "global_value": "D",
+    "mapped_by": "AI",
+    "confidence": 0.91,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_2",
+    "global_dimension": "SEGMENT",
+    "global_value": "A",
+    "mapped_by": "AI",
+    "confidence": 0.96,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_3",
+    "global_dimension": "SEGMENT",
+    "global_value": "B",
+    "mapped_by": "AI",
+    "confidence": 0.89,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_4",
+    "global_dimension": "SEGMENT",
+    "global_value": "C",
+    "mapped_by": "AI",
+    "confidence": 0.92,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_A",
+    "source": "Studio",
+    "source_dimension": "cluster",
+    "source_value": "cluster_2",
+    "global_dimension": "BEHAVIOURAL",
+    "global_value": "Engaged",
+    "mapped_by": "AI",
+    "confidence": 0.95,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_B",
+    "source": "Legacy tool",
+    "source_dimension": "tier",
+    "source_value": "T1",
+    "global_dimension": "SEGMENT",
+    "global_value": "A",
+    "mapped_by": "User",
+    "confidence": 1,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_B",
+    "source": "Legacy tool",
+    "source_dimension": "tier",
+    "source_value": "T2",
+    "global_dimension": "SEGMENT",
+    "global_value": "B",
+    "mapped_by": "User",
+    "confidence": 1,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_B",
+    "source": "Legacy tool",
+    "source_dimension": "tier",
+    "source_value": "T3",
+    "global_dimension": "SEGMENT",
+    "global_value": "C",
+    "mapped_by": "User",
+    "confidence": 1,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_B",
+    "source": "Legacy tool",
+    "source_dimension": "tier",
+    "source_value": "T4",
+    "global_dimension": "SEGMENT",
+    "global_value": "D",
+    "mapped_by": "User",
+    "confidence": 1,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Segmen",
+    "source_value": "Gold",
+    "global_dimension": "SEGMENT",
+    "global_value": "A",
+    "mapped_by": "AI",
+    "confidence": 0.93,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Segmen",
+    "source_value": "Silver",
+    "global_dimension": "SEGMENT",
+    "global_value": "B",
+    "mapped_by": "AI",
+    "confidence": 0.91,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Segmen",
+    "source_value": "Bronze",
+    "global_dimension": "SEGMENT",
+    "global_value": "C",
+    "mapped_by": "AI",
+    "confidence": 0.88,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Pot_Class",
+    "source_value": "High",
+    "global_dimension": "POTENTIAL",
+    "global_value": "4",
+    "mapped_by": "AI",
+    "confidence": 0.95,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Pot_Class",
+    "source_value": "Med",
+    "global_dimension": "POTENTIAL",
+    "global_value": "3",
+    "mapped_by": "AI",
+    "confidence": 0.92,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Pot_Class",
+    "source_value": "Low",
+    "global_dimension": "POTENTIAL",
+    "global_value": "2",
+    "mapped_by": "AI",
+    "confidence": 0.84,
+    "status": "Pending"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Pot_Class",
+    "source_value": "Low (decile 1)",
+    "global_dimension": "POTENTIAL",
+    "global_value": "1",
+    "mapped_by": "AI",
+    "confidence": 0.81,
+    "status": "Pending"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Adopt",
+    "source_value": "Aware",
+    "global_dimension": "ADOPTION",
+    "global_value": "Aware",
+    "mapped_by": "AI",
+    "confidence": 0.98,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Adopt",
+    "source_value": "Trying",
+    "global_dimension": "ADOPTION",
+    "global_value": "Trial",
+    "mapped_by": "AI",
+    "confidence": 0.94,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Adopt",
+    "source_value": "Using",
+    "global_dimension": "ADOPTION",
+    "global_value": "Adoption",
+    "mapped_by": "AI",
+    "confidence": 0.92,
+    "status": "Accepted"
+  },
+  {
+    "market_code": "MKT_C",
+    "source": "Vendor",
+    "source_dimension": "Adopt",
+    "source_value": "Loyal",
+    "global_dimension": "ADOPTION",
+    "global_value": "Expansion",
+    "mapped_by": "AI",
+    "confidence": 0.9,
+    "status": "Accepted"
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "publish_id": "PUB-000001",
+    "market_code": "MKT_A",
+    "version_id": "VER-0001",
+    "published_at": "2026-10-10T18:00:00Z",
+    "published_by": "USR-001",
+    "records_written": 6,
+    "target_systems": [
+      "CRM segment field",
+      "Proposed-segment field",
+      "Campaign audiences",
+      "NBA context"
+    ],
+    "status": "Success"
+  },
+  {
+    "publish_id": "PUB-000002",
+    "market_code": "MKT_B",
+    "version_id": "VER-0003",
+    "published_at": "2026-10-10T18:05:00Z",
+    "published_by": "USR-001",
+    "records_written": 5,
+    "target_systems": [
+      "CRM segment field",
+      "Proposed-segment field",
+      "Campaign audiences",
+      "NBA context"
+    ],
+    "status": "Success"
+  },
+  {
+    "publish_id": "PUB-000003",
+    "market_code": "MKT_C",
+    "version_id": "VER-0004",
+    "published_at": "2026-10-10T18:10:00Z",
+    "published_by": "USR-001",
+    "records_written": 1,
+    "target_systems": [
+      "CRM segment field",
+      "Campaign audiences"
+    ],
+    "status": "Success"
+  }
+]

@@ -1,0 +1,380 @@
+[
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "POTENTIAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ADOPTION",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "BEHAVIOURAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ATTITUDINAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Refresh between waves",
+    "never": "replace the survey",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "DIGITAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "CHANNEL_PREF",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "MICRO_SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ACC_ARCHETYPE",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ACC_POTENTIAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ACCESS_STATUS",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "DECISION_MODEL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "TREATMENT_CAP",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_A",
+    "dimension_code": "ACC_TIER",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "POTENTIAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ADOPTION",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "BEHAVIOURAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ATTITUDINAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Refresh between waves",
+    "never": "replace the survey",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "DIGITAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "CHANNEL_PREF",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "MICRO_SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACC_ARCHETYPE",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACC_POTENTIAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACCESS_STATUS",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "DECISION_MODEL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "TREATMENT_CAP",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_B",
+    "dimension_code": "ACC_TIER",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "POTENTIAL",
+    "maintained_by_today": "Field Reps + Annual Excel",
+    "approver_role": "P4",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": "P2"
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ADOPTION",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "BEHAVIOURAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ATTITUDINAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Refresh between waves",
+    "never": "replace the survey",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "DIGITAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "CHANNEL_PREF",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P4",
+    "ai_role": "Infer and suggest",
+    "never": "change silently",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "MICRO_SEGMENT",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P2",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ACC_ARCHETYPE",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ACC_POTENTIAL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ACCESS_STATUS",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "DECISION_MODEL",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "TREATMENT_CAP",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Flag for review",
+    "never": "change between cycles",
+    "co_approver_role": "P1"
+  },
+  {
+    "market_code": "MKT_C",
+    "dimension_code": "ACC_TIER",
+    "maintained_by_today": "Commercial Ops",
+    "approver_role": "P3",
+    "ai_role": "Propose",
+    "never": "overwrite",
+    "co_approver_role": null
+  }
+]

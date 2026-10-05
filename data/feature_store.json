@@ -1,0 +1,540 @@
+[
+  {
+    "feature_id": "FT-01",
+    "feature_name": "trx_qoq_change",
+    "description": "Quarter-over-quarter % change in total brand prescriptions at HCP level",
+    "source_category": "Sales",
+    "granularity": "HCP",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Not available",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": 15,
+      "MKT_B": null,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "SEGMENT",
+      "POTENTIAL"
+    ]
+  },
+  {
+    "feature_id": "FT-02",
+    "feature_name": "brick_sales_qoq_change",
+    "description": "Quarter-over-quarter % change in brick-level unit volume",
+    "source_category": "Sales",
+    "granularity": "BRICK",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Not available",
+      "MKT_B": "Available",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": null,
+      "MKT_B": 14,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-03",
+    "feature_name": "account_sellin_annual_runrate",
+    "description": "Quarterly account direct purchase and wholesaler sell-in trajectory",
+    "source_category": "Sales",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Quarterly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 30,
+      "MKT_B": 30,
+      "MKT_C": 45
+    },
+    "used_by_dimensions": [
+      "ACC_POTENTIAL",
+      "SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-04",
+    "feature_name": "portal_visits_3m",
+    "description": "Rolling 90-day portal authenticated session count",
+    "source_category": "Digital",
+    "granularity": "HCP",
+    "refresh_frequency": "Daily",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Partial"
+    },
+    "data_age_days": {
+      "MKT_A": 2,
+      "MKT_B": 3,
+      "MKT_C": 7
+    },
+    "used_by_dimensions": [
+      "DIGITAL",
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "feature_id": "FT-05",
+    "feature_name": "call_acceptance_rate",
+    "description": "Ratio of completed calls to total scheduled planned rep interactions",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Weekly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 3,
+      "MKT_B": 3,
+      "MKT_C": 5
+    },
+    "used_by_dimensions": [
+      "ADOPTION",
+      "BEHAVIOURAL"
+    ]
+  },
+  {
+    "feature_id": "FT-06",
+    "feature_name": "pmr_attitudinal",
+    "description": "Survey wave classification into adopter category",
+    "source_category": "Survey",
+    "granularity": "HCP",
+    "refresh_frequency": "Bi-annual",
+    "availability": {
+      "MKT_A": "Partial",
+      "MKT_B": "Partial",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 20,
+      "MKT_B": 20,
+      "MKT_C": 20
+    },
+    "used_by_dimensions": [
+      "ATTITUDINAL",
+      "BEHAVIOURAL"
+    ]
+  },
+  {
+    "feature_id": "FT-07",
+    "feature_name": "formulary_status",
+    "description": "Current verified formulary coverage listing at primary account",
+    "source_category": "Claims & access",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 7,
+      "MKT_B": 7,
+      "MKT_C": 14
+    },
+    "used_by_dimensions": [
+      "ACCESS_STATUS",
+      "ACC_TIER",
+      "POTENTIAL"
+    ]
+  },
+  {
+    "feature_id": "FT-08",
+    "feature_name": "kol_influence_score",
+    "description": "Composite academic publication, congress, and co-authorship score",
+    "source_category": "Reference",
+    "granularity": "HCP",
+    "refresh_frequency": "Quarterly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Partial",
+      "MKT_C": "Partial"
+    },
+    "data_age_days": {
+      "MKT_A": 45,
+      "MKT_B": 45,
+      "MKT_C": 60
+    },
+    "used_by_dimensions": [
+      "MICRO_SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-09",
+    "feature_name": "rep_adoption_assessment",
+    "description": "Structured qualitative adoption stage log from field notes",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Daily",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 1,
+      "MKT_B": 1,
+      "MKT_C": 2
+    },
+    "used_by_dimensions": [
+      "ADOPTION"
+    ]
+  },
+  {
+    "feature_id": "FT-10",
+    "feature_name": "email_open_rate_6m",
+    "description": "Rep-sent and marketing email open rate over rolling 180 days",
+    "source_category": "Digital",
+    "granularity": "HCP",
+    "refresh_frequency": "Weekly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Partial"
+    },
+    "data_age_days": {
+      "MKT_A": 4,
+      "MKT_B": 4,
+      "MKT_C": 10
+    },
+    "used_by_dimensions": [
+      "DIGITAL",
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "feature_id": "FT-11",
+    "feature_name": "webinar_attendance_count",
+    "description": "Count of medical education virtual events attended in last 12 months",
+    "source_category": "Digital",
+    "granularity": "HCP",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Partial"
+    },
+    "data_age_days": {
+      "MKT_A": 12,
+      "MKT_B": 12,
+      "MKT_C": 20
+    },
+    "used_by_dimensions": [
+      "DIGITAL",
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "feature_id": "FT-12",
+    "feature_name": "nrx_share_of_market",
+    "description": "Brand new-to-brand prescription volume share within therapy area",
+    "source_category": "Sales",
+    "granularity": "HCP",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Not available",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": 15,
+      "MKT_B": null,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-13",
+    "feature_name": "account_bed_capacity",
+    "description": "Hospital licensed inpatient bed count",
+    "source_category": "Reference",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Annual",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 120,
+      "MKT_B": 120,
+      "MKT_C": 120
+    },
+    "used_by_dimensions": [
+      "ACC_POTENTIAL",
+      "ACC_ARCHETYPE"
+    ]
+  },
+  {
+    "feature_id": "FT-14",
+    "feature_name": "pmr_prescribe_intent",
+    "description": "Likelihood to prescribe in next 6 months stated in PMR wave",
+    "source_category": "Survey",
+    "granularity": "HCP",
+    "refresh_frequency": "Bi-annual",
+    "availability": {
+      "MKT_A": "Partial",
+      "MKT_B": "Partial",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 20,
+      "MKT_B": 20,
+      "MKT_C": 20
+    },
+    "used_by_dimensions": [
+      "ADOPTION",
+      "POTENTIAL"
+    ]
+  },
+  {
+    "feature_id": "FT-15",
+    "feature_name": "field_sample_utilization",
+    "description": "Total unit samples provided in last 180 days",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Weekly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 5,
+      "MKT_B": 5,
+      "MKT_C": 7
+    },
+    "used_by_dimensions": [
+      "ADOPTION"
+    ]
+  },
+  {
+    "feature_id": "FT-16",
+    "feature_name": "affiliation_network_breadth",
+    "description": "Count of active hospital and clinic care network affiliations",
+    "source_category": "Reference",
+    "granularity": "HCP",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 10,
+      "MKT_B": 10,
+      "MKT_C": 15
+    },
+    "used_by_dimensions": [
+      "MICRO_SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-17",
+    "feature_name": "claims_patient_count_ta",
+    "description": "Diagnosed patient count in indication from medical claims",
+    "source_category": "Claims & access",
+    "granularity": "HCP",
+    "refresh_frequency": "Quarterly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Not available",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": 40,
+      "MKT_B": null,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "POTENTIAL"
+    ]
+  },
+  {
+    "feature_id": "FT-18",
+    "feature_name": "f2f_meeting_cadence",
+    "description": "Average days between face-to-face commercial discussions",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Weekly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 3,
+      "MKT_B": 3,
+      "MKT_C": 6
+    },
+    "used_by_dimensions": [
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "feature_id": "FT-19",
+    "feature_name": "congress_presentation_flag",
+    "description": "Abstract or keynote presentation at key national congress in last 2 years",
+    "source_category": "Reference",
+    "granularity": "HCP",
+    "refresh_frequency": "Annual",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Partial",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": 90,
+      "MKT_B": 90,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "MICRO_SEGMENT"
+    ]
+  },
+  {
+    "feature_id": "FT-20",
+    "feature_name": "digital_consent_state",
+    "description": "Opt-in verification state across email and virtual interaction channels",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Daily",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 1,
+      "MKT_B": 1,
+      "MKT_C": 1
+    },
+    "used_by_dimensions": [
+      "DIGITAL",
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "feature_id": "FT-21",
+    "feature_name": "protocol_compliance_index",
+    "description": "Institutional adherence score to clinical pathway protocols",
+    "source_category": "Claims & access",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Quarterly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Partial",
+      "MKT_C": "Not available"
+    },
+    "data_age_days": {
+      "MKT_A": 60,
+      "MKT_B": 60,
+      "MKT_C": null
+    },
+    "used_by_dimensions": [
+      "DECISION_MODEL"
+    ]
+  },
+  {
+    "feature_id": "FT-22",
+    "feature_name": "tender_win_rate",
+    "description": "Hospital tender award success rate for current brand class",
+    "source_category": "Sales",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Bi-annual",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 75,
+      "MKT_B": 75,
+      "MKT_C": 90
+    },
+    "used_by_dimensions": [
+      "ACC_TIER"
+    ]
+  },
+  {
+    "feature_id": "FT-23",
+    "feature_name": "specialist_infusion_chair_count",
+    "description": "Dedicated infusion chairs for specialty biologic treatments",
+    "source_category": "Reference",
+    "granularity": "ACCOUNT",
+    "refresh_frequency": "Annual",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 180,
+      "MKT_B": 180,
+      "MKT_C": 180
+    },
+    "used_by_dimensions": [
+      "TREATMENT_CAP"
+    ]
+  },
+  {
+    "feature_id": "FT-24",
+    "feature_name": "rep_note_sentiment_trajectory",
+    "description": "NLP sentiment direction from latest three interaction logs",
+    "source_category": "CRM",
+    "granularity": "HCP",
+    "refresh_frequency": "Daily",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Available"
+    },
+    "data_age_days": {
+      "MKT_A": 2,
+      "MKT_B": 2,
+      "MKT_C": 3
+    },
+    "used_by_dimensions": [
+      "BEHAVIOURAL",
+      "ADOPTION"
+    ]
+  },
+  {
+    "feature_id": "FT-25",
+    "feature_name": "competitor_share_threat_index",
+    "description": "Observed competitor switching rate in local territory",
+    "source_category": "Sales",
+    "granularity": "BRICK",
+    "refresh_frequency": "Monthly",
+    "availability": {
+      "MKT_A": "Available",
+      "MKT_B": "Available",
+      "MKT_C": "Partial"
+    },
+    "data_age_days": {
+      "MKT_A": 25,
+      "MKT_B": 25,
+      "MKT_C": 50
+    },
+    "used_by_dimensions": [
+      "SEGMENT"
+    ]
+  }
+]

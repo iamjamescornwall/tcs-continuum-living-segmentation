@@ -1,0 +1,56 @@
+{
+  "MKT_A": {
+    "max_changes_per_customer_per_180d": 2,
+    "freeze_windows": [
+      {
+        "name": "Q4 incentive period",
+        "start": "2026-10-01",
+        "end": "2026-10-31"
+      }
+    ],
+    "conflict_rule": "hold_if_signals_disagree",
+    "min_days_between_changes": 60,
+    "stable_dimensions": [
+      "BEHAVIOURAL",
+      "ACC_ARCHETYPE",
+      "DECISION_MODEL",
+      "TREATMENT_CAP"
+    ]
+  },
+  "MKT_B": {
+    "max_changes_per_customer_per_180d": 2,
+    "freeze_windows": [
+      {
+        "name": "Annual planning freeze",
+        "start": "2026-12-01",
+        "end": "2026-12-31"
+      }
+    ],
+    "conflict_rule": "hold_if_signals_disagree",
+    "min_days_between_changes": 60,
+    "stable_dimensions": [
+      "BEHAVIOURAL",
+      "ACC_ARCHETYPE",
+      "DECISION_MODEL",
+      "TREATMENT_CAP"
+    ]
+  },
+  "MKT_C": {
+    "max_changes_per_customer_per_180d": 2,
+    "freeze_windows": [
+      {
+        "name": "Territory alignment freeze",
+        "start": "2027-01-01",
+        "end": "2027-01-20"
+      }
+    ],
+    "conflict_rule": "hold_if_signals_disagree",
+    "min_days_between_changes": 60,
+    "stable_dimensions": [
+      "BEHAVIOURAL",
+      "ACC_ARCHETYPE",
+      "DECISION_MODEL",
+      "TREATMENT_CAP"
+    ]
+  }
+}

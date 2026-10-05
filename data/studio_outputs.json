@@ -1,0 +1,323 @@
+[
+  {
+    "version_id": "VER-0001",
+    "clusters": [
+      {
+        "cluster_id": "cluster_0",
+        "cluster_size": 120,
+        "centroid": {
+          "trx_qoq_change": -0.15,
+          "portal_visits_3m": 1,
+          "pmr_attitudinal": 1
+        },
+        "feature_importance": [
+          {
+            "feature": "trx_qoq_change",
+            "importance": 0.48
+          },
+          {
+            "feature": "portal_visits_3m",
+            "importance": 0.32
+          },
+          {
+            "feature": "pmr_attitudinal",
+            "importance": 0.2
+          }
+        ],
+        "box_stats": [
+          {
+            "feature": "trx_qoq_change",
+            "min": -0.35,
+            "q1": -0.22,
+            "median": -0.15,
+            "q3": -0.08,
+            "max": 0.02
+          },
+          {
+            "feature": "portal_visits_3m",
+            "min": 0,
+            "q1": 0,
+            "median": 1,
+            "q3": 2,
+            "max": 3
+          }
+        ],
+        "suggested_name": "Low Prescribing / Traditional",
+        "suggested_global_value": "E"
+      },
+      {
+        "cluster_id": "cluster_1",
+        "cluster_size": 150,
+        "centroid": {
+          "trx_qoq_change": -0.02,
+          "portal_visits_3m": 2,
+          "pmr_attitudinal": 2
+        },
+        "feature_importance": [
+          {
+            "feature": "trx_qoq_change",
+            "importance": 0.44
+          },
+          {
+            "feature": "portal_visits_3m",
+            "importance": 0.35
+          },
+          {
+            "feature": "pmr_attitudinal",
+            "importance": 0.21
+          }
+        ],
+        "box_stats": [
+          {
+            "feature": "trx_qoq_change",
+            "min": -0.1,
+            "q1": -0.05,
+            "median": -0.02,
+            "q3": 0.03,
+            "max": 0.08
+          },
+          {
+            "feature": "portal_visits_3m",
+            "min": 0,
+            "q1": 1,
+            "median": 2,
+            "q3": 3,
+            "max": 5
+          }
+        ],
+        "suggested_name": "Stable / Pragmatist",
+        "suggested_global_value": "D"
+      },
+      {
+        "cluster_id": "cluster_2",
+        "cluster_size": 48,
+        "centroid": {
+          "trx_qoq_change": 0.28,
+          "portal_visits_3m": 8,
+          "pmr_attitudinal": 4
+        },
+        "feature_importance": [
+          {
+            "feature": "trx_qoq_change",
+            "importance": 0.52
+          },
+          {
+            "feature": "portal_visits_3m",
+            "importance": 0.31
+          },
+          {
+            "feature": "pmr_attitudinal",
+            "importance": 0.17
+          }
+        ],
+        "box_stats": [
+          {
+            "feature": "trx_qoq_change",
+            "min": 0.18,
+            "q1": 0.22,
+            "median": 0.28,
+            "q3": 0.36,
+            "max": 0.52
+          },
+          {
+            "feature": "portal_visits_3m",
+            "min": 5,
+            "q1": 6,
+            "median": 8,
+            "q3": 11,
+            "max": 16
+          }
+        ],
+        "suggested_name": "High Growth / Engaged Champion",
+        "suggested_global_value": "A"
+      },
+      {
+        "cluster_id": "cluster_3",
+        "cluster_size": 102,
+        "centroid": {
+          "trx_qoq_change": 0.14,
+          "portal_visits_3m": 5,
+          "pmr_attitudinal": 3
+        },
+        "feature_importance": [
+          {
+            "feature": "trx_qoq_change",
+            "importance": 0.49
+          },
+          {
+            "feature": "portal_visits_3m",
+            "importance": 0.33
+          },
+          {
+            "feature": "pmr_attitudinal",
+            "importance": 0.18
+          }
+        ],
+        "box_stats": [
+          {
+            "feature": "trx_qoq_change",
+            "min": 0.08,
+            "q1": 0.11,
+            "median": 0.14,
+            "q3": 0.19,
+            "max": 0.26
+          },
+          {
+            "feature": "portal_visits_3m",
+            "min": 3,
+            "q1": 4,
+            "median": 5,
+            "q3": 7,
+            "max": 9
+          }
+        ],
+        "suggested_name": "Expanding Adopters",
+        "suggested_global_value": "B"
+      },
+      {
+        "cluster_id": "cluster_4",
+        "cluster_size": 180,
+        "centroid": {
+          "trx_qoq_change": 0.04,
+          "portal_visits_3m": 3,
+          "pmr_attitudinal": 2
+        },
+        "feature_importance": [
+          {
+            "feature": "trx_qoq_change",
+            "importance": 0.46
+          },
+          {
+            "feature": "portal_visits_3m",
+            "importance": 0.34
+          },
+          {
+            "feature": "pmr_attitudinal",
+            "importance": 0.2
+          }
+        ],
+        "box_stats": [
+          {
+            "feature": "trx_qoq_change",
+            "min": 0,
+            "q1": 0.02,
+            "median": 0.04,
+            "q3": 0.07,
+            "max": 0.11
+          },
+          {
+            "feature": "portal_visits_3m",
+            "min": 1,
+            "q1": 2,
+            "median": 3,
+            "q3": 4,
+            "max": 6
+          }
+        ],
+        "suggested_name": "Moderate Prescribers",
+        "suggested_global_value": "C"
+      }
+    ],
+    "before_after_counts": [
+      {
+        "from": "B",
+        "to": "A",
+        "count": 18
+      },
+      {
+        "from": "C",
+        "to": "B",
+        "count": 32
+      },
+      {
+        "from": "D",
+        "to": "C",
+        "count": 24
+      },
+      {
+        "from": "E",
+        "to": "D",
+        "count": 12
+      },
+      {
+        "from": "C",
+        "to": "D",
+        "count": 15
+      }
+    ]
+  },
+  {
+    "version_id": "VER-0005",
+    "clusters": [
+      {
+        "cluster_id": "grid_tier_1",
+        "cluster_size": 50,
+        "centroid": {
+          "volume_proxy": 4,
+          "pmr_intent": 4,
+          "rep_assessment": 4
+        },
+        "feature_importance": [
+          {
+            "feature": "volume_proxy",
+            "importance": 0.5
+          },
+          {
+            "feature": "pmr_intent",
+            "importance": 0.3
+          },
+          {
+            "feature": "rep_assessment",
+            "importance": 0.2
+          }
+        ],
+        "box_stats": [],
+        "suggested_name": "Key High Potential Specialists",
+        "suggested_global_value": "A"
+      },
+      {
+        "cluster_id": "grid_tier_2",
+        "cluster_size": 75,
+        "centroid": {
+          "volume_proxy": 3,
+          "pmr_intent": 3,
+          "rep_assessment": 3
+        },
+        "feature_importance": [
+          {
+            "feature": "volume_proxy",
+            "importance": 0.5
+          },
+          {
+            "feature": "pmr_intent",
+            "importance": 0.3
+          },
+          {
+            "feature": "rep_assessment",
+            "importance": 0.2
+          }
+        ],
+        "box_stats": [],
+        "suggested_name": "Moderate Core Target",
+        "suggested_global_value": "B"
+      }
+    ],
+    "before_after_counts": [
+      {
+        "from": "Gold",
+        "to": "A",
+        "count": 50
+      },
+      {
+        "from": "Silver",
+        "to": "B",
+        "count": 75
+      },
+      {
+        "from": "Bronze",
+        "to": "C",
+        "count": 62
+      }
+    ]
+  }
+]

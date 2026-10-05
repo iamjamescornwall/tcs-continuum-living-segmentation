@@ -1,0 +1,138 @@
+[
+  {
+    "persona_id": "P1",
+    "persona_name": "Global Segmentation Lead",
+    "user_id": "USR-001",
+    "market_scope": "ALL",
+    "landing_screen": "S03",
+    "visible_screens": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "D01",
+      "S15"
+    ],
+    "label_overrides": {},
+    "can_approve_dimensions": [
+      "SEGMENT",
+      "POTENTIAL",
+      "ADOPTION",
+      "BEHAVIOURAL",
+      "ATTITUDINAL",
+      "DIGITAL",
+      "CHANNEL_PREF",
+      "MICRO_SEGMENT",
+      "ACC_ARCHETYPE",
+      "ACC_POTENTIAL",
+      "ACCESS_STATUS",
+      "DECISION_MODEL",
+      "TREATMENT_CAP",
+      "ACC_TIER"
+    ]
+  },
+  {
+    "persona_id": "P2",
+    "persona_name": "Market Back Office (Commercial Excellence)",
+    "user_id": "USR-002",
+    "market_scope": "MKT_B",
+    "landing_screen": "S10",
+    "visible_screens": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S04"
+    ],
+    "label_overrides": {},
+    "can_approve_dimensions": [
+      "SEGMENT",
+      "POTENTIAL",
+      "MICRO_SEGMENT",
+      "BEHAVIOURAL",
+      "ATTITUDINAL"
+    ]
+  },
+  {
+    "persona_id": "P3",
+    "persona_name": "KAM / Account Lead",
+    "user_id": "USR-005",
+    "market_scope": "MKT_B",
+    "landing_screen": "S10",
+    "visible_screens": [
+      "S08",
+      "S09",
+      "S10",
+      "S11"
+    ],
+    "label_overrides": {},
+    "can_approve_dimensions": [
+      "ACC_TIER",
+      "ACC_POTENTIAL",
+      "ACCESS_STATUS",
+      "ACC_ARCHETYPE",
+      "DECISION_MODEL",
+      "TREATMENT_CAP"
+    ]
+  },
+  {
+    "persona_id": "P4",
+    "persona_name": "Field Rep",
+    "user_id": "USR-006",
+    "market_scope": "MKT_B",
+    "landing_screen": "S10",
+    "visible_screens": [
+      "S10",
+      "D01"
+    ],
+    "label_overrides": {
+      "S10": "My Customers"
+    },
+    "can_approve_dimensions": [
+      "ADOPTION",
+      "DIGITAL",
+      "CHANNEL_PREF"
+    ]
+  },
+  {
+    "persona_id": "P5",
+    "persona_name": "Local Agency (vendor)",
+    "user_id": "USR-007",
+    "market_scope": "MKT_C",
+    "landing_screen": "S05",
+    "visible_screens": [
+      "S05"
+    ],
+    "label_overrides": {},
+    "can_approve_dimensions": []
+  },
+  {
+    "persona_id": "P6",
+    "persona_name": "Executive / Compliance",
+    "user_id": "USR-008",
+    "market_scope": "ALL",
+    "landing_screen": "S01",
+    "visible_screens": [
+      "S01",
+      "S02",
+      "S08",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "label_overrides": {},
+    "can_approve_dimensions": []
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "recommendation_id": "REC-001",
+    "market_code": "MKT_A",
+    "dimension_code": "ADOPTION",
+    "issue": "High rejection rate due to short-lived prescription spikes.",
+    "evidence": {
+      "rejections": 12,
+      "rejection_rate": 0.38,
+      "top_reason": "Temporary behaviour",
+      "override_rate_before": 0.21,
+      "override_rate_after": 0.08,
+      "coverage_of_rising_customers": 0.89
+    },
+    "recommendation": "Raise lookback window for ADOPTION drift detection from 90 to 120 days to filter transient trial activity.",
+    "status": "Recommended",
+    "model_owner_user_id": "USR-001"
+  },
+  {
+    "recommendation_id": "REC-002",
+    "market_code": "MKT_B",
+    "dimension_code": "SEGMENT",
+    "issue": "Brick volume noise in low-density suburban territories.",
+    "evidence": {
+      "rejections": 6,
+      "rejection_rate": 0.18,
+      "top_reason": "Data quality issue",
+      "override_rate_before": 0.25,
+      "override_rate_after": 0.11,
+      "coverage_of_rising_customers": 0.82
+    },
+    "recommendation": "Increase minimum independent signals requirement from 1 to 2 in non-urban brick clusters.",
+    "status": "Under validation",
+    "model_owner_user_id": "USR-001"
+  },
+  {
+    "recommendation_id": "REC-003",
+    "market_code": "MKT_C",
+    "dimension_code": "POTENTIAL",
+    "issue": "Rep assessment variability across peripheral territories.",
+    "evidence": {
+      "rejections": 4,
+      "rejection_rate": 0.15,
+      "top_reason": "Field knowledge contradicts signal",
+      "override_rate_before": 0.32,
+      "override_rate_after": 0.14,
+      "coverage_of_rising_customers": 0.76
+    },
+    "recommendation": "Incorporate PMR wave alignment check prior to drafting POTENTIAL proposals.",
+    "status": "Recommended",
+    "model_owner_user_id": "USR-001"
+  }
+]

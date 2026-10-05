@@ -1,0 +1,72 @@
+[
+  {
+    "market_code": "MKT_A",
+    "display_name": "Market A · Data-rich",
+    "maturity_level": "Data-rich",
+    "profile": "HCP-level Rx and claims, digital, KOL",
+    "current_process": "In-house model, quarterly refresh",
+    "current_tool": "In-house Python model",
+    "studio_method": "KMEANS_RULES",
+    "refresh_cadence": "Quarterly",
+    "refresh_cycles_per_year": 4,
+    "manual_hours_per_refresh": 120,
+    "vendor_dependent": false,
+    "on_global_standard": false,
+    "brands": [
+      "AUR",
+      "ZEN",
+      "CRD",
+      "NEU",
+      "BRV"
+    ],
+    "hcp_universe": 8000,
+    "account_universe": 900,
+    "currency_note": "Values shown in USD"
+  },
+  {
+    "market_code": "MKT_B",
+    "display_name": "Market B · Signal-enriched",
+    "maturity_level": "Signal-enriched",
+    "profile": "Brick-level sales, strong CRM, consented digital",
+    "current_process": "Different tool, annual refresh, rep adjustments",
+    "current_tool": "Third-party segmentation tool",
+    "studio_method": "RULES_DECILE_CLUSTERS",
+    "refresh_cadence": "Annual",
+    "refresh_cycles_per_year": 1,
+    "manual_hours_per_refresh": 260,
+    "vendor_dependent": false,
+    "on_global_standard": false,
+    "brands": [
+      "AUR",
+      "ZEN",
+      "CRD",
+      "NEU",
+      "BRV"
+    ],
+    "hcp_universe": 4000,
+    "account_universe": 400,
+    "currency_note": "Values shown in USD"
+  },
+  {
+    "market_code": "MKT_C",
+    "display_name": "Market C · Survey-led",
+    "maturity_level": "Survey-led",
+    "profile": "No HCP-level sales; PMR + CRM + rep input",
+    "current_process": "Local agency Excel file yearly + rep judgement",
+    "current_tool": "Agency Excel file",
+    "studio_method": "RULES_TEMPLATE",
+    "refresh_cadence": "Annual",
+    "refresh_cycles_per_year": 1,
+    "manual_hours_per_refresh": 340,
+    "vendor_dependent": true,
+    "on_global_standard": false,
+    "brands": [
+      "AUR",
+      "ZEN",
+      "CRD"
+    ],
+    "hcp_universe": 1500,
+    "account_universe": 150,
+    "currency_note": "Values shown in USD"
+  }
+]

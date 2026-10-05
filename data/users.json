@@ -1,0 +1,322 @@
+[
+  {
+    "user_id": "USR-001",
+    "name": "Elena Marsh",
+    "persona_id": "P1",
+    "market_code": "ALL",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-002",
+    "name": "Jonas Weber",
+    "persona_id": "P2",
+    "market_code": "MKT_B",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-003",
+    "name": "Sofia Lindqvist",
+    "persona_id": "P2",
+    "market_code": "MKT_A",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-004",
+    "name": "Arif Santoso",
+    "persona_id": "P2",
+    "market_code": "MKT_C",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-005",
+    "name": "Priya Raman",
+    "persona_id": "P3",
+    "market_code": "MKT_B",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-006",
+    "name": "Tomás Ferreira",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-03",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-007",
+    "name": "Dewi Kartika",
+    "persona_id": "P5",
+    "market_code": "MKT_C",
+    "territory_id": null,
+    "agency_name": "Northbay Field Research"
+  },
+  {
+    "user_id": "USR-008",
+    "name": "Catherine Doyle",
+    "persona_id": "P6",
+    "market_code": "ALL",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-009",
+    "name": "Marcus Okafor",
+    "persona_id": "P6",
+    "market_code": "ALL",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-010",
+    "name": "Alexander Wright",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-01",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-011",
+    "name": "Claire Dubois",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-02",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-012",
+    "name": "Marcus Brody",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-03",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-013",
+    "name": "Helena Vance",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-04",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-014",
+    "name": "Liam Chen",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-05",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-015",
+    "name": "Emma Ross",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-06",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-016",
+    "name": "David Miller",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-07",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-017",
+    "name": "Sophie Martin",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-08",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-018",
+    "name": "Oliver Scott",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-09",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-019",
+    "name": "Chloe Bennett",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-10",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-020",
+    "name": "Lucas Meyer",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-11",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-021",
+    "name": "Zoe Fischer",
+    "persona_id": "P4",
+    "market_code": "MKT_A",
+    "territory_id": "TER-A-12",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-022",
+    "name": "Benjamin Holt",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-01",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-023",
+    "name": "Amara Patel",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-02",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-024",
+    "name": "Gabriel Silva",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-04",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-025",
+    "name": "Ingrid Bergman",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-05",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-026",
+    "name": "Matteo Rossi",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-06",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-027",
+    "name": "Fatima Zahra",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-07",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-028",
+    "name": "Lukas Novak",
+    "persona_id": "P4",
+    "market_code": "MKT_B",
+    "territory_id": "TER-B-08",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-029",
+    "name": "Budi Wijaya",
+    "persona_id": "P4",
+    "market_code": "MKT_C",
+    "territory_id": "TER-C-01",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-030",
+    "name": "Siti Rahma",
+    "persona_id": "P4",
+    "market_code": "MKT_C",
+    "territory_id": "TER-C-02",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-031",
+    "name": "Aditya Pratama",
+    "persona_id": "P4",
+    "market_code": "MKT_C",
+    "territory_id": "TER-C-03",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-032",
+    "name": "Nurul Hidayah",
+    "persona_id": "P4",
+    "market_code": "MKT_C",
+    "territory_id": "TER-C-04",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-033",
+    "name": "Reza Gunawan",
+    "persona_id": "P4",
+    "market_code": "MKT_C",
+    "territory_id": "TER-C-05",
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-034",
+    "name": "Rachel Green",
+    "persona_id": "P3",
+    "market_code": "MKT_A",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-035",
+    "name": "Nicholas Brody",
+    "persona_id": "P3",
+    "market_code": "MKT_A",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-036",
+    "name": "Daniel Craig",
+    "persona_id": "P3",
+    "market_code": "MKT_A",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-037",
+    "name": "Nadia Becker",
+    "persona_id": "P3",
+    "market_code": "MKT_B",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-038",
+    "name": "Julian Santos",
+    "persona_id": "P3",
+    "market_code": "MKT_B",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-039",
+    "name": "Agus Salim",
+    "persona_id": "P3",
+    "market_code": "MKT_C",
+    "territory_id": null,
+    "agency_name": null
+  },
+  {
+    "user_id": "USR-040",
+    "name": "Rina Kusuma",
+    "persona_id": "P3",
+    "market_code": "MKT_C",
+    "territory_id": null,
+    "agency_name": null
+  }
+]
