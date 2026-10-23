@@ -88,8 +88,51 @@ const REVIEW_PROFILES: Record<BuildMethod, ReviewProfile> = {
   },
 };
 
-const getReviewProfile = (method: StudioMethod): ReviewProfile =>
-  REVIEW_PROFILES[(method in REVIEW_PROFILES ? method : 'RULES_TEMPLATE') as BuildMethod];
+// K-means names and colours ordered from lowest to highest prescribing momentum; k clusters pick evenly from them
+const KMEANS_NAMES = [
+  'Low Prescribing / Traditional',
+  'Conservative Loyalists',
+  'Pragmatic Adopters',
+  'Digital Fast Followers',
+  'Steady Growth Prescribers',
+  'High-Volume Commercial Champions',
+  'Early Scientific Innovators',
+];
+const KMEANS_COLORS = ['#8A6D1F', '#B0603C', '#E9B44C', '#5B6ABF', '#1B4A63', '#3CA5AE', '#0E7C86'];
+const SEGMENT_LADDER = ['E', 'D', 'C', 'B', 'A'];
+
+/** Builds a k-cluster K-means review profile (k = 3–7), spreading momentum and global mapping across clusters. */
+function buildKmeansProfile(k: number): ReviewProfile {
+  const clusters = Math.min(7, Math.max(3, Math.round(k)));
+  const weightTotal = (clusters * (clusters + 1)) / 2;
+  const groups: ReviewGroup[] = Array.from({ length: clusters }, (_, i) => {
+    const t = i / (clusters - 1);
+    const median = Math.round(24 + 111 * t);
+    const spread = Math.round(8 + 22 * t);
+    const pick = Math.round(t * (KMEANS_NAMES.length - 1));
+    return {
+      key: `cluster_${i}`,
+      label: `Cluster ${i}`,
+      defaultName: KMEANS_NAMES[pick],
+      defaultSegment: SEGMENT_LADDER[Math.round(t * 4)],
+      share: (clusters - i) / weightTotal, // larger low-momentum clusters, smaller high-momentum ones
+      box: [Math.max(0, median - 2 * spread), median - spread, median, median + spread, median + 2 * spread],
+      color: KMEANS_COLORS[pick],
+    };
+  });
+  const medians = groups.map((g) => g.box[2]);
+  const ratio = medians[medians.length - 1] / (medians.reduce((a, b) => a + b, 0) / medians.length);
+  return {
+    ...REVIEW_PROFILES.KMEANS_RULES,
+    soWhat: `Cluster ${clusters - 1} captures hyper-responsive growth prescribers with median momentum ${ratio.toFixed(1)}x the cluster average.`,
+    groups,
+  };
+}
+
+const getReviewProfile = (method: StudioMethod, k: number): ReviewProfile =>
+  method === 'KMEANS_RULES'
+    ? buildKmeansProfile(k)
+    : REVIEW_PROFILES[(method in REVIEW_PROFILES ? method : 'RULES_TEMPLATE') as BuildMethod];
 
 const defaultNames = (profile: ReviewProfile) =>
   Object.fromEntries(profile.groups.map((g) => [g.key, g.defaultName]));
@@ -124,10 +167,10 @@ export const S06_SegmentationStudio: React.FC = () => {
 
   const [toast, setToast] = useState<ToastMessage | null>(null);
 
-  // A changed market or method invalidates the previous run's review output
+  // A changed market, method or k invalidates the previous run's review output
   useEffect(() => {
     setHasRun(false);
-  }, [selectedMarket, method]);
+  }, [selectedMarket, method, kClusters]);
 
   const steps: StepItem[] = [
     { step: 1, title: 'Scope & Filter', description: 'Universe definition' },
@@ -163,7 +206,7 @@ export const S06_SegmentationStudio: React.FC = () => {
 
   // Run studio simulation
   const handleRunAlgorithm = async () => {
-    const profile = getReviewProfile(method);
+    const profile = getReviewProfile(method, kClusters);
     setReviewProfile(profile);
     setClusterNames(defaultNames(profile));
     setClusterMappings(defaultMappings(profile));

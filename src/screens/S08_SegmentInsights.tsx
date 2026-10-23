@@ -8,19 +8,57 @@ import { PageHeader } from '../components/layout/PageHeader';
 import { Tabs } from '../components/ui/Tabs';
 import { KpiTile } from '../components/ui/KpiTile';
 import { SegmentAgeChip } from '../components/ui/SegmentAgeChip';
+import { EmptyState } from '../components/ui/EmptyState';
 import { DataTable, Column } from '../components/ui/DataTable';
 import { Matrix4x4, MatrixCellData } from '../components/charts/Matrix4x4';
 import { Sankey, SankeyNodeData, SankeyLinkData } from '../components/charts/Sankey';
 import { Heatmap, HeatmapHeaderItem, HeatmapCell } from '../components/charts/Heatmap';
 import { BarChartComponent, BarSeries } from '../components/charts/BarChart';
 import { useAppStore } from '../store/useAppStore';
-import dataService from '../services/dataService';
+import {
+  SEGMENTS,
+  SegmentCode,
+  AFFINITY_CHANNELS,
+  AccountInsightRow,
+  buildCustomerViews,
+  computeProfiles,
+  computeOpportunity,
+  computeMigration,
+  computeAccountRows,
+  computeCrossMarket,
+  computeChannelAffinity,
+  computeTargeting,
+} from '../services/insightsService';
 import { formatNumber, formatPercent } from '../utils/formatters';
+import { MarketCode } from '../types';
+
+// Global vocabulary definitions for the A–E value segment (labels, not data)
+const SEGMENT_DEFINITIONS: Record<SegmentCode, { archetype: string; description: string }> = {
+  A: { archetype: 'High Volume Innovator', description: 'Key prescribing leaders driving guideline adoption and rapid brand uptake.' },
+  B: { archetype: 'Fast Follower / Rising Prescriber', description: 'High potential prescribers moving into active trial; primary living loop growth target.' },
+  C: { archetype: 'Pragmatist / Guideline Dependent', description: 'Moderate volume requiring peer evidence and digital engagement before first script.' },
+  D: { archetype: 'Conservative Prescriber', description: 'Established prescribers loyal to standard-of-care alternatives.' },
+  E: { archetype: 'Low Potential / Non-Target', description: 'Infrequent prescribers supported primarily via low-cost digital touchpoints.' },
+};
+
+const SEGMENT_COLORS: Record<SegmentCode, string> = {
+  A: '#0E7C86',
+  B: '#3CA5AE',
+  C: '#5B6ABF',
+  D: '#E9B44C',
+  E: '#8A6D1F',
+};
+
+const MARKET_META: Record<MarketCode, { name: string; method: string; driver: string; badge: string; accent: string }> = {
+  MKT_A: { name: 'Market A · Data-rich', method: 'K-Means', driver: 'Rx claims driven', badge: 'text-teal-700 bg-teal-50', accent: 'text-teal-700' },
+  MKT_B: { name: 'Market B · Signal-enriched', method: 'Deciles + Rules', driver: 'Brick sales + rep notes', badge: 'text-indigo-700 bg-indigo-50', accent: 'text-indigo-700' },
+  MKT_C: { name: 'Market C · Survey-led', method: 'Agency Grid', driver: 'Rep assessment + PMR', badge: 'text-amber-700 bg-amber-50', accent: 'text-amber-700' },
+};
 
 export const S08_SegmentInsights: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { currentMarket, currentBrand, currentPersona } = useAppStore();
+  const { currentMarket, currentBrand, currentPersona, proposals } = useAppStore();
 
   const isP3 = currentPersona === 'P3';
   const defaultTab = isP3 ? 'accounts' : searchParams.get('tab') || 'profiles';
@@ -44,167 +82,64 @@ export const S08_SegmentInsights: React.FC = () => {
   // For P3 (KAM / Account Lead), only the Accounts tab is visible
   const visibleTabs = isP3 ? allTabs.filter((t) => t.id === 'accounts') : allTabs;
 
-  const marketAgg = dataService.getAggregates(currentMarket);
-  const accounts = dataService.getAccounts({ market: currentMarket });
-  const affiliations = dataService.getAffiliations();
-
-  // 1. Profiles Data
-  const segmentColors: Record<string, string> = {
-    A: '#0E7C86',
-    B: '#3CA5AE',
-    C: '#5B6ABF',
-    D: '#E9B44C',
-    E: '#8A6D1F',
-  };
-
-  const segmentMix = (marketAgg.segment_mix as any)[currentBrand === 'ALL' ? 'AUR' : currentBrand] ||
-    (marketAgg.segment_mix as any).AUR;
-
-  const profilesData = [
-    {
-      segment: 'Segment A',
-      code: 'A',
-      share: segmentMix.A,
-      count: Math.round(marketAgg.hcp_universe * segmentMix.A),
-      avgPotential: '3.9 / 4.0',
-      adoptionMix: '62% Adoption · 28% Trial · 10% Cons.',
-      channelMix: '55% F2F · 25% Remote · 20% Digital',
-      archetype: 'High Volume Innovator',
-      description: 'Key prescribing leaders driving guideline adoption and rapid brand uptake.',
-    },
-    {
-      segment: 'Segment B',
-      code: 'B',
-      share: segmentMix.B,
-      count: Math.round(marketAgg.hcp_universe * segmentMix.B),
-      avgPotential: '3.4 / 4.0',
-      adoptionMix: '34% Adoption · 46% Trial · 20% Cons.',
-      channelMix: '45% F2F · 30% Remote · 25% Digital',
-      archetype: 'Fast Follower / Rising Prescriber',
-      description: 'High potential prescribers moving into active trial; primary living loop growth target.',
-    },
-    {
-      segment: 'Segment C',
-      code: 'C',
-      share: segmentMix.C,
-      count: Math.round(marketAgg.hcp_universe * segmentMix.C),
-      avgPotential: '2.8 / 4.0',
-      adoptionMix: '15% Adoption · 40% Trial · 45% Cons.',
-      channelMix: '30% F2F · 35% Remote · 35% Digital',
-      archetype: 'Pragmatist / Guideline Dependent',
-      description: 'Moderate volume requiring peer evidence and digital engagement before first script.',
-    },
-    {
-      segment: 'Segment D',
-      code: 'D',
-      share: segmentMix.D,
-      count: Math.round(marketAgg.hcp_universe * segmentMix.D),
-      avgPotential: '2.1 / 4.0',
-      adoptionMix: '5% Adoption · 25% Trial · 70% Aware',
-      channelMix: '20% F2F · 40% Remote · 40% Digital',
-      archetype: 'Conservative Prescriber',
-      description: 'Established prescribers loyal to standard-of-care alternatives.',
-    },
-    {
-      segment: 'Segment E',
-      code: 'E',
-      share: segmentMix.E,
-      count: Math.round(marketAgg.hcp_universe * segmentMix.E),
-      avgPotential: '1.2 / 4.0',
-      adoptionMix: '2% Adoption · 8% Trial · 90% Aware',
-      channelMix: '10% F2F · 30% Remote · 60% Digital',
-      archetype: 'Low Potential / Non-Target',
-      description: 'Infrequent prescribers supported primarily via low-cost digital touchpoints.',
-    },
-  ];
-
-  // 2. Opportunity Matrix Data (Matrix4x4)
+  // Segments are captured per brand; "All brands" falls back to the hero brand and says so
+  const brand = currentBrand === 'ALL' ? 'AUR' : currentBrand;
+  const scope = useMemo(() => ({ market: currentMarket, brand }), [currentMarket, brand]);
   const isMarketC = currentMarket === 'MKT_C';
-  const matrixCells: MatrixCellData[] = [
-    // Tier 1 (High)
-    { potential: 1, adoptionStage: 'Awareness', count: isMarketC ? 25 : 120, isOpportunityGap: true, notes: 'Prime opportunity: high potential unaware of new indications' },
-    { potential: 1, adoptionStage: 'Consideration', count: isMarketC ? 45 : 340, isOpportunityGap: true, notes: 'Immediate priority: pending peer review and formulary pull' },
-    { potential: 1, adoptionStage: 'Trial', count: isMarketC ? 65 : 420, isOpportunityGap: false },
-    { potential: 1, adoptionStage: 'Adoption', count: isMarketC ? 70 : 580, isOpportunityGap: false },
 
-    // Tier 2 (Med-High)
-    { potential: 2, adoptionStage: 'Awareness', count: isMarketC ? 60 : 280, isOpportunityGap: true, notes: 'Secondary opportunity gap' },
-    { potential: 2, adoptionStage: 'Consideration', count: isMarketC ? 110 : 610, isOpportunityGap: true, notes: 'Target for remote detailing blitz' },
-    { potential: 2, adoptionStage: 'Trial', count: isMarketC ? 140 : 790, isOpportunityGap: false },
-    { potential: 2, adoptionStage: 'Adoption', count: isMarketC ? 115 : 640, isOpportunityGap: false },
+  // Every derivation re-runs when proposals change, i.e. after approvals are written back to CRM
+  const views = useMemo(() => buildCustomerViews(scope, proposals), [scope, proposals]);
+  const profiles = useMemo(() => computeProfiles(views), [views]);
+  const opportunity = useMemo(() => computeOpportunity(views, scope), [views, scope]);
+  const migration = useMemo(() => computeMigration(views), [views]);
+  const accountRows = useMemo(() => computeAccountRows(scope, proposals), [scope, proposals]);
+  const crossMarket = useMemo(() => computeCrossMarket(brand, proposals), [brand, proposals]);
+  const affinity = useMemo(() => computeChannelAffinity(views, scope), [views, scope]);
+  const targeting = useMemo(() => computeTargeting(views, scope), [views, scope]);
 
-    // Tier 3 (Med-Low)
-    { potential: 3, adoptionStage: 'Awareness', count: isMarketC ? 150 : 540, isOpportunityGap: false },
-    { potential: 3, adoptionStage: 'Consideration', count: isMarketC ? 180 : 820, isOpportunityGap: false },
-    { potential: 3, adoptionStage: 'Trial', count: isMarketC ? 130 : 640, isOpportunityGap: false },
-    { potential: 3, adoptionStage: 'Adoption', count: isMarketC ? 60 : 380, isOpportunityGap: false },
+  const sampleSize = views.length;
+  const estimatedUniverse = profiles.reduce((acc, p) => acc + p.count, 0);
+  const sampleNote = `Estimated from a ${formatNumber(sampleSize)}-HCP sample, scaled to ${formatNumber(estimatedUniverse)} HCPs${
+    currentBrand === 'ALL' ? ' · Showing Aurelix — select a brand to change' : ''
+  }.`;
 
-    // Tier 4 (Low)
-    { potential: 4, adoptionStage: 'Awareness', count: isMarketC ? 220 : 950, isOpportunityGap: false },
-    { potential: 4, adoptionStage: 'Consideration', count: isMarketC ? 140 : 620, isOpportunityGap: false },
-    { potential: 4, adoptionStage: 'Trial', count: isMarketC ? 35 : 190, isOpportunityGap: false },
-    { potential: 4, adoptionStage: 'Adoption', count: isMarketC ? 15 : 70, isOpportunityGap: false },
-  ];
+  // 1. Profiles
+  const abProfiles = profiles.filter((p) => p.code === 'A' || p.code === 'B');
+  const abShare = abProfiles.reduce((acc, p) => acc + p.share, 0);
+  const abCount = abProfiles.reduce((acc, p) => acc + p.count, 0);
+  const abTrialOrBetter =
+    abCount > 0 ? abProfiles.reduce((acc, p) => acc + p.count * (p.adoptingShare + p.trialShare), 0) / abCount : 0;
 
-  // 3. Migration Sankey Data
+  // 2. Opportunity Matrix (rows: potential 4 = high … 1 = low)
+  const matrixCells: MatrixCellData[] = opportunity.cells.map((c) => ({
+    potential: c.potential,
+    adoptionStage: c.adoptionStage,
+    count: c.count,
+    isOpportunityGap: c.isOpportunityGap,
+    notes: c.isOpportunityGap ? 'Opportunity gap: potential 3–4 not yet past consideration' : undefined,
+  }));
+
+  // 3. Migration Sankey (only segments that carry flow, so empty nodes never render)
+  const usedFrom = new Set(migration.flows.map((f) => f.from));
+  const usedTo = new Set(migration.flows.map((f) => f.to));
   const sankeyNodes: SankeyNodeData[] = [
-    { id: 'prev_A', name: 'Prev: Seg A', color: '#0E7C86' },
-    { id: 'prev_B', name: 'Prev: Seg B', color: '#3CA5AE' },
-    { id: 'prev_C', name: 'Prev: Seg C', color: '#5B6ABF' },
-    { id: 'prev_D', name: 'Prev: Seg D', color: '#E9B44C' },
-    { id: 'prev_E', name: 'Prev: Seg E', color: '#8A6D1F' },
-
-    { id: 'curr_A', name: 'Active: Seg A', color: '#0E7C86' },
-    { id: 'curr_B', name: 'Active: Seg B', color: '#3CA5AE' },
-    { id: 'curr_C', name: 'Active: Seg C', color: '#5B6ABF' },
-    { id: 'curr_D', name: 'Active: Seg D', color: '#E9B44C' },
-    { id: 'curr_E', name: 'Active: Seg E', color: '#8A6D1F' },
+    ...SEGMENTS.filter((s) => usedFrom.has(s)).map((s) => ({ id: `prev_${s}`, name: `Cycle ${s}`, color: SEGMENT_COLORS[s] })),
+    ...SEGMENTS.filter((s) => usedTo.has(s)).map((s) => ({ id: `curr_${s}`, name: `Living ${s}`, color: SEGMENT_COLORS[s] })),
   ];
+  const sankeyLinks: SankeyLinkData[] = migration.flows.map((f) => ({
+    source: `prev_${f.from}`,
+    target: `curr_${f.to}`,
+    value: f.count,
+    color: SEGMENT_COLORS[f.to],
+  }));
 
-  const sankeyLinks: SankeyLinkData[] = [
-    { source: 'prev_A', target: 'curr_A', value: 820, color: '#0E7C86' },
-    { source: 'prev_B', target: 'curr_A', value: 210, color: '#0E7C86' }, // Rising into A
-    { source: 'prev_B', target: 'curr_B', value: 1450, color: '#3CA5AE' },
-    { source: 'prev_C', target: 'curr_B', value: 340, color: '#3CA5AE' }, // Rising into B
-    { source: 'prev_C', target: 'curr_C', value: 2100, color: '#5B6ABF' },
-    { source: 'prev_D', target: 'curr_C', value: 180, color: '#5B6ABF' },
-    { source: 'prev_D', target: 'curr_D', value: 1650, color: '#E9B44C' },
-    { source: 'prev_C', target: 'curr_D', value: 95, color: '#E9B44C' }, // Declining
-    { source: 'prev_E', target: 'curr_E', value: 1400, color: '#8A6D1F' },
-  ];
+  // 4. Accounts
+  const tier1 = accountRows.filter((a) => a.tier === 'Tier 1');
+  const totalAccountPotential = accountRows.reduce((acc, a) => acc + a.potential, 0);
+  const tier1PotentialShare = totalAccountPotential > 0 ? tier1.reduce((acc, a) => acc + a.potential, 0) / totalAccountPotential : 0;
+  const listedAccounts = accountRows.filter((a) => a.accessStatus === 'Listed').length;
 
-  // 4. Accounts Table Data
-  type AccountRow = {
-    id: string;
-    name: string;
-    market: string;
-    archetype: string;
-    tier: string;
-    accessStatus: string;
-    affiliatedHcps: number;
-    segmentAge: number;
-  };
-
-  const accountRows: AccountRow[] = useMemo(() => {
-    const formularyStatuses = dataService.getFormularyStatus();
-    return accounts.map((acc) => {
-      const affCount = affiliations.filter((af) => af.hco_id === acc.hco_id).length || acc.affiliated_hcp_count;
-      const fStatus = formularyStatuses.find((f) => f.hco_id === acc.hco_id && (f.brand_code === (currentBrand === 'ALL' ? 'AUR' : currentBrand)));
-      const tier = (acc.beds && acc.beds > 300) || acc.hco_type === 'IDN' ? 'Tier 1' : (acc.beds && acc.beds > 100) ? 'Tier 2' : 'Tier 3';
-      return {
-        id: acc.hco_id,
-        name: acc.name,
-        market: acc.market_code,
-        archetype: acc.archetype,
-        tier,
-        accessStatus: fStatus?.status || 'Unrestricted',
-        affiliatedHcps: affCount,
-        segmentAge: acc.market_code === 'MKT_C' ? 310 : acc.market_code === 'MKT_B' ? 180 : 75,
-      };
-    });
-  }, [accounts, affiliations, currentBrand]);
-
-  const accountColumns: Column<AccountRow>[] = [
+  const accountColumns: Column<AccountInsightRow>[] = [
     {
       key: 'name',
       header: 'Account Name',
@@ -244,9 +179,9 @@ export const S08_SegmentInsights: React.FC = () => {
       header: 'Formulary Status',
       render: (row) => (
         <span className={`text-xs font-medium px-2 py-0.5 rounded ${
-          row.accessStatus === 'Preferred' || row.accessStatus === 'Unrestricted'
+          row.accessStatus === 'Listed'
             ? 'bg-teal-50 text-teal-700'
-            : row.accessStatus === 'Prior Auth Required'
+            : row.accessStatus === 'Restricted' || row.accessStatus === 'Under review'
             ? 'bg-amber-50 text-amber-800'
             : 'bg-slate-100 text-slate-600'
         }`}>
@@ -288,71 +223,45 @@ export const S08_SegmentInsights: React.FC = () => {
     },
   ];
 
-  // 5. Cross-Market Data
+  // 5. Cross-Market
   const [crossMarketStandardized, setCrossMarketStandardized] = useState<boolean>(true);
 
-  // 6. Cross-Segmentation (Neurelle Channel Affinity Heatmap)
-  const heatmapRows: HeatmapHeaderItem[] = [
-    { id: 'segA', label: 'Segment A (Leader)' },
-    { id: 'segB', label: 'Segment B (Rising)' },
-    { id: 'segC', label: 'Segment C (Pragmatist)' },
-    { id: 'segD', label: 'Segment D (Conservative)' },
-    { id: 'segE', label: 'Segment E (Low Potential)' },
-  ];
+  // 6. Channel Affinity Heatmap (status banded relative to the strongest channel reach)
+  const heatmapRows: HeatmapHeaderItem[] = SEGMENTS.map((s) => ({
+    id: s,
+    label: `Segment ${s} (${SEGMENT_DEFINITIONS[s].archetype.split(' / ')[0]})`,
+  }));
+  const heatmapCols: HeatmapHeaderItem[] = AFFINITY_CHANNELS.map((c) => ({ id: c.id, label: c.label }));
+  const maxReach = Math.max(...affinity.map((c) => c.reachPct), 1);
+  const heatmapCells: HeatmapCell[] = affinity.map((c) => ({
+    rowId: c.segment,
+    colId: c.channel,
+    value: c.reachPct,
+    displayValue: `${c.reachPct}%`,
+    status: c.reachPct >= maxReach * 0.66 ? 'high' : c.reachPct >= maxReach * 0.33 ? 'medium' : 'low',
+  }));
+  const segBAffinity = affinity.filter((c) => c.segment === 'B').sort((a, b) => b.reachPct - a.reachPct);
+  const channelLabel = (id: string) => AFFINITY_CHANNELS.find((c) => c.id === id)?.label ?? id;
 
-  const heatmapCols: HeatmapHeaderItem[] = [
-    { id: 'f2f', label: 'In-Person Detailing' },
-    { id: 'remote', label: 'Remote Detailing' },
-    { id: 'email', label: 'Rep Email' },
-    { id: 'portal', label: 'Self-Serve Portal' },
-    { id: 'webinar', label: 'Medical Webinar' },
-  ];
-
-  const heatmapCells: HeatmapCell[] = [
-    { rowId: 'segA', colId: 'f2f', value: 88, displayValue: '88%', status: 'high' },
-    { rowId: 'segA', colId: 'remote', value: 65, displayValue: '65%', status: 'medium' },
-    { rowId: 'segA', colId: 'email', value: 42, displayValue: '42%', status: 'low' },
-    { rowId: 'segA', colId: 'portal', value: 38, displayValue: '38%', status: 'low' },
-    { rowId: 'segA', colId: 'webinar', value: 74, displayValue: '74%', status: 'high' },
-
-    { rowId: 'segB', colId: 'f2f', value: 72, displayValue: '72%', status: 'high' },
-    { rowId: 'segB', colId: 'remote', value: 85, displayValue: '85%', status: 'high' },
-    { rowId: 'segB', colId: 'email', value: 78, displayValue: '78%', status: 'high' },
-    { rowId: 'segB', colId: 'portal', value: 82, displayValue: '82%', status: 'high' },
-    { rowId: 'segB', colId: 'webinar', value: 68, displayValue: '68%', status: 'medium' },
-
-    { rowId: 'segC', colId: 'f2f', value: 45, displayValue: '45%', status: 'medium' },
-    { rowId: 'segC', colId: 'remote', value: 60, displayValue: '60%', status: 'medium' },
-    { rowId: 'segC', colId: 'email', value: 65, displayValue: '65%', status: 'medium' },
-    { rowId: 'segC', colId: 'portal', value: 70, displayValue: '70%', status: 'high' },
-    { rowId: 'segC', colId: 'webinar', value: 52, displayValue: '52%', status: 'medium' },
-
-    { rowId: 'segD', colId: 'f2f', value: 30, displayValue: '30%', status: 'low' },
-    { rowId: 'segD', colId: 'remote', value: 40, displayValue: '40%', status: 'low' },
-    { rowId: 'segD', colId: 'email', value: 50, displayValue: '50%', status: 'medium' },
-    { rowId: 'segD', colId: 'portal', value: 45, displayValue: '45%', status: 'medium' },
-    { rowId: 'segD', colId: 'webinar', value: 25, displayValue: '25%', status: 'low' },
-
-    { rowId: 'segE', colId: 'f2f', value: 12, displayValue: '12%', status: 'low' },
-    { rowId: 'segE', colId: 'remote', value: 20, displayValue: '20%', status: 'low' },
-    { rowId: 'segE', colId: 'email', value: 35, displayValue: '35%', status: 'low' },
-    { rowId: 'segE', colId: 'portal', value: 40, displayValue: '40%', status: 'low' },
-    { rowId: 'segE', colId: 'webinar', value: 15, displayValue: '15%', status: 'low' },
-  ];
-
-  // 7. Targeting Alignment Data
-  const targetingBarData = [
-    { segment: 'Segment A', currentCalls: 1240, recommendedCalls: 1580 },
-    { segment: 'Segment B', currentCalls: 1680, recommendedCalls: 2150 },
-    { segment: 'Segment C', currentCalls: 1450, recommendedCalls: 1120 },
-    { segment: 'Segment D', currentCalls: 980, recommendedCalls: 540 },
-    { segment: 'Segment E', currentCalls: 450, recommendedCalls: 120 },
-  ];
-
+  // 7. Targeting Alignment
   const targetingSeries: BarSeries[] = [
-    { dataKey: 'currentCalls', name: 'Current Cycle Call Plan', color: '#94A3B8' },
+    { dataKey: 'currentCalls', name: 'Calls Delivered (Last 90 Days)', color: '#94A3B8' },
     { dataKey: 'recommendedCalls', name: 'Living Aligned Recommendation', color: '#0E7C86' },
   ];
+  const abShift = targeting.abShareRecommended - targeting.abShareCurrent;
+
+  if (sampleSize === 0 && currentTab !== 'accounts' && currentTab !== 'cross-market') {
+    return (
+      <div className="p-6 max-w-7xl mx-auto space-y-6">
+        <PageHeader title="Segment Insights" question="What do our segments tell us?" />
+        <Tabs tabs={visibleTabs} activeTab={currentTab} onChange={handleTabChange} />
+        <EmptyState
+          title="No segment assignments for this brand in this market"
+          description="This brand is not commercialised in the selected market. Choose another market or brand."
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-6">
@@ -364,19 +273,23 @@ export const S08_SegmentInsights: React.FC = () => {
       {/* Tabs */}
       <Tabs tabs={visibleTabs} activeTab={currentTab} onChange={handleTabChange} />
 
+      {currentTab !== 'accounts' && currentTab !== 'cross-market' && (
+        <p className="text-xs text-slate-500 -mt-2">{sampleNote}</p>
+      )}
+
       {/* TAB 1: PROFILES */}
       {currentTab === 'profiles' && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {profilesData.map((item) => (
+            {profiles.map((item) => (
               <div
                 key={item.code}
                 className="bg-white rounded-lg border border-slate-200 p-4 shadow-2xs flex flex-col justify-between"
-                style={{ borderTop: `4px solid ${segmentColors[item.code]}` }}
+                style={{ borderTop: `4px solid ${SEGMENT_COLORS[item.code]}` }}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-navy-900">{item.segment}</span>
+                    <span className="font-bold text-navy-900">Segment {item.code}</span>
                     <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-slate-100">
                       {formatPercent(item.share)}
                     </span>
@@ -388,21 +301,33 @@ export const S08_SegmentInsights: React.FC = () => {
                   <div className="mt-4 space-y-2 text-xs">
                     <div>
                       <span className="text-slate-500">Archetype:</span>
-                      <div className="font-semibold text-navy-900">{item.archetype}</div>
+                      <div className="font-semibold text-navy-900">{SEGMENT_DEFINITIONS[item.code].archetype}</div>
                     </div>
                     <div>
                       <span className="text-slate-500">Avg Potential:</span>
-                      <div className="font-mono text-slate-700">{item.avgPotential}</div>
+                      <div className="font-mono text-slate-700">{item.avgPotential.toFixed(1)} / 4.0</div>
                     </div>
                     <div>
-                      <span className="text-slate-500">Channel Mix:</span>
-                      <div className="text-slate-600 font-mono text-2xs">{item.channelMix}</div>
+                      <span className="text-slate-500">Adoption Mix:</span>
+                      <div className="text-slate-600 font-mono text-2xs">
+                        {formatPercent(item.adoptingShare)} Adopting · {formatPercent(item.trialShare)} Trial · {formatPercent(item.earlierShare)} Earlier
+                      </div>
+                    </div>
+                    <div>
+                      <span className="text-slate-500">Top Channel Preference:</span>
+                      <div className="text-slate-600 font-mono text-2xs">
+                        {item.topChannels.map((c) => `${formatPercent(c.share)} ${c.value}`).join(' · ') || '—'}
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between pt-1">
+                      <span className="text-slate-500">Median Segment Age:</span>
+                      <SegmentAgeChip days={item.medianAgeDays} />
                     </div>
                   </div>
                 </div>
 
                 <p className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 italic">
-                  {item.description}
+                  {SEGMENT_DEFINITIONS[item.code].description}
                 </p>
               </div>
             ))}
@@ -416,7 +341,8 @@ export const S08_SegmentInsights: React.FC = () => {
                   Living Segment Calibration Active
                 </h4>
                 <p className="text-xs text-slate-600">
-                  Segments A and B capture 30% of total prescriber volume while generating 68% of new patient start momentum.
+                  Segments A and B hold {formatPercent(abShare)} of prescribers ({formatNumber(abCount)} HCPs);{' '}
+                  {formatPercent(abTrialOrBetter)} of them are already in Trial or beyond.
                 </p>
               </div>
             </div>
@@ -437,32 +363,35 @@ export const S08_SegmentInsights: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <KpiTile
               label="Identified Opportunity Gap"
-              value={isMarketC ? '130 HCPs' : '740 HCPs'}
+              value={`${formatNumber(opportunity.gapCount)} HCPs`}
               delta={{
-                value: 'High Potential / Low Adoption',
+                value: 'Potential 3–4 · not past Consideration',
                 direction: 'up',
                 isPositive: true,
               }}
-              tooltip="Prescribers in Tier 1 or Tier 2 potential who remain in Awareness or Consideration stage"
+              tooltip="Prescribers with potential 3 or 4 who remain in Unaware, Aware or Consideration stage"
             />
             <KpiTile
-              label="Prioritized Next-Step Actions"
-              value="310 Detailing Triggers"
-              delta={{ value: 'Routed to Call Planning', direction: 'neutral' }}
+              label="Gap Without a Call in 90 Days"
+              value={`${formatNumber(opportunity.gapUncontacted)} HCPs`}
+              delta={{ value: 'No completed F2F or remote call', direction: 'neutral' }}
+              tooltip="Opportunity-gap HCPs with no completed in-person or remote call since 2026-07-17"
             />
             <KpiTile
-              label="Potential Value at Risk"
-              value="$1.8M ARR"
-              delta={{ value: 'If unaddressed by next cycle', direction: 'down', isPositive: false }}
+              label="Gap at Formulary-Listed Accounts"
+              value={`${formatNumber(opportunity.gapAtListedAccounts)} HCPs`}
+              delta={{ value: 'Access unlocked at primary account', direction: 'up', isPositive: true }}
+              tooltip="Opportunity-gap HCPs whose primary account lists the brand on formulary"
             />
           </div>
 
           <Matrix4x4
             title="Potential × Adoption Opportunity Matrix"
-            soWhat="Prescribers in Tier 1 & 2 with Awareness/Consideration represent highest-yield growth candidates."
+            soWhat="Prescribers with potential 3–4 still in Awareness or Consideration are the highest-yield growth candidates."
             xAxisLabel="Adoption Stage"
-            yAxisLabel="Prescriber Potential Tier"
+            yAxisLabel="Prescriber Potential"
             data={matrixCells}
+            potentialLabels={['Potential 4 (High)', 'Potential 3', 'Potential 2', 'Potential 1 (Low)']}
             isProxyData={isMarketC}
             proxyNotice="Not available in this market — using proxy: rep assessment + PMR"
           />
@@ -474,25 +403,29 @@ export const S08_SegmentInsights: React.FC = () => {
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <KpiTile
-              label="Net Upgraded to Tier A/B"
-              value="+550 HCPs"
-              delta={{ value: '+14% growth in priority tiers', direction: 'up', isPositive: true }}
+              label="Upgraded Since Planning Cycle"
+              value={`+${formatNumber(migration.upgraded)} HCPs`}
+              delta={{ value: 'Living changes written back to CRM', direction: 'up', isPositive: true }}
             />
             <KpiTile
-              label="Downgraded to Support Tiers"
-              value="-95 HCPs"
-              delta={{ value: 'Saved 620 wasted sales calls', direction: 'down', isPositive: true }}
+              label="Downgraded Since Planning Cycle"
+              value={`-${formatNumber(migration.downgraded)} HCPs`}
+              delta={{ value: 'Effort released for redeployment', direction: 'down', isPositive: true }}
             />
             <KpiTile
-              label="Quarterly Segment Stability"
-              value="88.2%"
-              delta={{ value: 'Conforms to stability policy limit', direction: 'neutral' }}
+              label="Segment Stability Index"
+              value={formatPercent(migration.stabilityIndex)}
+              delta={{ value: '1 − customers changed ÷ customers', direction: 'neutral' }}
             />
           </div>
 
           <Sankey
-            title="Segment Movement Between Versions (Last Planning Cycle → Living Active)"
-            soWhat="Living segmentation continuously captures rising prescribers without waiting for the annual review cycle."
+            title="Segment Movement: Planning-Cycle Assignment → Living Active (After Write-Back)"
+            soWhat={
+              migration.upgraded + migration.downgraded > 0
+                ? 'Approved living changes move prescribers between segments without waiting for the annual review cycle.'
+                : 'No segment changes written back yet for this scope — approve and publish proposals to see movement.'
+            }
             xAxisLabel="Version Lifecycle Stage"
             yAxisLabel="Customer Volume"
             nodes={sankeyNodes}
@@ -508,18 +441,18 @@ export const S08_SegmentInsights: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <KpiTile
               label="Total Governed Accounts"
-              value={formatNumber(accounts.length)}
-              delta={{ value: 'Hospitals, clinics & IDNs', direction: 'neutral' }}
+              value={formatNumber(accountRows.length)}
+              delta={{ value: 'Hospitals, clinics & IDNs (sample)', direction: 'neutral' }}
             />
             <KpiTile
               label="Tier 1 Strategic Accounts"
-              value={accountRows.filter((a) => a.tier === 'Tier 1').length}
-              delta={{ value: 'Holding 64% of regional potential', direction: 'neutral' }}
+              value={tier1.length}
+              delta={{ value: `Holding ${formatPercent(tier1PotentialShare)} of account potential`, direction: 'neutral' }}
             />
             <KpiTile
-              label="Formulary Win Propagation"
-              value="24 Accounts Active"
-              delta={{ value: 'Zentrova hero account active', direction: 'up', isPositive: true }}
+              label="Formulary-Listed Accounts"
+              value={`${listedAccounts} Accounts`}
+              delta={{ value: 'Listed status for the selected brand', direction: 'up', isPositive: true }}
             />
           </div>
 
@@ -582,95 +515,36 @@ export const S08_SegmentInsights: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Market A Comparison */}
-            <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-2xs">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                <span className="font-semibold text-navy-900">Market A · Data-rich</span>
-                <span className="text-xs font-mono text-teal-700 bg-teal-50 px-2 py-0.5 rounded">
-                  K-Means
-                </span>
-              </div>
-              <div className="mt-4 space-y-3">
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-teal-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment A · High Volume' : 'Cluster 1: High Rx Innovators'}
+            {crossMarket.map((entry) => {
+              const meta = MARKET_META[entry.market];
+              return (
+                <div key={entry.market} className="bg-white rounded-lg border border-slate-200 p-5 shadow-2xs">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <span className="font-semibold text-navy-900">{meta.name}</span>
+                    <span className={`text-xs font-mono px-2 py-0.5 rounded ${meta.badge}`}>{meta.method}</span>
                   </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    8% Universe · 3.9 Avg Potential · Rx Claims Driven
-                  </div>
+                  {!entry.available ? (
+                    <p className="mt-4 text-xs text-slate-500">Brand not commercialised in this market.</p>
+                  ) : (
+                    <div className="mt-4 space-y-3">
+                      {entry.segments.map((seg) => (
+                        <div key={seg.code} className="p-3 bg-slate-50 rounded border border-slate-100">
+                          <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
+                          <div className={`text-body font-bold mt-0.5 ${meta.accent}`}>
+                            {crossMarketStandardized
+                              ? `Segment ${seg.code} · ${SEGMENT_DEFINITIONS[seg.code].archetype.split(' / ')[0]}`
+                              : `Local value: ${seg.localLabel ?? 'Unmapped'}`}
+                          </div>
+                          <div className="text-xs text-slate-600 mt-1 font-mono">
+                            {formatPercent(seg.share)} Universe · {seg.avgPotential.toFixed(1)} Avg Potential · {meta.driver}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-teal-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment B · Fast Follower' : 'Cluster 3: Mid-Tier Digital'}
-                  </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    17% Universe · 3.3 Avg Potential · Dynamic Re-scoring
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Market B Comparison */}
-            <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-2xs">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                <span className="font-semibold text-navy-900">Market B · Signal-enriched</span>
-                <span className="text-xs font-mono text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">
-                  Deciles + Rules
-                </span>
-              </div>
-              <div className="mt-4 space-y-3">
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-indigo-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment A · High Volume' : 'Decile 9-10 Commercial Leaders'}
-                  </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    12% Universe · 3.8 Avg Potential · Brick Sales + Rep Notes
-                  </div>
-                </div>
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-indigo-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment B · Fast Follower' : 'Decile 7-8 Rising Adopters'}
-                  </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    22% Universe · 3.4 Avg Potential · Moving Digital Signals
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Market C Comparison */}
-            <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-2xs">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                <span className="font-semibold text-navy-900">Market C · Survey-led</span>
-                <span className="text-xs font-mono text-amber-700 bg-amber-50 px-2 py-0.5 rounded">
-                  Agency Grid
-                </span>
-              </div>
-              <div className="mt-4 space-y-3">
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-amber-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment A · High Volume' : 'Survey Tier 1: KOL Champions'}
-                  </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    20% Universe · 3.6 Avg Potential · Rep Perception + PMR
-                  </div>
-                </div>
-                <div className="p-3 bg-slate-50 rounded border border-slate-100">
-                  <div className="text-xs text-slate-500 font-medium">Mapped Representation</div>
-                  <div className="text-body font-bold text-amber-700 mt-0.5">
-                    {crossMarketStandardized ? 'Segment B · Fast Follower' : 'Survey Tier 2: Regular Prescribers'}
-                  </div>
-                  <div className="text-xs text-slate-600 mt-1 font-mono">
-                    30% Universe · 3.1 Avg Potential · Agency Spreadsheet
-                  </div>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       )}
@@ -682,18 +556,19 @@ export const S08_SegmentInsights: React.FC = () => {
             <Sparkles className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
             <div>
               <h4 className="text-body font-semibold text-indigo-900">
-                Neurelle Cross-Segmentation Storyline
+                Segment × Channel Cross-Segmentation
               </h4>
               <p className="text-body-sm text-indigo-800 mt-1">
-                Prescribers in Segment B demonstrate an 85% remote detailing responsiveness and 82% portal affinity.
-                Combining behavioural segment with channel preference allows the field team to deploy hybrid engagements rather than relying purely on in-person visits.
+                Segment B prescribers are most often reached through {channelLabel(segBAffinity[0]?.channel)} ({segBAffinity[0]?.reachPct ?? 0}%)
+                and {channelLabel(segBAffinity[1]?.channel)} ({segBAffinity[1]?.reachPct ?? 0}%). Combining value segment with channel
+                reach lets the field team plan hybrid engagement rather than relying purely on in-person visits.
               </p>
             </div>
           </div>
 
           <Heatmap
-            title="Segment × Channel Affinity Engagement Heatmap"
-            soWhat="Segment B prescribers show exceptionally high responsiveness to remote video and rep-triggered email."
+            title="Segment × Channel Reach Heatmap"
+            soWhat="Share of HCPs in each segment engaged at least once per channel — calls in the last 90 days, digital in the last 6 months."
             xAxisLabel="Omnichannel Touchpoint"
             yAxisLabel="Customer Segment"
             rows={heatmapRows}
@@ -709,35 +584,39 @@ export const S08_SegmentInsights: React.FC = () => {
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <KpiTile
-              label="Effort Redirected to Rising Prescribers"
-              value="+18.4%"
-              delta={{ value: 'Targeting alignment post-publish', direction: 'up', isPositive: true }}
+              label="Effort Share on Segments A + B"
+              value={`${formatPercent(targeting.abShareRecommended)}`}
+              delta={{
+                value: `${abShift >= 0 ? '+' : ''}${formatPercent(abShift)} vs ${formatPercent(targeting.abShareCurrent)} delivered`,
+                direction: abShift >= 0 ? 'up' : 'down',
+                isPositive: abShift >= 0,
+              }}
             />
             <KpiTile
-              label="Wasted Detail Calls Eliminated"
-              value="770 Details"
-              delta={{ value: 'Reallocated from declining Segment D/E', direction: 'down', isPositive: true }}
+              label="Calls Redirected from Segments D/E"
+              value={`${formatNumber(targeting.callsRedirectedFromDE)} Calls`}
+              delta={{ value: 'Per 90 days, at constant call capacity', direction: 'down', isPositive: true }}
             />
             <KpiTile
               label="Downstream Consumer Sync"
-              value="5 Systems Live"
-              delta={{ value: 'Targeting, Call Plan, NBA, Journeys', direction: 'neutral' }}
+              value={`${targeting.downstreamConsumers.length} Systems`}
+              delta={{ value: targeting.downstreamConsumers.join(', ') || 'None in scope', direction: 'neutral' }}
             />
           </div>
 
           <BarChartComponent
-            title="Sales Force Effort Alignment: Current Cycle Plan vs Living Recommended"
-            soWhat="Publishing living segmentation directly re-allocates 790 call targets into high-momentum Segments A & B."
+            title="Sales Force Effort Alignment: Delivered Calls vs Living Recommended"
+            soWhat="The same call capacity re-allocated by current segment size and segment priority weights (A 5 · B 4 · C 2 · D 1 · E 0.25)."
             xAxisLabel="Segment Tier"
-            yAxisLabel="Quarterly Planned Detail Calls"
-            data={targetingBarData}
+            yAxisLabel="Completed F2F + Remote Calls (90 Days)"
+            data={targeting.rows.map((r) => ({ ...r, segment: `Segment ${r.segment}` }))}
             series={targetingSeries}
             height={340}
           />
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs text-slate-600 flex items-center justify-between">
             <span>
-              Downstream impact verified: targeting rules re-weighted in Call Planning &amp; Veeva Align.
+              Recommendations recompute after each CRM write-back and feed Call Planning targets downstream.
             </span>
             <button
               onClick={() => navigate('/publish')}

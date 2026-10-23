@@ -38,6 +38,16 @@ export const S10_ReviewQueue: React.FC = () => {
   const isP4 = currentPersona === 'P4';
   const isP6 = currentPersona === 'P6';
 
+  // Field Rep scope: the persona's demo user and the HCPs in that user's territory
+  const repTerritoryId = useMemo(() => {
+    const repUserId = dataService.getPersonas().find((p) => p.persona_id === 'P4')?.user_id;
+    return dataService.getUsers().find((u) => u.user_id === repUserId)?.territory_id ?? null;
+  }, []);
+  const territoryHcpIds = useMemo(
+    () => new Set(dataService.getHcps().filter((h) => h.territory_id === repTerritoryId).map((h) => h.hcp_id)),
+    [repTerritoryId]
+  );
+
   const defaultType = isP3 ? 'HCO' : searchParams.get('filter') === 'accounts' ? 'HCO' : 'ALL';
   const [typeFilter, setTypeFilter] = useState<string>(defaultType);
   const [statusFilter, setStatusFilter] = useState<string>('ALL');
@@ -67,13 +77,13 @@ export const S10_ReviewQueue: React.FC = () => {
 
       // P4 Field Rep: only territory prescribers
       if (isP4) {
-        const inTerritory = p.customer_type === 'HCP' && (p.customer_id.startsWith('HCP-B') || p.customer_id === 'HCP-B-0001');
+        const inTerritory = p.customer_type === 'HCP' && territoryHcpIds.has(p.customer_id);
         return matchMarket && matchBrand && matchStatus && inTerritory;
       }
 
       return matchMarket && matchBrand && matchType && matchStatus;
     });
-  }, [proposals, currentMarket, currentBrand, typeFilter, statusFilter, isP4]);
+  }, [proposals, currentMarket, currentBrand, typeFilter, statusFilter, isP4, territoryHcpIds]);
 
   // Set initial active proposal to Hero record if available
   React.useEffect(() => {
@@ -306,7 +316,7 @@ export const S10_ReviewQueue: React.FC = () => {
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-6">
       <PageHeader
-        title={isP4 ? 'My Customers (Territory 101)' : 'Review Queue'}
+        title={isP4 ? `My Customers (Territory ${repTerritoryId ?? 'unassigned'})` : 'Review Queue'}
         question="What do I need to decide?"
         actions={
           currentPersona === 'P2' ? (
