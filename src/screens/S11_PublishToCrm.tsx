@@ -44,8 +44,12 @@ export const S11_PublishToCrm: React.FC = () => {
     });
   }, [proposals, currentMarket, currentBrand]);
 
-  const [selectedProposalIds, setSelectedProposalIds] = useState<string[]>(
-    readyProposals.map((p) => p.proposal_id)
+  // Track deselections rather than selections so newly approved records default to selected,
+  // and stale IDs (already published or filtered out) can never be counted or published.
+  const [deselectedIds, setDeselectedIds] = useState<Set<string>>(new Set());
+  const selectedProposalIds = useMemo(
+    () => readyProposals.filter((p) => !deselectedIds.has(p.proposal_id)).map((p) => p.proposal_id),
+    [readyProposals, deselectedIds]
   );
 
   const [previewCustomerId, setPreviewCustomerId] = useState<string>(
@@ -65,21 +69,37 @@ export const S11_PublishToCrm: React.FC = () => {
     return dataService.getHcpById(p.customer_id)?.display_name || p.customer_id;
   };
 
+  // Affiliation / territory line for the CRM record, derived from the customer master
+  const getCustomerContext = (customerId: string): string => {
+    const hcp = dataService.getHcpById(customerId);
+    if (hcp) {
+      const primaryHcoId =
+        hcp.primary_hco_id ||
+        dataService.getAffiliations({ hcpId: customerId }).find((a) => a.affiliation_type === 'Primary')?.hco_id;
+      const primaryHco = primaryHcoId ? dataService.getAccountById(primaryHcoId) : undefined;
+      return `Account Affiliation: ${primaryHco?.name || 'No primary affiliation'} · Territory ${hcp.territory_id}`;
+    }
+    const account = dataService.getAccountById(customerId);
+    if (account) {
+      return `${account.hco_type} · ${account.region} region · KAM ${account.kam_user_id}`;
+    }
+    return 'Customer not found in customer master';
+  };
+
   // Toggle selection
   const handleSelectAll = () => {
     if (selectedProposalIds.length === readyProposals.length) {
-      setSelectedProposalIds([]);
+      setDeselectedIds(new Set(readyProposals.map((p) => p.proposal_id)));
     } else {
-      setSelectedProposalIds(readyProposals.map((p) => p.proposal_id));
+      setDeselectedIds(new Set());
     }
   };
 
   const handleToggleSelect = (id: string) => {
-    if (selectedProposalIds.includes(id)) {
-      setSelectedProposalIds(selectedProposalIds.filter((pId) => pId !== id));
-    } else {
-      setSelectedProposalIds([...selectedProposalIds, id]);
-    }
+    const next = new Set(deselectedIds);
+    if (next.has(id)) next.delete(id);
+    else next.add(id);
+    setDeselectedIds(next);
   };
 
   // Preview Customer Mock CRM Record
@@ -93,7 +113,10 @@ export const S11_PublishToCrm: React.FC = () => {
       return;
     }
 
-    const { publishedCount } = publishToCrm(currentMarket);
+    const { publishedCount } = publishToCrm(currentMarket, undefined, {
+      brandCode: currentBrand,
+      proposalIds: selectedProposalIds,
+    });
     setIsConfirmModalOpen(false);
 
     setToast({
@@ -312,7 +335,7 @@ export const S11_PublishToCrm: React.FC = () => {
               {activeProposalForPreview ? getCustomerName(activeProposalForPreview) : (crmRecord?.customer_name || 'Dr. Hanna Vogel')}
             </h4>
             <div className="text-xs text-slate-500 mt-0.5">
-              Account Affiliation: St. Jude Medical Center · Territory 101
+              {getCustomerContext(activeProposalForPreview?.customer_id || previewCustomerId)}
             </div>
           </div>
 

@@ -99,7 +99,8 @@ export interface AppState {
   // Publishing & CRM Write-back
   publishToCrm: (
     marketCode?: MarketCode | 'ALL',
-    targetSystems?: string[]
+    targetSystems?: string[],
+    scope?: { brandCode?: BrandCode | 'ALL'; proposalIds?: string[] }
   ) => { publishedCount: number };
 
   // Segment Library Version Management
@@ -276,13 +277,17 @@ export const useAppStore = create<AppState>((set, get) => ({
     });
   },
 
-  publishToCrm: (marketCode = 'ALL', targetSystems = ['Veeva CRM', 'Targeting Engine']) => {
+  publishToCrm: (marketCode = 'ALL', targetSystems = ['Veeva CRM', 'Targeting Engine'], scope = {}) => {
     const { proposals, crmRecords, auditLog, publishLog } = get();
+    const brandCode = scope.brandCode ?? 'ALL';
+    const selectedIds = scope.proposalIds ? new Set(scope.proposalIds) : null;
 
-    // Select approved proposals matching market
+    // Select approved proposals matching market, brand and (if given) the user's explicit selection
     const toPublish = proposals.filter((p) => {
       const matchMarket = marketCode === 'ALL' || p.market_code === marketCode;
-      return matchMarket && p.status === 'Approved';
+      const matchBrand = brandCode === 'ALL' || p.brand_code === brandCode;
+      const matchSelection = selectedIds === null || selectedIds.has(p.proposal_id);
+      return matchMarket && matchBrand && matchSelection && p.status === 'Approved';
     });
 
     if (toPublish.length === 0) {

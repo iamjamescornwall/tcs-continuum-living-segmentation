@@ -67,8 +67,25 @@ function runStateLoopTests() {
   const approvalsInLog = useAppStore.getState().auditLog.filter((a) => a.action === 'Proposal approved').length;
   assert(totalWrittenBackInLog <= approvalsInLog + 200, '0 unapproved write-backs invariant holds');
 
-  // 4. Action: Demo Reset
-  console.log('\n[Step 3: Demo Reset]');
+  // 4. Publish scope: brand filter and explicit selection are honoured
+  console.log('\n[Step 3: Publish respects brand filter and selection]');
+  useAppStore.getState().resetDemo();
+  const approvedB = () => useAppStore.getState().proposals.filter((p) => p.market_code === 'MKT_B' && p.status === 'Approved');
+  const approvedNonAur = approvedB().filter((p) => p.brand_code !== 'AUR').length;
+  useAppStore.getState().publishToCrm('MKT_B', undefined, { brandCode: 'AUR' });
+  assert(approvedB().every((p) => p.brand_code !== 'AUR'), 'Brand-scoped publish writes back only that brand');
+  assert(approvedB().length === approvedNonAur, 'Brand-scoped publish leaves other brands Approved');
+
+  const [pickedProposal, ...unpicked] = approvedB();
+  const selectionResult = useAppStore.getState().publishToCrm('MKT_B', undefined, { proposalIds: [pickedProposal.proposal_id] });
+  assert(selectionResult.publishedCount === 1, 'Selection-scoped publish writes back exactly the selected proposal');
+  assert(
+    unpicked.every((p) => useAppStore.getState().proposals.find((x) => x.proposal_id === p.proposal_id)?.status === 'Approved'),
+    'Unselected approved proposals stay Approved (not written back)'
+  );
+
+  // 5. Action: Demo Reset
+  console.log('\n[Step 4: Demo Reset]');
   useAppStore.getState().resetDemo();
   const resetHeroProposal = useAppStore.getState().proposals.find((p) => p.customer_id === 'HCP-B-0001');
   assert(resetHeroProposal?.status === 'Proposed', 'Demo reset restores hero proposal to Proposed state');

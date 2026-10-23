@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight,
@@ -6,6 +6,7 @@ import {
   Sparkles,
   Play,
   Save,
+  AlertTriangle,
 } from 'lucide-react';
 import { PageHeader } from '../components/layout/PageHeader';
 import { StepIndicator, StepItem } from '../components/ui/StepIndicator';
@@ -16,6 +17,85 @@ import { useAppStore } from '../store/useAppStore';
 import dataService from '../services/dataService';
 import aiService from '../services/aiService';
 import { MarketCode, BrandCode, CustomerType, StudioMethod } from '../types';
+
+type BuildMethod = 'KMEANS_RULES' | 'RULES_DECILE_CLUSTERS' | 'RULES_TEMPLATE';
+
+interface ReviewGroup {
+  key: string;
+  label: string;
+  defaultName: string;
+  defaultSegment: string;
+  share: number;
+  box: [number, number, number, number, number];
+  color: string;
+}
+
+interface ReviewProfile {
+  unitLabel: string;
+  aiNamed: boolean;
+  chartTitle: string;
+  soWhat: string;
+  yAxisLabel: string;
+  groups: ReviewGroup[];
+}
+
+const GROUP_COLORS = ['#8A6D1F', '#E9B44C', '#5B6ABF', '#3CA5AE', '#0E7C86'];
+
+// Review-step output per build method. Each method only plots inputs its market actually has:
+// Market C (rules template) has no HCP-level sales, so it is scored on rep assessment + PMR only.
+const REVIEW_PROFILES: Record<BuildMethod, ReviewProfile> = {
+  KMEANS_RULES: {
+    unitLabel: 'Cluster',
+    aiNamed: true,
+    chartTitle: 'Cluster Feature Distribution: Prescribing Volume & Momentum',
+    soWhat: 'Cluster 4 captures hyper-responsive growth prescribers with median volume 2.4x higher than standard baseline.',
+    yAxisLabel: 'Prescription Index (NBRx Momentum)',
+    groups: [
+      { key: 'cluster_0', label: 'Cluster 0', defaultName: 'Low Prescribing / Traditional', defaultSegment: 'E', share: 0.2, box: [10, 18, 24, 32, 45], color: GROUP_COLORS[0] },
+      { key: 'cluster_1', label: 'Cluster 1', defaultName: 'Pragmatic Adopters', defaultSegment: 'D', share: 0.25, box: [25, 35, 44, 56, 68], color: GROUP_COLORS[1] },
+      { key: 'cluster_2', label: 'Cluster 2', defaultName: 'Digital Fast Followers', defaultSegment: 'C', share: 0.3, box: [40, 52, 65, 78, 92], color: GROUP_COLORS[2] },
+      { key: 'cluster_3', label: 'Cluster 3', defaultName: 'High-Volume Commercial Champions', defaultSegment: 'B', share: 0.15, box: [60, 75, 88, 104, 122], color: GROUP_COLORS[3] },
+      { key: 'cluster_4', label: 'Cluster 4', defaultName: 'Early Scientific Innovators', defaultSegment: 'A', share: 0.1, box: [85, 110, 135, 160, 195], color: GROUP_COLORS[4] },
+    ],
+  },
+  RULES_DECILE_CLUSTERS: {
+    unitLabel: 'Decile band',
+    aiNamed: true,
+    chartTitle: 'Decile Band Distribution: Brick Sales Index with Digital Overlay',
+    soWhat: 'Deciles 9–10 concentrate brick-level volume; the digital overlay separates rising adopters within deciles 7–8.',
+    yAxisLabel: 'Brick Sales Index (Decile Baseline + Digital Overlay)',
+    groups: [
+      { key: 'band_1_4', label: 'D1–4', defaultName: 'Deciles 1–4 · Low Volume', defaultSegment: 'E', share: 0.3, box: [5, 12, 18, 24, 32], color: GROUP_COLORS[0] },
+      { key: 'band_5_6', label: 'D5–6', defaultName: 'Deciles 5–6 · Steady Base', defaultSegment: 'D', share: 0.24, box: [28, 36, 42, 50, 58], color: GROUP_COLORS[1] },
+      { key: 'band_7_8_core', label: 'D7–8 core', defaultName: 'Deciles 7–8 · Core Prescribers', defaultSegment: 'C', share: 0.18, box: [48, 56, 63, 70, 78], color: GROUP_COLORS[2] },
+      { key: 'band_7_8_digital', label: 'D7–8 digital', defaultName: 'Deciles 7–8 · Digitally Rising', defaultSegment: 'B', share: 0.16, box: [58, 66, 74, 82, 90], color: GROUP_COLORS[3] },
+      { key: 'band_9_10', label: 'D9–10', defaultName: 'Deciles 9–10 · Commercial Leaders', defaultSegment: 'A', share: 0.12, box: [80, 86, 92, 96, 100], color: GROUP_COLORS[4] },
+    ],
+  },
+  RULES_TEMPLATE: {
+    unitLabel: 'Grid tier',
+    aiNamed: false,
+    chartTitle: 'Potential Grid Score by Tier (Rep Assessment + PMR)',
+    soWhat: 'Tiers come from the weighted potential × adoption grid. No HCP-level sales are used — scores rely on rep assessment and PMR survey responses.',
+    yAxisLabel: 'Potential Grid Score (0–100)',
+    groups: [
+      { key: 'tier_5', label: 'Tier 5', defaultName: 'Grid Tier 5 · Low Potential / Aware', defaultSegment: 'E', share: 0.26, box: [4, 10, 16, 22, 30], color: GROUP_COLORS[0] },
+      { key: 'tier_4', label: 'Tier 4', defaultName: 'Grid Tier 4 · Moderate Potential / Aware', defaultSegment: 'D', share: 0.24, box: [24, 32, 38, 44, 52], color: GROUP_COLORS[1] },
+      { key: 'tier_3', label: 'Tier 3', defaultName: 'Grid Tier 3 · Moderate Potential / Trialling', defaultSegment: 'C', share: 0.22, box: [42, 50, 56, 62, 70], color: GROUP_COLORS[2] },
+      { key: 'tier_2', label: 'Tier 2', defaultName: 'Grid Tier 2 · High Potential / Considering', defaultSegment: 'B', share: 0.16, box: [60, 67, 73, 79, 86], color: GROUP_COLORS[3] },
+      { key: 'tier_1', label: 'Tier 1', defaultName: 'Grid Tier 1 · High Potential / Adopting', defaultSegment: 'A', share: 0.12, box: [76, 82, 88, 93, 100], color: GROUP_COLORS[4] },
+    ],
+  },
+};
+
+const getReviewProfile = (method: StudioMethod): ReviewProfile =>
+  REVIEW_PROFILES[(method in REVIEW_PROFILES ? method : 'RULES_TEMPLATE') as BuildMethod];
+
+const defaultNames = (profile: ReviewProfile) =>
+  Object.fromEntries(profile.groups.map((g) => [g.key, g.defaultName]));
+
+const defaultMappings = (profile: ReviewProfile) =>
+  Object.fromEntries(profile.groups.map((g) => [g.key, g.defaultSegment]));
 
 export const S06_SegmentationStudio: React.FC = () => {
   const navigate = useNavigate();
@@ -35,23 +115,19 @@ export const S06_SegmentationStudio: React.FC = () => {
 
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [hasRun, setHasRun] = useState<boolean>(false);
-  const [clusterNames, setClusterNames] = useState<Record<string, string>>({
-    cluster_0: 'Low Prescribing / Traditional',
-    cluster_1: 'Pragmatic Adopters',
-    cluster_2: 'Digital Fast Followers',
-    cluster_3: 'High-Volume Commercial Champions',
-    cluster_4: 'Early Scientific Innovators',
-  });
-
-  const [clusterMappings, setClusterMappings] = useState<Record<string, string>>({
-    cluster_0: 'E',
-    cluster_1: 'D',
-    cluster_2: 'C',
-    cluster_3: 'B',
-    cluster_4: 'A',
-  });
+  // Profile of the last run; names/mappings are re-seeded on every run so they always match its method
+  const [reviewProfile, setReviewProfile] = useState<ReviewProfile>(REVIEW_PROFILES.KMEANS_RULES);
+  const [clusterNames, setClusterNames] = useState<Record<string, string>>(defaultNames(REVIEW_PROFILES.KMEANS_RULES));
+  const [clusterMappings, setClusterMappings] = useState<Record<string, string>>(
+    defaultMappings(REVIEW_PROFILES.KMEANS_RULES)
+  );
 
   const [toast, setToast] = useState<ToastMessage | null>(null);
+
+  // A changed market or method invalidates the previous run's review output
+  useEffect(() => {
+    setHasRun(false);
+  }, [selectedMarket, method]);
 
   const steps: StepItem[] = [
     { step: 1, title: 'Scope & Filter', description: 'Universe definition' },
@@ -87,9 +163,16 @@ export const S06_SegmentationStudio: React.FC = () => {
 
   // Run studio simulation
   const handleRunAlgorithm = async () => {
+    const profile = getReviewProfile(method);
+    setReviewProfile(profile);
+    setClusterNames(defaultNames(profile));
+    setClusterMappings(defaultMappings(profile));
     setIsRunning(true);
     try {
-      await aiService.nameClusters('VER-STUDIO-NEW', { market: selectedMarket, method });
+      // Rules-template tiers come from the grid definition, not from AI-2 cluster naming
+      if (profile.aiNamed) {
+        await aiService.nameClusters('VER-STUDIO-NEW', { market: selectedMarket, method });
+      }
       setHasRun(true);
       setActiveStep(3);
     } catch (err) {
@@ -101,14 +184,13 @@ export const S06_SegmentationStudio: React.FC = () => {
     }
   };
 
-  // Box plot sample data
-  const boxPlotData: BoxPlotItem[] = [
-    { group: 'Cluster 0 (E)', min: 10, q1: 18, median: 24, q3: 32, max: 45, color: '#8A6D1F' },
-    { group: 'Cluster 1 (D)', min: 25, q1: 35, median: 44, q3: 56, max: 68, color: '#E9B44C' },
-    { group: 'Cluster 2 (C)', min: 40, q1: 52, median: 65, q3: 78, max: 92, color: '#5B6ABF' },
-    { group: 'Cluster 3 (B)', min: 60, q1: 75, median: 88, q3: 104, max: 122, color: '#3CA5AE' },
-    { group: 'Cluster 4 (A)', min: 85, q1: 110, median: 135, q3: 160, max: 195, color: '#0E7C86' },
-  ];
+  const isProxyMarket = selectedMarket === 'MKT_C';
+  const boxPlotData: BoxPlotItem[] = reviewProfile.groups.map((g) => {
+    const [min, q1, median, q3, max] = g.box;
+    return { group: `${g.label} (${g.defaultSegment})`, min, q1, median, q3, max, color: g.color };
+  });
+  const groupSize = (key: string) =>
+    Math.round(universeCount * (reviewProfile.groups.find((g) => g.key === key)?.share ?? 0));
 
   // Save as Version in Segment Library
   const handleSaveVersion = () => {
@@ -412,13 +494,15 @@ export const S06_SegmentationStudio: React.FC = () => {
         <div className="space-y-6">
           <div className="flex items-center justify-between bg-white border border-slate-200 rounded-lg p-4 shadow-2xs">
             <div className="flex items-center gap-3">
-              <AIBadge providerName="MockProvider" />
+              {reviewProfile.aiNamed && <AIBadge providerName="MockProvider" />}
               <div>
                 <h4 className="text-body font-semibold text-navy-900">
-                  Cluster Convergence &amp; Profiling
+                  {reviewProfile.aiNamed ? `${reviewProfile.unitLabel} Profiling` : 'Potential Grid Tiers'}
                 </h4>
                 <p className="text-xs text-slate-500">
-                  Generated {kClusters} clusters with AI-assisted behavioral naming.
+                  {reviewProfile.aiNamed
+                    ? `Generated ${reviewProfile.groups.length} ${reviewProfile.unitLabel.toLowerCase()}s with AI-assisted behavioral naming.`
+                    : `Scored ${reviewProfile.groups.length} tiers from the global grid template (potential ${gridWeightPotential}% · adoption ${100 - gridWeightPotential}%).`}
                 </p>
               </div>
             </div>
@@ -440,25 +524,37 @@ export const S06_SegmentationStudio: React.FC = () => {
             </div>
           </div>
 
+          {isProxyMarket && (
+            <div className="p-4 bg-amber-50 border border-amber-200 rounded text-xs text-amber-900 flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" />
+              <div>
+                <span className="font-semibold">Sales Signal Policy: </span>
+                <span>Not available in this market — using proxy: rep assessment + PMR</span>
+              </div>
+            </div>
+          )}
+
           <BoxPlot
-            title="Cluster Feature Distribution: Prescribing Volume &amp; Momentum"
-            soWhat="Cluster 4 captures hyper-responsive growth prescribers with median volume 2.4x higher than standard baseline."
-            xAxisLabel="Formed Cluster"
-            yAxisLabel="Prescription Index (NBRx Momentum)"
+            title={reviewProfile.chartTitle}
+            soWhat={reviewProfile.soWhat}
+            xAxisLabel={`Formed ${reviewProfile.unitLabel}`}
+            yAxisLabel={reviewProfile.yAxisLabel}
             data={boxPlotData}
             height={320}
           />
 
-          {/* Cluster Name Editing */}
+          {/* Group Name Editing */}
           <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-2xs space-y-4">
-            <h4 className="text-section-title text-navy-900">Review &amp; Edit Cluster Behavioral Titles</h4>
+            <h4 className="text-section-title text-navy-900">
+              Review &amp; Edit {reviewProfile.unitLabel} Titles
+            </h4>
 
             <div className="space-y-3">
-              {Object.keys(clusterNames).map((key, idx) => (
+              {Object.keys(clusterNames).map((key) => (
                 <div key={key} className="flex items-center justify-between p-3 bg-slate-50 rounded border border-slate-200">
                   <div className="w-1/4">
                     <span className="font-mono text-xs font-bold text-navy-900">{key}</span>
-                    <div className="text-2xs text-slate-500">Size: {[120, 150, 180, 90, 60][idx]} HCPs</div>
+                    <div className="text-2xs text-slate-500">Size: {groupSize(key).toLocaleString()} HCPs</div>
                   </div>
                   <div className="w-1/2">
                     <input
@@ -470,7 +566,7 @@ export const S06_SegmentationStudio: React.FC = () => {
                   </div>
                   <div className="w-1/5 text-right">
                     <span className="text-2xs text-teal-700 font-semibold bg-teal-50 px-2 py-1 rounded border border-teal-200">
-                      AI Suggested
+                      {reviewProfile.aiNamed ? 'AI Suggested' : 'Template Default'}
                     </span>
                   </div>
                 </div>
@@ -486,10 +582,10 @@ export const S06_SegmentationStudio: React.FC = () => {
           <div className="bg-white rounded-lg border border-slate-200 p-6 shadow-2xs space-y-6">
             <div>
               <h3 className="text-section-title text-navy-900">
-                Map Formed Clusters to Global Vocabulary Standard
+                Map Formed {reviewProfile.unitLabel}s to Global Vocabulary Standard
               </h3>
               <p className="text-xs text-slate-500 mt-0.5">
-                Every cluster must map to a global segment value (A–E) before it can enter the living loop or publish to CRM.
+                Every {reviewProfile.unitLabel.toLowerCase()} must map to a global segment value (A–E) before it can enter the living loop or publish to CRM.
               </p>
             </div>
 
