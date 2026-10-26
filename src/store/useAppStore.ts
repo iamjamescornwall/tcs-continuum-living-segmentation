@@ -13,6 +13,7 @@ import {
 } from '../types';
 import dataService from '../services/dataService';
 import { appConfig } from '../config/appConfig';
+import { getDaysRelativeToDemo } from '../utils/formatters';
 
 /**
  * Initializes mock CRM records from customer master and current proposals.
@@ -24,9 +25,20 @@ function createInitialCrmRecords(): CrmRecord[] {
 
   const records: CrmRecord[] = [];
 
+  // The mock record's segment field holds the Aurelix value segment (HCPs) / Zentrova account tier (HCOs),
+  // so only proposals on that brand and dimension may populate it
+  const aurelixSegment = new Map(
+    dataService
+      .getSegmentAssignments({ brand: 'AUR', dimension: 'SEGMENT' })
+      .map((a) => [a.customer_id, a])
+  );
+
   // Seed HCP CRM records
   hcps.forEach((hcp) => {
-    const proposal = proposals.find((p) => p.customer_id === hcp.hcp_id);
+    const proposal = proposals.find(
+      (p) => p.customer_id === hcp.hcp_id && p.brand_code === 'AUR' && p.dimension_code === 'SEGMENT'
+    );
+    const assignment = aurelixSegment.get(hcp.hcp_id);
     records.push({
       customer_id: hcp.hcp_id,
       customer_type: 'HCP',
@@ -34,9 +46,13 @@ function createInitialCrmRecords(): CrmRecord[] {
       brand_code: 'AUR',
       customer_name: hcp.display_name,
       specialty: hcp.specialty,
-      segment: proposal ? proposal.current_value : 'Segment B',
+      segment: proposal ? proposal.current_value : assignment?.value ?? 'B',
       proposed_segment: proposal ? proposal.proposed_value : null,
-      segment_age_days: proposal ? proposal.segment_age_days : 90,
+      segment_age_days: proposal
+        ? proposal.segment_age_days
+        : assignment
+        ? getDaysRelativeToDemo(assignment.set_date)
+        : 90,
       last_sync_date: '2026-05-04',
       sync_status: proposal?.status === 'Approved' ? 'Pending publish' : 'Synced',
     });
@@ -44,7 +60,9 @@ function createInitialCrmRecords(): CrmRecord[] {
 
   // Seed Account CRM records
   accounts.forEach((acc) => {
-    const proposal = proposals.find((p) => p.customer_id === acc.hco_id);
+    const proposal = proposals.find(
+      (p) => p.customer_id === acc.hco_id && p.brand_code === 'ZEN' && p.dimension_code === 'ACC_TIER'
+    );
     records.push({
       customer_id: acc.hco_id,
       customer_type: 'HCO',
@@ -303,13 +321,22 @@ export const useAppStore = create<AppState>((set, get) => ({
       publishedIds.has(p.proposal_id) ? { ...p, status: 'Written back' as const } : p
     );
 
-    // 2. Write to CRM records: update segment, reset proposed_segment and segment_age_days to 0
-    const publishedCustomerMap = new Map(toPublish.map((p) => [p.customer_id, p.proposed_value]));
+    // 2. Write to CRM records: reset proposed_segment and segment_age_days to 0; the segment field
+    //    itself changes only for proposals on the record's brand and segment dimension
+    const publishedCustomers = new Set(toPublish.map((p) => p.customer_id));
+    const segmentChanges = new Map<string, string>();
+    toPublish.forEach((p) => {
+      const record = crmRecords.find((r) => r.customer_id === p.customer_id);
+      const segmentDimension = p.customer_type === 'HCO' ? 'ACC_TIER' : 'SEGMENT';
+      if (record && p.brand_code === record.brand_code && p.dimension_code === segmentDimension) {
+        segmentChanges.set(p.customer_id, p.proposed_value);
+      }
+    });
     const updatedCrm = crmRecords.map((r) => {
-      if (publishedCustomerMap.has(r.customer_id)) {
+      if (publishedCustomers.has(r.customer_id)) {
         return {
           ...r,
-          segment: publishedCustomerMap.get(r.customer_id)!,
+          segment: segmentChanges.get(r.customer_id) ?? r.segment,
           proposed_segment: null,
           segment_age_days: 0, // Reset age on write-back per brief Section 11
           last_sync_date: '2026-10-15',

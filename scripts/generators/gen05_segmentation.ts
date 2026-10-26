@@ -55,6 +55,39 @@ export function generateSegmentationData(
     }
   }
 
+  // Potential and adoption are drawn conditional on the value segment so profiles are coherent
+  // (A skews to high potential / late adoption, E to low potential / early stages). Each draw is a
+  // single weightedChoice, consuming exactly one RNG call like the uniform choice it replaces, so the
+  // seeded sequence for every later file is unchanged.
+  const POTENTIAL_VALUES = ['1', '2', '3', '4'];
+  const POTENTIAL_WEIGHTS: Record<string, number[]> = {
+    A: [0.03, 0.12, 0.35, 0.5],
+    B: [0.07, 0.2, 0.4, 0.33],
+    C: [0.15, 0.35, 0.35, 0.15],
+    D: [0.3, 0.4, 0.22, 0.08],
+    E: [0.5, 0.32, 0.13, 0.05],
+  };
+  const ADOPTION_VALUES = ['Unaware', 'Aware', 'Consideration', 'Trial', 'Adoption', 'Expansion'];
+  const ADOPTION_WEIGHTS: Record<string, number[]> = {
+    A: [0.02, 0.05, 0.13, 0.2, 0.35, 0.25],
+    B: [0.04, 0.1, 0.24, 0.27, 0.25, 0.1],
+    C: [0.1, 0.2, 0.27, 0.22, 0.16, 0.05],
+    D: [0.2, 0.3, 0.25, 0.15, 0.08, 0.02],
+    E: [0.35, 0.35, 0.17, 0.08, 0.04, 0.01],
+  };
+
+  // Planning-cycle segments for hand-written hero proposals in gen06 (customer|brand → current_value):
+  // Zentrova propagation HCP-B-0002…0006, conflicting-signal hold HCP-B-0007, freeze-window hold HCP-A-0001
+  const HERO_SEGMENT_OVERRIDES: Record<string, string> = {
+    'HCP-B-0002|ZEN': 'B',
+    'HCP-B-0003|ZEN': 'B',
+    'HCP-B-0004|ZEN': 'C',
+    'HCP-B-0005|ZEN': 'C',
+    'HCP-B-0006|ZEN': 'C',
+    'HCP-B-0007|AUR': 'C',
+    'HCP-A-0001|AUR': 'B',
+  };
+
   // 1. HCP Assignments
   hcps.forEach((hcp) => {
     const isHeroB0001 = hcp.hcp_id === 'HCP-B-0001';
@@ -85,9 +118,11 @@ export function generateSegmentationData(
         // MKT_C inflates top segments
         segVal = ctx.weightedChoice(['A', 'B', 'C', 'D', 'E'], [0.20, 0.30, 0.25, 0.15, 0.10]);
       }
+      // Override after the draw so the RNG sequence is preserved
+      segVal = HERO_SEGMENT_OVERRIDES[`${hcp.hcp_id}|${brandCode}`] ?? segVal;
 
       // Potential
-      let potVal = isHeroAurelix ? '3' : ctx.choice(['1', '2', '3', '4']);
+      let potVal = isHeroAurelix ? '3' : ctx.weightedChoice(POTENTIAL_VALUES, POTENTIAL_WEIGHTS[segVal]);
       let isGapFilled = false;
       if (isHeroC0001Aur) {
         potVal = '3';
@@ -105,7 +140,11 @@ export function generateSegmentationData(
       const behavVal = isHeroAurelix ? 'Traditionalist' : ctx.choice(['Traditionalist', 'Pragmatist', 'Engaged', 'Advocate']);
       const attVal = isHeroAurelix ? 'Late majority' : ctx.choice(['Early adopter', 'Early majority', 'Late majority', 'Sceptic']);
       const digVal = isHeroAurelix ? 'Evolving' : ctx.choice(['Traditional', 'Evolving', 'Savvy']);
-      const adoptVal = isHeroAurelix ? 'Consideration' : (isHeroC0001Aur ? 'Consideration' : ctx.choice(['Unaware', 'Aware', 'Consideration', 'Trial', 'Adoption', 'Expansion']));
+      const adoptVal = isHeroAurelix
+        ? 'Consideration'
+        : isHeroC0001Aur
+        ? 'Consideration'
+        : ctx.weightedChoice(ADOPTION_VALUES, ADOPTION_WEIGHTS[segVal]);
       const chanVal = isHeroAurelix ? 'Portal' : ctx.choice(['Face-to-face', 'Remote', 'Email', 'Portal', 'Events', 'Mixed']);
       const microVal = ctx.choice(['MS-01', 'MS-02', 'MS-03', 'MS-04', 'None']);
 
@@ -148,10 +187,11 @@ export function generateSegmentationData(
       acc.market_code === 'MKT_C' ? ['AUR', 'ZEN', 'CRD'] : ['AUR', 'ZEN', 'CRD', 'NEU', 'BRV'];
 
     accBrands.forEach((brandCode) => {
+      // Hero account holds its pre-formulary-win values; PRP-000006/7 propose Listed / Tier 1
       const isHeroAccZen = acc.hco_id === 'ACC-B-001' && brandCode === 'ZEN';
-      const accessStatus = isHeroAccZen ? 'Listed' : ctx.choice(['Listed', 'Restricted', 'Under review', 'Not listed']);
-      const tierVal = isHeroAccZen ? 'Tier 1' : ctx.choice(['Tier 1', 'Tier 2', 'Tier 3']);
-      const setDate = isHeroAccZen ? '2026-10-08' : generateSetDate(acc.market_code);
+      const accessStatus = isHeroAccZen ? 'Under review' : ctx.choice(['Listed', 'Restricted', 'Under review', 'Not listed']);
+      const tierVal = isHeroAccZen ? 'Tier 2' : ctx.choice(['Tier 1', 'Tier 2', 'Tier 3']);
+      const setDate = isHeroAccZen ? '2026-04-10' : generateSetDate(acc.market_code);
 
       const hcoDims: Array<{ code: any; val: string }> = [
         { code: 'ACC_ARCHETYPE', val: acc.archetype },

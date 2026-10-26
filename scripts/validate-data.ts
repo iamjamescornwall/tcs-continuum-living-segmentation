@@ -1,6 +1,6 @@
 /**
  * Synthetic Data Validation Script
- * Tests all 12 validation rules from DATA_SPEC.md Section 11 + Prompt 10 checks.
+ * Tests the 12 validation rules from DATA_SPEC.md Section 11 + Prompt 10 checks, plus rules 13–15 (proposal vocabulary, proposal–assignment consistency, segment ordering).
  * Invoked via: npm run data:validate
  */
 
@@ -280,6 +280,89 @@ async function validateAll(): Promise<boolean> {
     evidence: 'All hospital and practitioner names are fictitious synthesis.',
   });
 
+  // --- Rule 13: Proposal and drift-flag values are in the global vocabulary ---
+  let vocabFailures = 0;
+  const vocabExamples: string[] = [];
+  const checkValue = (id: string, dim: string, value: string) => {
+    const allowed = dimensionAllowedValues[dim];
+    if (allowed && !allowed.has(value)) {
+      vocabFailures++;
+      if (vocabExamples.length < 3) vocabExamples.push(`${id} ${dim}=${value}`);
+    }
+  };
+  proposals.forEach((p) => {
+    checkValue(p.proposal_id, p.dimension_code, p.current_value);
+    checkValue(p.proposal_id, p.dimension_code, p.proposed_value);
+    if (p.current_value === p.proposed_value) {
+      vocabFailures++;
+      if (vocabExamples.length < 3) vocabExamples.push(`${p.proposal_id} proposes no change`);
+    }
+  });
+  driftFlags.forEach((f) => {
+    checkValue(f.flag_id, f.dimension_code, f.current_value);
+    checkValue(f.flag_id, f.dimension_code, f.indicated_value);
+  });
+
+  results.push({
+    ruleNumber: 13,
+    ruleTitle: 'Proposal and drift-flag values are in vocabulary',
+    passed: vocabFailures === 0,
+    evidence:
+      vocabFailures === 0
+        ? `All ${proposals.length} proposals and ${driftFlags.length} drift flags use allowed values and propose a real change.`
+        : `${vocabFailures} invalid values, e.g. ${vocabExamples.join('; ')}.`,
+  });
+
+  // --- Rule 14: Proposal current_value matches the customer's planning-cycle assignment ---
+  const assignmentValue = new Map(
+    assignments.map((a) => [`${a.customer_id}|${a.brand_code}|${a.dimension_code}`, a.value])
+  );
+  const mismatched = proposals.filter(
+    (p) => assignmentValue.get(`${p.customer_id}|${p.brand_code}|${p.dimension_code}`) !== p.current_value
+  );
+
+  results.push({
+    ruleNumber: 14,
+    ruleTitle: 'Proposal current values match assignments',
+    passed: mismatched.length === 0,
+    evidence:
+      mismatched.length === 0
+        ? `All ${proposals.length} proposals start from the customer's assigned value.`
+        : `${mismatched.length} proposals disagree with segment_assignments, e.g. ${mismatched
+            .slice(0, 3)
+            .map((p) => `${p.proposal_id} ${p.dimension_code} ${p.current_value} vs ${assignmentValue.get(`${p.customer_id}|${p.brand_code}|${p.dimension_code}`)}`)
+            .join('; ')}.`,
+  });
+
+  // --- Rule 15: Segments are ordered on potential and adoption (A highest, E lowest) ---
+  const adoptionRank: Record<string, number> = { Unaware: 0, Aware: 1, Consideration: 2, Trial: 3, Adoption: 4, Expansion: 5 };
+  const hcpDims = new Map<string, Record<string, string>>();
+  assignments
+    .filter((a) => a.customer_type === 'HCP' && ['SEGMENT', 'POTENTIAL', 'ADOPTION'].includes(a.dimension_code))
+    .forEach((a) => {
+      const key = `${a.customer_id}|${a.brand_code}`;
+      const rec = hcpDims.get(key) || {};
+      rec[a.dimension_code] = a.value;
+      hcpDims.set(key, rec);
+    });
+  const segMeans = ['A', 'B', 'C', 'D', 'E'].map((seg) => {
+    const rows = [...hcpDims.values()].filter((r) => r.SEGMENT === seg);
+    const mean = (fn: (r: Record<string, string>) => number) => rows.reduce((acc, r) => acc + fn(r), 0) / Math.max(1, rows.length);
+    return { seg, potential: mean((r) => Number(r.POTENTIAL)), adoption: mean((r) => adoptionRank[r.ADOPTION] ?? 0) };
+  });
+  const strictlyDescending = (vals: number[]) => vals.every((v, i) => i === 0 || vals[i - 1] > v);
+  const orderedPotential = strictlyDescending(segMeans.map((m) => m.potential));
+  const orderedAdoption = strictlyDescending(segMeans.map((m) => m.adoption));
+
+  results.push({
+    ruleNumber: 15,
+    ruleTitle: 'Segments ordered on potential and adoption',
+    passed: orderedPotential && orderedAdoption,
+    evidence: `Mean potential A→E: ${segMeans.map((m) => m.potential.toFixed(2)).join(' > ')}; mean adoption rank A→E: ${segMeans
+      .map((m) => m.adoption.toFixed(2))
+      .join(' > ')}.`,
+  });
+
   // Print results table
   console.table(
     results.map((r) => ({
@@ -292,7 +375,7 @@ async function validateAll(): Promise<boolean> {
 
   const allPassed = results.every((r) => r.passed);
   if (allPassed) {
-    console.log('\n🎉 ALL 12 VALIDATION RULES PASSED PERFECTLY!\n');
+    console.log(`\n🎉 ALL ${results.length} VALIDATION RULES PASSED PERFECTLY!\n`);
   } else {
     console.error('\n⚠️ SOME VALIDATION RULES FAILED.\n');
   }

@@ -12,6 +12,7 @@ import {
   ProposalStatus,
   HoldReason,
   RejectionReason,
+  SegmentAssignment,
 } from '../../src/types';
 import {
   HERO_EVENTS_HCP_B0001,
@@ -20,15 +21,40 @@ import {
 } from '../heroes';
 import { GeneratorContext, writeJsonFile } from '../utils';
 
+// Ordered value ladders (low → high) for dimensions that random proposals and drift flags can move
+const VALUE_LADDERS: Record<string, string[]> = {
+  SEGMENT: ['E', 'D', 'C', 'B', 'A'],
+  POTENTIAL: ['1', '2', '3', '4'],
+  ADOPTION: ['Unaware', 'Aware', 'Consideration', 'Trial', 'Adoption', 'Expansion'],
+  DIGITAL: ['Traditional', 'Evolving', 'Savvy'],
+};
+
+/** One step up the dimension's ladder, or one step down if the customer is already at the top. */
+function nextValue(dimension: string, current: string): string {
+  const ladder = VALUE_LADDERS[dimension];
+  const idx = ladder.indexOf(current);
+  if (idx < 0) return ladder[ladder.length - 1];
+  return idx < ladder.length - 1 ? ladder[idx + 1] : ladder[idx - 1];
+}
+
 export function generatePipelineData(
   ctx: GeneratorContext,
   hcps: HCP[],
-  _accounts: Account[]
+  _accounts: Account[],
+  assignments: SegmentAssignment[]
 ): {
   changeEvents: ChangeEvent[];
   driftFlags: DriftFlag[];
   proposals: Proposal[];
 } {
+  // Planning-cycle assignment per customer|brand|dimension, so generated changes start from real values
+  const assigned = new Map(
+    assignments.map((a) => [`${a.customer_id}|${a.brand_code}|${a.dimension_code}`, a])
+  );
+  const DEMO_TODAY_MS = new Date('2026-10-15').getTime();
+  const ageOf = (a: SegmentAssignment | undefined, fallback: number) =>
+    a ? Math.round((DEMO_TODAY_MS - new Date(a.set_date).getTime()) / 86400000) : fallback;
+
   const changeEvents: ChangeEvent[] = [...HERO_EVENTS_HCP_B0001];
   const driftFlags: DriftFlag[] = [...HERO_FLAGS_HCP_B0001];
   const proposals: Proposal[] = [...HERO_PROPOSALS_HCP_B0001];
@@ -523,6 +549,7 @@ export function generatePipelineData(
       const dim = ctx.choice(['SEGMENT', 'ADOPTION', 'DIGITAL', 'POTENTIAL']) as any;
       const fid = `DRF-${String(drfIdCounter++).padStart(6, '0')}`;
       flagIdsForMarket.push(fid);
+      const flagCurrent = assigned.get(`${hcp.hcp_id}|${brand}|${dim}`)?.value ?? VALUE_LADDERS[dim][0];
 
       driftFlags.push({
         flag_id: fid,
@@ -531,8 +558,8 @@ export function generatePipelineData(
         customer_id: hcp.hcp_id,
         brand_code: brand,
         dimension_code: dim,
-        current_value: 'C',
-        indicated_value: 'B',
+        current_value: flagCurrent,
+        indicated_value: nextValue(dim, flagCurrent),
         drift_score: ctx.round(ctx.randomFloat(0.70, 0.95), 2),
         confidence: ctx.choice(['High', 'Medium']),
         threshold_ref: `THR-${m.code}-01`,
@@ -590,6 +617,10 @@ export function generatePipelineData(
       }
 
       const pId = `PRP-${String(prpIdCounter++).padStart(6, '0')}`;
+      const assignment = assigned.get(`${hcp.hcp_id}|${brand}|${dim}`);
+      const currentValue = assignment?.value ?? VALUE_LADDERS[dim][0];
+      // Draw kept (and discarded when an assignment exists) so the seeded RNG sequence is unchanged
+      const drawnAge = ctx.randomInt(70, 240);
 
       proposals.push({
         proposal_id: pId,
@@ -599,15 +630,16 @@ export function generatePipelineData(
         brand_code: brand,
         indication_code: brand === 'AUR' ? 'AUR_PSO' : null,
         dimension_code: dim,
-        current_value: 'C',
-        proposed_value: 'B',
-        segment_age_days: ctx.randomInt(70, 240),
+        current_value: currentValue,
+        proposed_value: nextValue(dim, currentValue),
+        segment_age_days: ageOf(assignment, drawnAge),
         confidence: conf,
         drivers: [
           {
-            label: 'Signal indicator change',
+            // Market C has no HCP-level sales: its generic driver comes from survey / rep assessment
+            label: m.code === 'MKT_C' ? 'PMR / rep assessment indicator change' : 'Signal indicator change',
             value: '+15% relative velocity',
-            source_category: 'Sales',
+            source_category: m.code === 'MKT_C' ? 'Survey' : 'Sales',
             data_age_days: ctx.randomInt(5, 25),
           },
         ],

@@ -8,8 +8,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0187",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -24,8 +24,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0451",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Aware",
+    "after_value": "Consideration",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -40,8 +40,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0076",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Unaware",
+    "after_value": "Aware",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -56,8 +56,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0328",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -72,8 +72,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0347",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -88,8 +88,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0152",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000001"
@@ -104,8 +104,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0096",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Consideration",
+    "after_value": "Trial",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000002"
@@ -120,8 +120,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0153",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Trial",
+    "after_value": "Adoption",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000002"
@@ -136,8 +136,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0200",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000002"
@@ -152,8 +152,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0077",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000002"
@@ -168,8 +168,8 @@
     "action": "Written back",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0098",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Published to CRM via Continuum automated write-back",
     "evidence_refs": [
       "PUB-000002"
@@ -200,8 +200,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0600",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Unaware",
+    "after_value": "Aware",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000075"
@@ -232,8 +232,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0187",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000024"
@@ -248,8 +248,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0578",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Traditional",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000018"
@@ -280,8 +280,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0500",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Traditional",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000061"
@@ -296,8 +296,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0451",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Aware",
+    "after_value": "Consideration",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000108"
@@ -312,8 +312,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0076",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Unaware",
+    "after_value": "Aware",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000027"
@@ -328,8 +328,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0132",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "D",
+    "after_value": "C",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000051"
@@ -360,8 +360,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0359",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Aware",
+    "after_value": "Consideration",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000076"
@@ -376,8 +376,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0156",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000067"
@@ -392,8 +392,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0104",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000098"
@@ -408,8 +408,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0328",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000106"
@@ -440,8 +440,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0306",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Aware",
+    "after_value": "Consideration",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000022"
@@ -456,8 +456,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0482",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000069"
@@ -472,8 +472,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0578",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Traditional",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000105"
@@ -488,8 +488,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0347",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000122"
@@ -504,8 +504,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0152",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000102"
@@ -520,8 +520,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0108",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000041"
@@ -536,8 +536,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0131",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Consideration",
+    "after_value": "Trial",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000105"
@@ -552,8 +552,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0096",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Consideration",
+    "after_value": "Trial",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000127"
@@ -568,8 +568,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0153",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Trial",
+    "after_value": "Adoption",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000141"
@@ -584,8 +584,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0192",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Trial",
+    "after_value": "Adoption",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000141"
@@ -600,8 +600,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0200",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000186"
@@ -616,8 +616,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0291",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Aware",
+    "after_value": "Consideration",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000159"
@@ -632,8 +632,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0033",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Traditional",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000128"
@@ -648,8 +648,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0362",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Savvy",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000176"
@@ -664,8 +664,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0077",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000168"
@@ -680,8 +680,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0098",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Evolving",
+    "after_value": "Savvy",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000154"
@@ -696,8 +696,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0231",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Savvy",
+    "after_value": "Evolving",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000161"
@@ -712,8 +712,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0330",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Consideration",
+    "after_value": "Trial",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000148"
@@ -728,8 +728,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-C-0077",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "E",
+    "after_value": "D",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000205"
@@ -760,8 +760,8 @@
     "action": "Proposal approved",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-C-0236",
-    "before_value": "C",
-    "after_value": "B",
+    "before_value": "Consideration",
+    "after_value": "Trial",
     "reason": "Approved after evidence review",
     "evidence_refs": [
       "DRF-000215"
@@ -776,8 +776,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0316",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Adoption",
+    "after_value": "Adoption",
     "reason": "Other",
     "evidence_refs": [
       "DRF-000116"
@@ -792,8 +792,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0385",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Savvy",
+    "after_value": "Savvy",
     "reason": "Other",
     "evidence_refs": [
       "DRF-000094"
@@ -808,8 +808,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0004",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "B",
+    "after_value": "B",
     "reason": "Temporary behaviour",
     "evidence_refs": [
       "DRF-000056"
@@ -824,8 +824,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0538",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "A",
+    "after_value": "A",
     "reason": "Data quality issue",
     "evidence_refs": [
       "DRF-000092"
@@ -840,8 +840,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-A-0161",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Unaware",
+    "after_value": "Unaware",
     "reason": "Freeze period",
     "evidence_refs": [
       "DRF-000087"
@@ -856,8 +856,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0105",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Savvy",
+    "after_value": "Savvy",
     "reason": "Other",
     "evidence_refs": [
       "DRF-000151"
@@ -872,8 +872,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0113",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Adoption",
+    "after_value": "Adoption",
     "reason": "Freeze period",
     "evidence_refs": [
       "DRF-000184"
@@ -888,8 +888,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-B-0119",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Consideration",
+    "after_value": "Consideration",
     "reason": "Other",
     "evidence_refs": [
       "DRF-000160"
@@ -904,8 +904,8 @@
     "action": "Proposal rejected",
     "entity_type": "hcp_segment",
     "entity_id": "HCP-C-0057",
-    "before_value": "C",
-    "after_value": "C",
+    "before_value": "Traditional",
+    "after_value": "Traditional",
     "reason": "Freeze period",
     "evidence_refs": [
       "DRF-000187"

@@ -47,7 +47,7 @@ async function main() {
   const { assignments, history, library, studioOutputs } = generateSegmentationData(ctx, hcps, accounts);
 
   console.log('\n--- Phase 6: Change pipeline (Prompt 6) ---');
-  const { changeEvents, driftFlags, proposals } = generatePipelineData(ctx, hcps, accounts);
+  const { changeEvents, driftFlags, proposals } = generatePipelineData(ctx, hcps, accounts, assignments);
 
   console.log('\n--- Phase 7: Records and learning (Prompt 7) ---');
   const { auditLog, publishLog, downstreamImpact, recalibration } = generateRecordsData(ctx, proposals, library);

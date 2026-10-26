@@ -84,7 +84,21 @@ function runStateLoopTests() {
     'Unselected approved proposals stay Approved (not written back)'
   );
 
-  // 5. Action: Demo Reset
+  // 5. Non-segment write-backs never overwrite the CRM segment field
+  useAppStore.getState().resetDemo();
+  const nonSegment = useAppStore
+    .getState()
+    .proposals.find((p) => p.customer_type === 'HCP' && p.status === 'Approved' && p.dimension_code !== 'SEGMENT')!;
+  const segmentBefore = useAppStore.getState().crmRecords.find((r) => r.customer_id === nonSegment.customer_id)?.segment;
+  useAppStore.getState().publishToCrm(nonSegment.market_code, undefined, { proposalIds: [nonSegment.proposal_id] });
+  const recordAfter = useAppStore.getState().crmRecords.find((r) => r.customer_id === nonSegment.customer_id);
+  assert(
+    recordAfter?.segment === segmentBefore && recordAfter?.segment !== nonSegment.proposed_value,
+    `${nonSegment.dimension_code} write-back leaves the CRM segment field unchanged`
+  );
+  assert(['A', 'B', 'C', 'D', 'E'].includes(recordAfter?.segment ?? ''), 'CRM segment field holds a global segment value');
+
+  // 6. Action: Demo Reset
   console.log('\n[Step 4: Demo Reset]');
   useAppStore.getState().resetDemo();
   const resetHeroProposal = useAppStore.getState().proposals.find((p) => p.customer_id === 'HCP-B-0001');

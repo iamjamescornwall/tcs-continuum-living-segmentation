@@ -69,6 +69,22 @@ export const S11_PublishToCrm: React.FC = () => {
     return dataService.getHcpById(p.customer_id)?.display_name || p.customer_id;
   };
 
+  // Mock CRM field that each governed dimension writes back to
+  const CRM_FIELD_BY_DIMENSION: Record<string, string> = {
+    SEGMENT: 'Core_Segment__c',
+    POTENTIAL: 'Potential__c',
+    ADOPTION: 'Adoption_Stage__c',
+    BEHAVIOURAL: 'Behavioural_Segment__c',
+    ATTITUDINAL: 'Attitudinal_Segment__c',
+    DIGITAL: 'Digital_Affinity__c',
+    CHANNEL_PREF: 'Channel_Preference__c',
+    MICRO_SEGMENT: 'Micro_Segment__c',
+    ACC_TIER: 'Account_Tier__c',
+    ACCESS_STATUS: 'Access_Status__c',
+    ACC_POTENTIAL: 'Account_Potential__c',
+    ACC_ARCHETYPE: 'Account_Archetype__c',
+  };
+
   // Affiliation / territory line for the CRM record, derived from the customer master
   const getCustomerContext = (customerId: string): string => {
     const hcp = dataService.getHcpById(customerId);
@@ -105,6 +121,8 @@ export const S11_PublishToCrm: React.FC = () => {
   // Preview Customer Mock CRM Record
   const activeProposalForPreview = readyProposals.find((p) => p.customer_id === previewCustomerId) || readyProposals[0];
   const crmRecord = crmRecords.find((r) => r.customer_id === previewCustomerId);
+  const crmField = CRM_FIELD_BY_DIMENSION[activeProposalForPreview?.dimension_code ?? 'SEGMENT'] ?? 'Core_Segment__c';
+  const proposedField = crmField.replace(/^(Core_)?/, 'Proposed_');
 
   // Execution
   const handleExecutePublish = () => {
@@ -346,20 +364,20 @@ export const S11_PublishToCrm: React.FC = () => {
                 Current Live CRM State (Pre-Writeback)
               </div>
               <div className="flex justify-between border-b border-slate-200 pb-1.5">
-                <span className="text-slate-600 font-mono">Core_Segment__c:</span>
+                <span className="text-slate-600 font-mono">{crmField}:</span>
                 <span className="font-mono font-bold text-navy-900">
-                  {crmRecord?.segment || activeProposalForPreview?.current_value || 'Segment B'}
+                  {activeProposalForPreview?.current_value ?? crmRecord?.segment ?? '—'}
                 </span>
               </div>
               <div className="flex justify-between border-b border-slate-200 pb-1.5">
-                <span className="text-slate-600 font-mono">Proposed_Segment__c:</span>
+                <span className="text-slate-600 font-mono">{proposedField}:</span>
                 <span className="font-mono font-bold text-teal-700">
-                  {crmRecord?.proposed_segment || activeProposalForPreview?.proposed_value || 'Segment A'}
+                  {activeProposalForPreview?.proposed_value ?? crmRecord?.proposed_segment ?? '—'}
                 </span>
               </div>
               <div className="flex justify-between border-b border-slate-200 pb-1.5">
                 <span className="text-slate-600 font-mono">Segment_Age__c:</span>
-                <SegmentAgeChip days={crmRecord?.segment_age_days || activeProposalForPreview?.segment_age_days || 164} />
+                <SegmentAgeChip days={activeProposalForPreview?.segment_age_days ?? crmRecord?.segment_age_days ?? 0} />
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-600 font-mono">Sync_Status__c:</span>
@@ -375,13 +393,13 @@ export const S11_PublishToCrm: React.FC = () => {
                 <span className="text-teal-600 font-sans">Atomic Update</span>
               </div>
               <div className="flex justify-between border-b border-teal-200 pb-1.5">
-                <span className="text-slate-600 font-mono">Core_Segment__c:</span>
+                <span className="text-slate-600 font-mono">{crmField}:</span>
                 <span className="font-mono font-bold text-teal-800">
-                  {activeProposalForPreview?.proposed_value || 'Segment A'}
+                  {activeProposalForPreview?.proposed_value ?? '—'}
                 </span>
               </div>
               <div className="flex justify-between border-b border-teal-200 pb-1.5">
-                <span className="text-slate-600 font-mono">Proposed_Segment__c:</span>
+                <span className="text-slate-600 font-mono">{proposedField}:</span>
                 <span className="font-mono text-slate-400 italic">null (cleared)</span>
               </div>
               <div className="flex justify-between border-b border-teal-200 pb-1.5">
